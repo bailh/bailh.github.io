@@ -169,6 +169,86 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lisihan.com.cn/2023/03/01/clock/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="疯子">
+      <meta itemprop="description" content="认真做好每一件事">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="北辰星">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/01/clock/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-03-01 18:27:56 / 修改时间：18:33:56" itemprop="dateCreated datePublished" datetime="2023-03-01T18:27:56+08:00">2023-03-01</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="clock"><a href="#clock" class="headerlink" title="clock"></a>clock</h1><p>C语言中的函数clock（ ），它可以捕捉从程序开始运行到clock( )被调用时所耗费的时间。它计时所用的单位是clock tick，翻译成中文就是“时钟打点”。</p>
+<p>与之配套的还有一个常数CLK_TCK，实际上就是“clock tick”的缩写。它给出的是机器时钟每秒所走的时钟打点数。这个数在不同机器中可能不一样，可以通过写程序得到一台机器的CLK_TCK。</p>
+<p>代码如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">( )</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, CLK_TCK);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>将clock( )函数和常数CLK_TCK两个配合在一起，就可以计算出来一个函数到底跑了多少秒钟。</p>
+<p>以下是一个常用的模板：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;studio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="comment">/*要用clock( )函数必须要包含time.h*/</span></span><br><span class="line"><span class="type">clock_t</span> start,stop;<span class="comment">/*clock_t是clock( )函数返回的变量类型*/</span></span><br><span class="line"><span class="type">double</span> duration;<span class="comment">/*记录被测函数运行时间，以秒为单位*/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">( )</span></span><br><span class="line">&#123;   <span class="comment">/*不在测试范围内的准备工作写在clock( )调用之前*/</span></span><br><span class="line">    start=clock();<span class="comment">/*开始计时*/</span></span><br><span class="line">    MyFunction();<span class="comment">/*把被测函数加在这里*/</span></span><br><span class="line">    stop=clock();<span class="comment">/*停止计时*/</span></span><br><span class="line">    duration=((<span class="type">double</span>)(stop-start))/CLK_TCK;<span class="comment">/*计算运行时间*/</span></span><br><span class="line">    <span class="comment">/*其他不在测试范围的处理写在后面，例如输出duration的值*/</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>下面是一个具体的例子</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="type">clock_t</span> start, stop;</span><br><span class="line"><span class="type">double</span> duration;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXN 10</span></span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> a[MAXN];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; MAXN; i++)  a[i] = (<span class="type">double</span>)i;</span><br><span class="line"></span><br><span class="line">    start = clock();</span><br><span class="line">    f(MAXN - <span class="number">1</span>, a, <span class="number">1.1</span>);</span><br><span class="line">    stop = clock();</span><br><span class="line">    duration = ((<span class="type">double</span>)(stop - start)) / CLK_TCK;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ticks=%f\n&quot;</span>, (<span class="type">double</span>)(stop - start));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;duration=%6.2e\n&quot;</span>, duration);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> p = a[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        p += (a[i] * <span class="built_in">pow</span>(x,i));</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>计算结果都是0，是因为这个函数跑的实在是太快了，它的运行时间不到一个tick，所以clock函数铺捉不到它。解决方法就是让被测函数<strong>重复运行</strong>充分多次，使得测出的总的时钟打点间隔充分长，最后计算被测函数<strong>平均每次</strong>运行的时间即可。</p>
+<p>调整后的代码如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="type">clock_t</span> start, stop;</span><br><span class="line"><span class="type">double</span> duration;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXN 10</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXK 1e7<span class="comment">/*被测函数最大重复调用次数*/</span></span></span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> a[MAXN];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; MAXN; i++)  a[i] = (<span class="type">double</span>)i;</span><br><span class="line"></span><br><span class="line">    start = clock();</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=MAXK;i++)<span class="comment">/*重复调用函数已获得充分多的时钟打点数*/</span></span><br><span class="line">        f(MAXN - <span class="number">1</span>, a, <span class="number">1.1</span>);</span><br><span class="line">    stop = clock();</span><br><span class="line">    duration = ((<span class="type">double</span>)(stop - start)) / CLK_TCK/MAXK;<span class="comment">/*计算函数单次运行的时间*/</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ticks=%f\n&quot;</span>, (<span class="type">double</span>)(stop - start));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;duration=%6.2e\n&quot;</span>, duration);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> p = a[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        p += (a[i] * <span class="built_in">pow</span>(x,i));</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这个数据在不同的电脑上运行出来的结果不同，因为不同机器的CLK_TCK不一定相同</p>
+<p><img src="/image/clock/1677666755946.png" alt="1677666755946"></p>
+
+      
+    </div>
+
+    
+    
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://lisihan.com.cn/2023/03/01/cmd%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -630,7 +710,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-01 12:49:06" itemprop="dateModified" datetime="2023-03-01T12:49:06+08:00">2023-03-01</time>
+                <time title="修改时间：2023-03-01 18:27:02" itemprop="dateModified" datetime="2023-03-01T18:27:02+08:00">2023-03-01</time>
               </span>
 
           
@@ -1141,7 +1221,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
