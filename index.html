@@ -269,7 +269,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-04-05 11:49:51 / 修改时间：17:05:02" itemprop="dateCreated datePublished" datetime="2023-04-05T11:49:51+08:00">2023-04-05</time>
+              <time title="创建时间：2023-04-05 11:49:51 / 修改时间：20:41:49" itemprop="dateCreated datePublished" datetime="2023-04-05T11:49:51+08:00">2023-04-05</time>
             </span>
 
           
@@ -312,24 +312,6 @@
 
       
           <h1 id="C-核心编程"><a href="#C-核心编程" class="headerlink" title="C++核心编程"></a>C++核心编程</h1><p>本阶段主要针对C++&#x3D;&#x3D;面向对象&#x3D;&#x3D;编程技术做详细讲解，探讨C++中的核心和精髓。</p>
-<h2 id="1-内存分区模型"><a href="#1-内存分区模型" class="headerlink" title="1 内存分区模型"></a>1 内存分区模型</h2><p>C++程序在执行时，将内存大方向划分为<strong>4个区域</strong></p>
-<ul>
-<li>代码区：存放函数体的二进制代码，由操作系统进行管理的</li>
-<li>全局区：存放全局变量和静态变量以及常量</li>
-<li>栈区：由编译器自动分配释放, 存放函数的参数值,局部变量等</li>
-<li>堆区：由程序员分配和释放,若程序员不释放,程序结束时由操作系统回收</li>
-</ul>
-<p><strong>内存四区意义：</strong></p>
-<p>不同区域存放的数据，赋予不同的生命周期, 给我们更大的灵活编程</p>
-<h3 id="1-1-程序运行前"><a href="#1-1-程序运行前" class="headerlink" title="1.1 程序运行前"></a>1.1 程序运行前</h3><p>​	在程序编译后，生成了exe可执行程序，<strong>未执行该程序前</strong>分为两个区域</p>
-<p>​	<strong>代码区：</strong></p>
-<p>​		存放 CPU 执行的机器指令</p>
-<p>​		代码区是<strong>共享</strong>的，共享的目的是对于频繁被执行的程序，只需要在内存中有一份代码即可</p>
-<p>​		代码区是<strong>只读</strong>的，使其只读的原因是防止程序意外地修改了它的指令</p>
-<p>​	<strong>全局区：</strong></p>
-<p>​		全局变量和静态变量存放在此.</p>
-<p>​		全局区还包含了常量区, 字符串常量和其他常量也存放在此.</p>
-<p>​		&#x3D;&#x3D;该区域的数据在程序结束后由操作系统释放&#x3D;&#x3D;.</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/04/05/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/#more" rel="contents">
