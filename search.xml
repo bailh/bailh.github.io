@@ -66,24 +66,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/01/27/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
- <span id="more"></span>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>C++核心编程</title>
     <url>/2023/04/05/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="C-核心编程"><a href="#C-核心编程" class="headerlink" title="C++核心编程"></a>C++核心编程</h1><p>本阶段主要针对C++&#x3D;&#x3D;面向对象&#x3D;&#x3D;编程技术做详细讲解，探讨C++中的核心和精髓。</p>
@@ -1157,6 +1139,74 @@
 ]]></content>
   </entry>
   <entry>
+    <title>math faction</title>
+    <url>/2023/02/25/math%20faction/</url>
+    <content><![CDATA[<p>头文件math.h</p>
+<p>实数绝对值函数</p>
+<h2 id="➢指数函数"><a href="#➢指数函数" class="headerlink" title="➢指数函数"></a>➢指数函数</h2><p>double fabs(double x);</p>
+<p>double exp(double x);</p>
+<p>求实数x的绝对值|x|</p>
+<p>求e的实数x次幂ex</p>
+<p>例: fabs(3.5)的值为3.5</p>
+<p>例: exp(1.0)的值约为2.71828</p>
+<p>fabs(-3.5)的值为3.5</p>
+<p>exp(2. 5)的值约为12.1825</p>
+<h2 id="平方根函数"><a href="#平方根函数" class="headerlink" title="平方根函数"></a>平方根函数</h2><p>double sqrt(double x);</p>
+<h2 id="➢对数函数"><a href="#➢对数函数" class="headerlink" title="➢对数函数"></a>➢对数函数</h2><p>double log(double x);</p>
+<p>求实数x的平方根vx</p>
+<p>求以e为底正实数x的对数Inx</p>
+<p>例: sqrt(100.0)的值约为10.0</p>
+<p>double log10(doublex);</p>
+<p>sqrt(12.96)的值约为3.6</p>
+<p>求以10为底正实数x的对数lgx</p>
+<h2 id="➢幂函数"><a href="#➢幂函数" class="headerlink" title="➢幂函数"></a>➢幂函数</h2><p>例: log(2.718283)的值约为1.0</p>
+<p>double pow(double x, doubley); .</p>
+<p>log(45.7)的值约为3.822098</p>
+<p>求实数x的实数y次幂x</p>
+<p>log10(1000.0)的值约为3.0</p>
+<p>例: pow(2.0, 10.0)的值约为1024.0</p>
+<p>log10(6.022e23)的值约为23.7797</p>
+<p>pow(4.3, 2.9)的值约为68.7161</p>
+<p>注: C只提供以e和10为底数的对数函数。当计算</p>
+<p>以其它实数为底数的对数时，可利用换底公式。</p>
+<h2 id="➢双曲函数"><a href="#➢双曲函数" class="headerlink" title="➢双曲函数"></a>➢双曲函数</h2><p>ex-e-x<br>shx或sinhx<br>double sinh(double x);<br>sinh x&#x3D;<br>2<br>chx或cosh xdouble cosh(double x);<br>thx或tanhx<br>double tanh(double x);<br>e*+ e-x<br>例: sinh(1.0)的值约为1.175201<br>coshx&#x3D; -<br>2<br>cosh(1.0)的值约为1.543081<br>tanh(1.0)的值约为0.7615942<br>ex- e-x</p>
+<h2 id="➢取整函数"><a href="#➢取整函数" class="headerlink" title="➢取整函数"></a>➢取整函数</h2><p>tanh x &#x3D;ex+ e-x<br>[x1 double ceil(double x);<br>. lx」<br>double floor(double x);<br>例: ceil(1.1)的值约为2.0, ceil(-1.1)的值约为-1.0<br>floor(1.1)的值约为1.0, floor(-1.1)的值约为-2.0<br>ceil(1.0)和floor(1.0)的值都约为1.0, ceil(-1.0)和floor(-1.0)的值都约为-1.0</p>
+<h2 id="➢取模函数"><a href="#➢取模函数" class="headerlink" title="➢取模函数"></a>➢取模函数</h2><p>xmody<br>double fmod(double x, double y);<br>例: fmod(14.0, 3.0)的值约为2.0, fmod(-14.0, -3.0)的值约为-2.0<br>fmod(-6.5, -3.2)的值约为-0.1, fmod(6.5, -3.2)的值约为0.1</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/01/27/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+ <span id="more"></span>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>流</title>
+    <url>/2023/03/03/liu/</url>
+    <content><![CDATA[<h1 id="主要介绍："><a href="#主要介绍：" class="headerlink" title="主要介绍："></a>主要介绍：</h1><p>  什么是“流”，“流”的基本概念，“流”对于内存和外部设备着什么样的作用，C语言默认打开的三个“流”：stdin、stdout、stderr👀。</p>
+<p>通过《C语言》文件这一章的学习，我们学会了如何向文件进行读写操作，也就是如何让数据从内存中保存到硬盘上，或是如何从硬盘上读取数据放到内存中。硬盘其实是一个外部设备，那有人就要问了：我们能否对其他<strong>外部</strong>设进行读写操作呢？例如：屏幕、键盘、鼠标、U盘、光盘、网络…… ，答案当然是肯定的。</p>
+<h2 id="但值得注意"><a href="#但值得注意" class="headerlink" title="但值得注意"></a>但值得注意</h2><p> 的是，<em>每一种外部设备的读写方式是有所差异的</em>，就比如：写硬盘和写屏幕，读键盘和读网络。那大家想一下，如果一个程序员写代码的时候，必须要把每种外部设备的读和写的方式都理解透彻，是不是太麻烦了！</p>
+<p>  所以，为了能够<em>让程序员更加方便的对外部设备进行读写操作</em>，我们会在外部设备前抽象出来一层东西，称为：“流”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由C语言底层的封装来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个中转站，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  所以，为了能够让程序员更加方便的对外部设备进行读写操作，我们会<em>在外部设备前抽象出来一层东西</em>，称为：“<strong>流</strong>”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由<strong>C语言底层的封装</strong>来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个<strong>中转站</strong>，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  “流”是一个比较抽象的概念，数据就像水管里的水流，可以从内存中流向外部设备，也可以从外部设备流向内存，但只能<strong>单方向</strong>的流。由此可见“流”是有明确的方向性的，所以可以将“流”分为两种：以内存为第一人称，<strong>数据从内存向外流的称为输出流，数据由外向内存流的称为输入流</strong>。</p>
+<p>  还值得补充的一点是，不知道大家有没有发现，我们在对一个文件操作前必须先打开它，获得与之关联的文件指针，这个指针就可以称为“文件流”，因为这个指针指向了数据的目的地 &#x2F; 源头。但我们在对屏幕写出数据时或从键盘上读入数据时，并没有对这些外部设备进行打开操作获得所对应的“流”啊，而且在scanf和printf操作的时候也没有要求你给出数据的流向，最后却还能实现，这是为什么呢？<br>因为任意一个C程序只要运行起来，就会默认打开3个“流”：</p>
+<blockquote>
+<p>stdin —— 标准输入流（键盘）</br><br>stdout —— 标准输出流（屏幕）</br><br>stderr —— 标准错误流（屏幕）</br></p>
+</blockquote>
+<p>  所以printf()会默认将数据发送到stdout这个“流”上，scanf()会默从stdin这个“流”上读取数据，不需要我们手动打开和关闭“流”。但对于文件来说，我们就必须先打开这个文件从而获得这个“流”，然后才能从这个“流”里面读取数据或向这个“流”里面写数据，最后还得关闭“流”。<br>  那有同学就要问了：能不能用格式化输出函数fprintf()来向屏幕上输出一段内容？答案当然是可以的.</p>
+]]></content>
+  </entry>
+  <entry>
     <title>CMD</title>
     <url>/2023/03/01/cmd/</url>
     <content><![CDATA[<p>链接：<a href="https://link.zhihu.com/?target=https://www.cnblogs.com/walkwaters/p/12153364.html">CMD命令大全</a><br>CMD命令：开始－&gt;运行－&gt;键入cmd或command（在命令行里可以看到系统版本、文件系统版本）<br>chcp 修改默认字符集<br>chcp 936默认中文<br>chcp 65001</p>
@@ -1471,56 +1521,6 @@
 <p>　　cacls 文件名 查看文件的访问用户权限列表</p>
 <p>　　REM 文本内容 在批处理文件中添加注解</p>
 <p>　　netsh 查看或更改本地网络配置情况</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>流</title>
-    <url>/2023/03/03/liu/</url>
-    <content><![CDATA[<h1 id="主要介绍："><a href="#主要介绍：" class="headerlink" title="主要介绍："></a>主要介绍：</h1><p>  什么是“流”，“流”的基本概念，“流”对于内存和外部设备着什么样的作用，C语言默认打开的三个“流”：stdin、stdout、stderr👀。</p>
-<p>通过《C语言》文件这一章的学习，我们学会了如何向文件进行读写操作，也就是如何让数据从内存中保存到硬盘上，或是如何从硬盘上读取数据放到内存中。硬盘其实是一个外部设备，那有人就要问了：我们能否对其他<strong>外部</strong>设进行读写操作呢？例如：屏幕、键盘、鼠标、U盘、光盘、网络…… ，答案当然是肯定的。</p>
-<h2 id="但值得注意"><a href="#但值得注意" class="headerlink" title="但值得注意"></a>但值得注意</h2><p> 的是，<em>每一种外部设备的读写方式是有所差异的</em>，就比如：写硬盘和写屏幕，读键盘和读网络。那大家想一下，如果一个程序员写代码的时候，必须要把每种外部设备的读和写的方式都理解透彻，是不是太麻烦了！</p>
-<p>  所以，为了能够<em>让程序员更加方便的对外部设备进行读写操作</em>，我们会在外部设备前抽象出来一层东西，称为：“流”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由C语言底层的封装来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个中转站，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  所以，为了能够让程序员更加方便的对外部设备进行读写操作，我们会<em>在外部设备前抽象出来一层东西</em>，称为：“<strong>流</strong>”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由<strong>C语言底层的封装</strong>来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个<strong>中转站</strong>，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  “流”是一个比较抽象的概念，数据就像水管里的水流，可以从内存中流向外部设备，也可以从外部设备流向内存，但只能<strong>单方向</strong>的流。由此可见“流”是有明确的方向性的，所以可以将“流”分为两种：以内存为第一人称，<strong>数据从内存向外流的称为输出流，数据由外向内存流的称为输入流</strong>。</p>
-<p>  还值得补充的一点是，不知道大家有没有发现，我们在对一个文件操作前必须先打开它，获得与之关联的文件指针，这个指针就可以称为“文件流”，因为这个指针指向了数据的目的地 &#x2F; 源头。但我们在对屏幕写出数据时或从键盘上读入数据时，并没有对这些外部设备进行打开操作获得所对应的“流”啊，而且在scanf和printf操作的时候也没有要求你给出数据的流向，最后却还能实现，这是为什么呢？<br>因为任意一个C程序只要运行起来，就会默认打开3个“流”：</p>
-<blockquote>
-<p>stdin —— 标准输入流（键盘）</br><br>stdout —— 标准输出流（屏幕）</br><br>stderr —— 标准错误流（屏幕）</br></p>
-</blockquote>
-<p>  所以printf()会默认将数据发送到stdout这个“流”上，scanf()会默从stdin这个“流”上读取数据，不需要我们手动打开和关闭“流”。但对于文件来说，我们就必须先打开这个文件从而获得这个“流”，然后才能从这个“流”里面读取数据或向这个“流”里面写数据，最后还得关闭“流”。<br>  那有同学就要问了：能不能用格式化输出函数fprintf()来向屏幕上输出一段内容？答案当然是可以的.</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>math faction</title>
-    <url>/2023/02/25/math%20faction/</url>
-    <content><![CDATA[<p>头文件math.h</p>
-<p>实数绝对值函数</p>
-<h2 id="➢指数函数"><a href="#➢指数函数" class="headerlink" title="➢指数函数"></a>➢指数函数</h2><p>double fabs(double x);</p>
-<p>double exp(double x);</p>
-<p>求实数x的绝对值|x|</p>
-<p>求e的实数x次幂ex</p>
-<p>例: fabs(3.5)的值为3.5</p>
-<p>例: exp(1.0)的值约为2.71828</p>
-<p>fabs(-3.5)的值为3.5</p>
-<p>exp(2. 5)的值约为12.1825</p>
-<h2 id="平方根函数"><a href="#平方根函数" class="headerlink" title="平方根函数"></a>平方根函数</h2><p>double sqrt(double x);</p>
-<h2 id="➢对数函数"><a href="#➢对数函数" class="headerlink" title="➢对数函数"></a>➢对数函数</h2><p>double log(double x);</p>
-<p>求实数x的平方根vx</p>
-<p>求以e为底正实数x的对数Inx</p>
-<p>例: sqrt(100.0)的值约为10.0</p>
-<p>double log10(doublex);</p>
-<p>sqrt(12.96)的值约为3.6</p>
-<p>求以10为底正实数x的对数lgx</p>
-<h2 id="➢幂函数"><a href="#➢幂函数" class="headerlink" title="➢幂函数"></a>➢幂函数</h2><p>例: log(2.718283)的值约为1.0</p>
-<p>double pow(double x, doubley); .</p>
-<p>log(45.7)的值约为3.822098</p>
-<p>求实数x的实数y次幂x</p>
-<p>log10(1000.0)的值约为3.0</p>
-<p>例: pow(2.0, 10.0)的值约为1024.0</p>
-<p>log10(6.022e23)的值约为23.7797</p>
-<p>pow(4.3, 2.9)的值约为68.7161</p>
-<p>注: C只提供以e和10为底数的对数函数。当计算</p>
-<p>以其它实数为底数的对数时，可利用换底公式。</p>
-<h2 id="➢双曲函数"><a href="#➢双曲函数" class="headerlink" title="➢双曲函数"></a>➢双曲函数</h2><p>ex-e-x<br>shx或sinhx<br>double sinh(double x);<br>sinh x&#x3D;<br>2<br>chx或cosh xdouble cosh(double x);<br>thx或tanhx<br>double tanh(double x);<br>e*+ e-x<br>例: sinh(1.0)的值约为1.175201<br>coshx&#x3D; -<br>2<br>cosh(1.0)的值约为1.543081<br>tanh(1.0)的值约为0.7615942<br>ex- e-x</p>
-<h2 id="➢取整函数"><a href="#➢取整函数" class="headerlink" title="➢取整函数"></a>➢取整函数</h2><p>tanh x &#x3D;ex+ e-x<br>[x1 double ceil(double x);<br>. lx」<br>double floor(double x);<br>例: ceil(1.1)的值约为2.0, ceil(-1.1)的值约为-1.0<br>floor(1.1)的值约为1.0, floor(-1.1)的值约为-2.0<br>ceil(1.0)和floor(1.0)的值都约为1.0, ceil(-1.0)和floor(-1.0)的值都约为-1.0</p>
-<h2 id="➢取模函数"><a href="#➢取模函数" class="headerlink" title="➢取模函数"></a>➢取模函数</h2><p>xmody<br>double fmod(double x, double y);<br>例: fmod(14.0, 3.0)的值约为2.0, fmod(-14.0, -3.0)的值约为-2.0<br>fmod(-6.5, -3.2)的值约为-0.1, fmod(6.5, -3.2)的值约为0.1</p>
 ]]></content>
   </entry>
   <entry>
