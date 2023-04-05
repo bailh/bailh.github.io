@@ -27,6 +27,19 @@
 ]]></content>
   </entry>
   <entry>
+    <title>c++的STL</title>
+    <url>/2023/03/15/STL/</url>
+    <content><![CDATA[<h1 id="c-的STL"><a href="#c-的STL" class="headerlink" title="c++的STL"></a>c++的STL</h1><h2 id="sort排序"><a href="#sort排序" class="headerlink" title="sort排序"></a>sort排序</h2><h3 id="用法一"><a href="#用法一" class="headerlink" title="用法一"></a>用法一</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[] = &#123;<span class="number">15</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">6</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">sort</span>(a,a+<span class="number">7</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="用法二-从大到小"><a href="#用法二-从大到小" class="headerlink" title="用法二 -从大到小"></a>用法二 -从大到小</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[] = &#123;<span class="number">15</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">2</span> ,<span class="number">6</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">sort</span>(a+<span class="number">1</span>,a+<span class="number">4</span>,<span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;());</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h3 id="用法三-结构体"><a href="#用法三-结构体" class="headerlink" title="用法三-结构体"></a>用法三-结构体</h3><p>sort(数组名+n1，数组名+n2,排序规则结构名());</p>
+<p>排序规则结构的定义方式</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> 结构名</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">​     <span class="function"><span class="type">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">( <span class="type">const</span> T &amp; a1,<span class="type">const</span> T &amp; a2)</span> <span class="type">const</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//若a1在a2前面，则返回true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//eles返回false</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>clock</title>
     <url>/2023/03/01/clock/</url>
     <content><![CDATA[<h1 id="clock"><a href="#clock" class="headerlink" title="clock"></a>clock</h1><p>C语言中的函数clock（ ），它可以捕捉从程序开始运行到clock(<span id="more"></span> )被调用时所耗费的时间。它计时所用的单位是clock tick，翻译成中文就是“时钟打点”。</p>
@@ -50,6 +63,400 @@
 
 <p>这个数据在不同的电脑上运行出来的结果不同，因为不同机器的CLK_TCK不一定相同</p>
 <p><img src="/image/clock/1677666755946.png" alt="1677666755946"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/01/27/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+ <span id="more"></span>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>流</title>
+    <url>/2023/03/03/liu/</url>
+    <content><![CDATA[<h1 id="主要介绍："><a href="#主要介绍：" class="headerlink" title="主要介绍："></a>主要介绍：</h1><p>  什么是“流”，“流”的基本概念，“流”对于内存和外部设备着什么样的作用，C语言默认打开的三个“流”：stdin、stdout、stderr👀。</p>
+<p>通过《C语言》文件这一章的学习，我们学会了如何向文件进行读写操作，也就是如何让数据从内存中保存到硬盘上，或是如何从硬盘上读取数据放到内存中。硬盘其实是一个外部设备，那有人就要问了：我们能否对其他<strong>外部</strong>设进行读写操作呢？例如：屏幕、键盘、鼠标、U盘、光盘、网络…… ，答案当然是肯定的。</p>
+<h2 id="但值得注意"><a href="#但值得注意" class="headerlink" title="但值得注意"></a>但值得注意</h2><p> 的是，<em>每一种外部设备的读写方式是有所差异的</em>，就比如：写硬盘和写屏幕，读键盘和读网络。那大家想一下，如果一个程序员写代码的时候，必须要把每种外部设备的读和写的方式都理解透彻，是不是太麻烦了！</p>
+<p>  所以，为了能够<em>让程序员更加方便的对外部设备进行读写操作</em>，我们会在外部设备前抽象出来一层东西，称为：“流”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由C语言底层的封装来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个中转站，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  所以，为了能够让程序员更加方便的对外部设备进行读写操作，我们会<em>在外部设备前抽象出来一层东西</em>，称为：“<strong>流</strong>”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由<strong>C语言底层的封装</strong>来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个<strong>中转站</strong>，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  “流”是一个比较抽象的概念，数据就像水管里的水流，可以从内存中流向外部设备，也可以从外部设备流向内存，但只能<strong>单方向</strong>的流。由此可见“流”是有明确的方向性的，所以可以将“流”分为两种：以内存为第一人称，<strong>数据从内存向外流的称为输出流，数据由外向内存流的称为输入流</strong>。</p>
+<p>  还值得补充的一点是，不知道大家有没有发现，我们在对一个文件操作前必须先打开它，获得与之关联的文件指针，这个指针就可以称为“文件流”，因为这个指针指向了数据的目的地 &#x2F; 源头。但我们在对屏幕写出数据时或从键盘上读入数据时，并没有对这些外部设备进行打开操作获得所对应的“流”啊，而且在scanf和printf操作的时候也没有要求你给出数据的流向，最后却还能实现，这是为什么呢？<br>因为任意一个C程序只要运行起来，就会默认打开3个“流”：</p>
+<blockquote>
+<p>stdin —— 标准输入流（键盘）</br><br>stdout —— 标准输出流（屏幕）</br><br>stderr —— 标准错误流（屏幕）</br></p>
+</blockquote>
+<p>  所以printf()会默认将数据发送到stdout这个“流”上，scanf()会默从stdin这个“流”上读取数据，不需要我们手动打开和关闭“流”。但对于文件来说，我们就必须先打开这个文件从而获得这个“流”，然后才能从这个“流”里面读取数据或向这个“流”里面写数据，最后还得关闭“流”。<br>  那有同学就要问了：能不能用格式化输出函数fprintf()来向屏幕上输出一段内容？答案当然是可以的.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>math faction</title>
+    <url>/2023/02/25/math%20faction/</url>
+    <content><![CDATA[<p>头文件math.h</p>
+<p>实数绝对值函数</p>
+<h2 id="➢指数函数"><a href="#➢指数函数" class="headerlink" title="➢指数函数"></a>➢指数函数</h2><p>double fabs(double x);</p>
+<p>double exp(double x);</p>
+<p>求实数x的绝对值|x|</p>
+<p>求e的实数x次幂ex</p>
+<p>例: fabs(3.5)的值为3.5</p>
+<p>例: exp(1.0)的值约为2.71828</p>
+<p>fabs(-3.5)的值为3.5</p>
+<p>exp(2. 5)的值约为12.1825</p>
+<h2 id="平方根函数"><a href="#平方根函数" class="headerlink" title="平方根函数"></a>平方根函数</h2><p>double sqrt(double x);</p>
+<h2 id="➢对数函数"><a href="#➢对数函数" class="headerlink" title="➢对数函数"></a>➢对数函数</h2><p>double log(double x);</p>
+<p>求实数x的平方根vx</p>
+<p>求以e为底正实数x的对数Inx</p>
+<p>例: sqrt(100.0)的值约为10.0</p>
+<p>double log10(doublex);</p>
+<p>sqrt(12.96)的值约为3.6</p>
+<p>求以10为底正实数x的对数lgx</p>
+<h2 id="➢幂函数"><a href="#➢幂函数" class="headerlink" title="➢幂函数"></a>➢幂函数</h2><p>例: log(2.718283)的值约为1.0</p>
+<p>double pow(double x, doubley); .</p>
+<p>log(45.7)的值约为3.822098</p>
+<p>求实数x的实数y次幂x</p>
+<p>log10(1000.0)的值约为3.0</p>
+<p>例: pow(2.0, 10.0)的值约为1024.0</p>
+<p>log10(6.022e23)的值约为23.7797</p>
+<p>pow(4.3, 2.9)的值约为68.7161</p>
+<p>注: C只提供以e和10为底数的对数函数。当计算</p>
+<p>以其它实数为底数的对数时，可利用换底公式。</p>
+<h2 id="➢双曲函数"><a href="#➢双曲函数" class="headerlink" title="➢双曲函数"></a>➢双曲函数</h2><p>ex-e-x<br>shx或sinhx<br>double sinh(double x);<br>sinh x&#x3D;<br>2<br>chx或cosh xdouble cosh(double x);<br>thx或tanhx<br>double tanh(double x);<br>e*+ e-x<br>例: sinh(1.0)的值约为1.175201<br>coshx&#x3D; -<br>2<br>cosh(1.0)的值约为1.543081<br>tanh(1.0)的值约为0.7615942<br>ex- e-x</p>
+<h2 id="➢取整函数"><a href="#➢取整函数" class="headerlink" title="➢取整函数"></a>➢取整函数</h2><p>tanh x &#x3D;ex+ e-x<br>[x1 double ceil(double x);<br>. lx」<br>double floor(double x);<br>例: ceil(1.1)的值约为2.0, ceil(-1.1)的值约为-1.0<br>floor(1.1)的值约为1.0, floor(-1.1)的值约为-2.0<br>ceil(1.0)和floor(1.0)的值都约为1.0, ceil(-1.0)和floor(-1.0)的值都约为-1.0</p>
+<h2 id="➢取模函数"><a href="#➢取模函数" class="headerlink" title="➢取模函数"></a>➢取模函数</h2><p>xmody<br>double fmod(double x, double y);<br>例: fmod(14.0, 3.0)的值约为2.0, fmod(-14.0, -3.0)的值约为-2.0<br>fmod(-6.5, -3.2)的值约为-0.1, fmod(6.5, -3.2)的值约为0.1</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>CMD</title>
+    <url>/2023/03/01/cmd/</url>
+    <content><![CDATA[<p>链接：<a href="https://link.zhihu.com/?target=https://www.cnblogs.com/walkwaters/p/12153364.html">CMD命令大全</a><br>CMD命令：开始－&gt;运行－&gt;键入cmd或command（在命令行里可以看到系统版本、文件系统版本）<br>chcp 修改默认字符集<br>chcp 936默认中文<br>chcp 65001</p>
+<ol>
+<li>appwiz.cpl：程序和功能</li>
+<li>calc：启动计算器</li>
+<li>chkdsk.exe：Chkdsk磁盘检查（管理员身份运行命令提示符）</li>
+<li>cleanmgr: 打开磁盘清理工具</li>
+<li>cmd.exe：CMD命令提示符</li>
+<li>自动关机命令<br>　 Shutdown -s -t 600：表示600秒后自动关机<br>　 <a href="https://www.zhihu.com/search?q=shutdown%20-a&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">shutdown -a</a> ：可取消定时关机<br>　 Shutdown -r -t 600：表示600秒后自动重启</li>
+<li>CompMgmtLauncher：计算机管理</li>
+<li>compmgmt.msc：计算机管理</li>
+<li>credwiz：备份或还原储存的用户名和密码</li>
+<li>control：控制面版</li>
+<li>dcomcnfg：打开系统组件服务</li>
+<li>devmgmt.msc：设备管理器</li>
+<li>desk.cpl：屏幕分辨率</li>
+<li>dfrgui：优化驱动器   Windows 7→dfrg.msc：磁盘碎片整理程序</li>
+<li>dialer：电话拨号程序</li>
+<li>diskmgmt.msc：磁盘管理</li>
+<li>dvdplay：DVD播放器</li>
+<li>dxdiag：检查DirectX信息</li>
+<li>eudcedit：造字程序</li>
+<li>eventvwr：事件查看器</li>
+<li>explorer：打开资源管理器</li>
+<li>Firewall.cpl：Windows防火墙</li>
+<li>fsmgmt.msc：共享文件夹管理器</li>
+<li><span id="more"></span></li>
+<li>gpedit.msc：组策略</li>
+<li>hdwwiz.cpl：设备管理器</li>
+<li><a href="https://www.zhihu.com/search?q=inetcpl.cpl&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">inetcpl.cpl</a>：Internet属性</li>
+<li>intl.cpl：区域</li>
+<li>iexpress：木马捆绑工具，系统自带</li>
+<li>joy.cpl：游戏控制器</li>
+<li>logoff：注销命令</li>
+<li>lusrmgr.msc：本地用户和组</li>
+<li>lpksetup：语言包安装&#x2F;删除向导，安装向导会提示下载语言包</li>
+<li>lusrmgr.msc：本机用户和组</li>
+<li>main.cpl：鼠标属性</li>
+<li>mmsys.cpl：声音</li>
+<li>mem.exe：显示内存使用情况（如果直接运行无效，可以先管理员身份运行命令提示符，在命令提示符里输入mem.exe&gt;d:a.txt 即可打开d盘查看a.txt，里面的就是内存使用情况了。当然什么盘什么文件名可自己决定。）</li>
+<li>mmc：打开控制台</li>
+<li>mobsync：同步命令</li>
+<li>Msconfig.exe：系统配置实用程序</li>
+<li>msdt：微软支持诊断工具</li>
+<li>msinfo32：系统信息</li>
+<li>mspaint：画图</li>
+<li>Msra：Windows远程协助</li>
+<li>mstsc：远程桌面连接</li>
+<li>NAPCLCFG.MSC：客户端配置</li>
+<li>ncpa.cpl：网络连接</li>
+<li>narrator：屏幕“讲述人”</li>
+<li>Netplwiz：高级用户帐户控制面板，设置登陆安全相关的选项</li>
+<li>netstat : an(TC)命令检查接口</li>
+<li>notepad：打开记事本</li>
+<li>Nslookup：IP地址侦测器</li>
+<li>odbcad32：ODBC数据源管理器</li>
+<li>OptionalFeatures：打开“打开或关闭Windows功能”对话框</li>
+<li>osk：打开屏幕键盘</li>
+<li>perfmon.msc：计算机性能监测器</li>
+<li>perfmon：计算机性能监测器</li>
+<li>PowerShell：提供强大远程处理能力</li>
+<li>printmanagement.msc：打印管理</li>
+<li>powercfg.cpl：电源选项</li>
+<li>psr：问题步骤记录器</li>
+<li>Rasphone：网络连接</li>
+<li>Recdisc：创建系统修复光盘</li>
+<li>Resmon：资源监视器</li>
+<li>Rstrui：系统还原</li>
+<li>regedit.exe：注册表</li>
+<li>regedt32：注册表编辑器</li>
+<li>rsop.msc：组策略结果集</li>
+<li>sdclt：备份状态与配置，就是查看系统是否已备份</li>
+<li>secpol.msc：本地安全策略</li>
+<li>services.msc：本地服务设置</li>
+<li>sfc &#x2F;scannow：扫描错误并复原&#x2F;windows文件保护</li>
+<li>sfc.exe：系统文件检查器</li>
+<li>shrpubw：创建共享文件夹</li>
+<li>sigverif：文件签名验证程序</li>
+<li>slui：Windows激活，查看系统激活信息</li>
+<li>slmgr.vbs -dlv ：显示详细的许可证信息<br>　 slmgr.vbs -dli ：显示许可证信息<br>　 <a href="https://www.zhihu.com/search?q=slmgr.vbs%20-xpr&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">slmgr.vbs -xpr</a> ：当前许可证截止日期<br>　 slmgr.vbs -dti ：显示安装ID 以进行脱机激<br>　 <a href="https://www.zhihu.com/search?q=slmgr.vbs%20-ipk&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">slmgr.vbs -ipk</a> ：(Product Key)安装产品密钥<br>　 slmgr.vbs -ato ：激活Windows<br>　 <a href="https://www.zhihu.com/search?q=slmgr.vbs%20-cpky&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">slmgr.vbs -cpky</a> ：从注册表中清除产品密钥（防止泄露引起的攻击）<br>　 slmgr.vbs -ilc ：(License file)安装许可证<br>　 <a href="https://www.zhihu.com/search?q=slmgr.vbs%20-upk&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">slmgr.vbs -upk</a> ：卸载产品密钥<br>　 slmgr.vbs -skms ：(name[ort] )批量授权</li>
+<li>snippingtool：截图工具，支持无规则截图</li>
+<li><a href="https://www.zhihu.com/search?q=soundrecorder&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">soundrecorder</a>：录音机，没有录音时间的限制</li>
+<li>StikyNot：便笺</li>
+<li>sysdm.cpl：系统属性</li>
+<li>sysedit：系统配置编辑器</li>
+<li>syskey：系统加密，一旦加密就不能解开，保护系统的双重密码</li>
+<li>taskmgr：任务管理器（旧版）</li>
+<li>TM任务管理器（新版）</li>
+<li>taskschd.msc：任务计划程序</li>
+<li>timedate.cpl：日期和时间</li>
+<li>UserAccountControlSettings用户账户控制设置</li>
+<li>utilman：辅助工具管理器</li>
+<li>wf.msc：高级安全Windows防火墙</li>
+<li>WFS：Windows传真和扫描</li>
+<li>wiaacmgr：扫描仪和照相机向导</li>
+<li>winver：关于Windows</li>
+<li>wmimgmt.msc：打开windows管理体系结构(WMI)</li>
+<li>write：写字板</li>
+<li>wscui.cpl：操作中心</li>
+<li>wscript：windows脚本宿主设置</li>
+<li>wuapp：Windows更新</li>
+</ol>
+<!-- more -->
+
+<p>　　1. gpedit.msc—–组策略</p>
+<p>　　2. sndrec32——-录音机</p>
+<p>　　3. Nslookup——-IP地址侦测器 ，是一个 监测网络中 DNS 服务器是否能正确实现域名解析的命令行工具。 它在 Windows NT&#x2F;2000&#x2F;XP 中均可使用 , 但在 Windows 98 中却没有集成这一个工具。</p>
+<p>　　4. explorer——-打开资源管理器</p>
+<p>　　5. logoff———注销命令</p>
+<p>　　6. shutdown——-60秒倒计时关机命令</p>
+<p>　　7. lusrmgr.msc—-本机用户和组</p>
+<p>　　8. services.msc—本地服务设置</p>
+<p>　　9. oobe&#x2F;msoobe &#x2F;a—-检查XP是否激活</p>
+<p>　　10. notepad——–打开记事本</p>
+<p>　　11. cleanmgr——-垃圾整理</p>
+<p>　　12. net start messenger—-开始信使服务</p>
+<p>　　13. compmgmt.msc—计算机管理</p>
+<p>　　14. net stop messenger—–停止信使服务</p>
+<p>　　15. conf———–启动netmeeting</p>
+<p>　　16. dvdplay——–DVD播放器</p>
+<p>　　17. charmap——–启动字符映射表</p>
+<p>　　18. diskmgmt.msc—磁盘管理实用程序</p>
+<p>　　19. calc———–启动计算器</p>
+<p>　　20. dfrg.msc——-磁盘碎片整理程序</p>
+<p>　　21. chkdsk.exe—–Chkdsk磁盘检查</p>
+<p>　　22. devmgmt.msc— 设备管理器</p>
+<p>　　23. regsvr32 &#x2F;u *.dll—-停止dll文件运行</p>
+<p>　　24. drwtsn32—— 系统医生</p>
+<p>　　25. rononce -p—-15秒关机</p>
+<p>　　26. dxdiag———检查DirectX信息</p>
+<p>　　27. regedt32——-注册表编辑器</p>
+<p>　　28. Msconfig.exe—系统配置实用程序</p>
+<p>　　29. rsop.msc——-组策略结果集</p>
+<p>　　30. mem.exe——–显示内存使用情况</p>
+<p>　　31. regedit.exe—-注册表</p>
+<p>　　32. winchat——–XP自带局域网聊天</p>
+<p>　　33. progman——–程序管理器</p>
+<p>　　34. winmsd———系统信息</p>
+<p>　　35. perfmon.msc—-计算机性能监测程序</p>
+<p>　　36. winver———检查Windows版本</p>
+<p>　　37. sfc &#x2F;scannow—–扫描错误并复原</p>
+<p>　　38. <a href="https://www.zhihu.com/search?q=taskmgr&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">taskmgr</a>—–任务管理器（2000&#x2F;xp&#x2F;2003</p>
+<p>　　39. winver———检查Windows版本</p>
+<p>　　40. wmimgmt.msc—-打开windows管理体系结构(WMI)</p>
+<p>　　41. wupdmgr——–windows更新程序</p>
+<p>　　42. wscript——–windows脚本宿主设置</p>
+<p>　　43. write———-写字板</p>
+<p>　　44. winmsd———系统信息</p>
+<p>　　45. wiaacmgr——-扫描仪和照相机向导</p>
+<p>　　46. winchat——–XP自带局域网聊天</p>
+<p>　　47. mem.exe——–显示内存使用情况</p>
+<p>　　48. Msconfig.exe—系统配置实用程序</p>
+<p>　　49. mplayer2——-简易widnows media player</p>
+<p>　　50. mspaint——–画图板</p>
+<p>　　51. mstsc———-远程桌面连接</p>
+<p>　　52. mplayer2——-媒体播放机</p>
+<p>　　53. magnify——–放大镜实用程序</p>
+<p>　　54. mmc————打开控制台</p>
+<p>　　55. mobsync——–同步命令</p>
+<p>　　56. dxdiag———检查DirectX信息</p>
+<p>　　57. iexpress——-木马捆绑工具，系统自带 58. fsmgmt.msc—–共享文件夹管理器</p>
+<p>　　58. utilman——–辅助工具管理器</p>
+<p>　　59. diskmgmt.msc—磁盘管理实用程序</p>
+<p>　　60. dcomcnfg——-打开系统组件服务</p>
+<p>　　61. ddeshare——-打开DDE共享设置</p>
+<p>　　62.  osk————打开屏幕键盘</p>
+<p>　　63.  odbcad32——-ODBC数据源管理器</p>
+<p>　　64.  oobe&#x2F;msoobe &#x2F;a—-检查XP是否激活 114. logoff———注销命令</p>
+<p>　　65. notepad——–打开记事本</p>
+<p>　　66. nslookup——-网络管理的工具向导</p>
+<p>　　67. ntbackup——-系统备份和还原</p>
+<p>　　68. narrator——-屏幕“讲述人”</p>
+<p>　　69. ntmsmgr.msc—-移动存储管理器</p>
+<p>　　70. ntmsoprq.msc—移动存储管理员操作请求</p>
+<p>　　71. netstat -an—-(TC)命令检查接口</p>
+<p>　　72. syncapp——–创建一个公文包</p>
+<p>　　73. sysedit——–系统配置编辑器</p>
+<p>　　74. sigverif——-文件签名验证程序</p>
+<p>　　75. ciadv.msc——索引服务程序</p>
+<p>　　76. shrpubw——–创建共享文件夹</p>
+<p>　　77. secpol.msc—–本地安全策略</p>
+<p>　　78. syskey———系统加密，一旦加密就不能解开，保护windows xp系统的双重密码</p>
+<p>　　79. services.msc—本地服务设置</p>
+<p>　　80. Sndvol32——-音量控制程序</p>
+<p>　　81. sfc.exe——–系统文件检查器</p>
+<p>　　82. sfc &#x2F;scannow—windows文件保护</p>
+<p>　　83. ciadv.msc——索引服务程序</p>
+<p>　　84. tourstart——xp简介（安装完成后出现的漫游xp程序）</p>
+<p>　　86. taskmgr——–任务管理器</p>
+<p>　　87. eventvwr——-事件查看器</p>
+<p>　　88. eudcedit——-造字程序</p>
+<p>　　89. compmgmt.msc—计算机管理</p>
+<p>　　90. packager——-对象包装程序</p>
+<p>　　91. perfmon.msc—-计算机性能监测程序</p>
+<p>　　92. charmap——–启动字符映射表</p>
+<p>　　93. cliconfg——-SQL SERVER 客户端网络实用程序</p>
+<p>　　94. Clipbrd——–剪贴板查看器</p>
+<p>　　95. conf———–启动<a href="https://www.zhihu.com/search?q=netmeeting&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">netmeeting</a></p>
+<p>　　96. certmgr.msc—-证书管理实用程序</p>
+<p>　　97. regsvr32 &#x2F;u *.dll—-停止dll文件运行</p>
+<p>　　98. regsvr32 &#x2F;u zipfldr.dll——取消ZIP支持</p>
+<p>　　99. cmd.exe——–CMD命令提示符</p>
+<p>　　100. chkdsk.exe—–Chkdsk磁盘检查</p>
+<p>1.磁盘操作，<br>　　fdisk 隐含 参数 &#x2F;mbr 重建主引导记录fdisk &#x2F;mbr 重建主引导记录<br>　　fdisk 在DOS7.0以后增加了&#x2F;cmbr参数，可在挂接多个物理硬盘时，重建排序在后面的硬盘的主引导记录，例如：fdisk &#x2F;cmbr 2，可重写第二个硬盘的主引导记录。（在使用时要十分小心，避免把好的硬盘引导记录损坏）<br>　　format 参数： &#x2F;q 快速格式化 &#x2F;u 不可恢复 &#x2F;autotest 不提示 &#x2F;s 创建 MS-DOS 引导盘 format c: &#x2F;q &#x2F;u &#x2F;autotest<br>2.目录操作<br>　　DIR [目录名或文件名] [&#x2F;S][&#x2F;W][&#x2F;P][&#x2F;A] 列出目录 参数: &#x2F;s 查找子目录&#x2F;w 只显示文件名 &#x2F;p 分页&#x2F;a 显示隐藏文件 DIR format.exe &#x2F;s查找该盘的format.exe文件并报告位置<br>　　MD (MKDIR) [目录名] 创建目录 MKDIR HELLOWORLD 创建HELLOWORLD目录<br>　　CD (CHDIR) [目录名] PS:可以使用相对目录或绝对目录 进入目录 CD AA 进入当前文件夹下的AA目录,cd .. 进入上一个文件夹cd \返回根目录;cd c:\windows 进入c:\windows文件夹<br>　　RD ( RMDIR) [目录名] 删除目录 RD HELLOWORLD 删除HELLOWORLD目录<br>3.文件操作<br>　　删除目录及其文件： rmdir [目录名或文件名] [&#x2F;S][&#x2F;W][&#x2F;P][&#x2F;A] 。例 rmdir c:\qqdownload&#x2F;s 删除C盘的qqdownload目录。<br>　　del [目录名或文件名] [&#x2F;f][&#x2F;s][&#x2F;q] 删除 参数:&#x2F;f 删除只读文件&#x2F;s 删除该目录及其下的所有内容 &#x2F;q 删除前不确认<br>　　del c:\del &#x2F;s &#x2F;q 自动删除c盘的del目录。<br>　　copy [源文件或目录] [目标目录] 复制文件 copy d:\pwin98*.* c:\presetup 将d盘的pwin98的所有文件复制到c盘的presetup下。<br>　　attrib  [参数][源文件或目录]  文件属性操作命令，attrib命令可以列出或修改磁盘上文件的属性，文件属性包括文档（A）、只读(R)、隐藏(H)、系统(S)，例如：attrib  -h -r -s io.sys  执行这一命令后，将把DOS系统文件io.sys文件的只读、隐藏、系统属性去掉，这时将可以直接通过dir命令看到io.sys文件。attrib  +h +r +s autoexec.bat将为自动批处理文件增加以上属性。<br>4.内存操作<br>　　debug 调试内存 参数 -w [文件名] 写入二进制文件 -o [地址1] [地址2] 输出内存 -q 退出 exp:o 70 10[return] o 71 01<br>　　[return] 01[return] q[return] DOS下通过写70h&#x2F;71h PORT改变BIOS密码在CMOS中存放的对应位置的值,用以清除AWARD BIOS密码.debug 还可以破解硬盘保护卡等,但只可以在纯DOS下用。<br>5.分区操作<br>　　给磁盘分区，一般都会分成四个区，磁盘分区由主分区、扩展分区、逻辑分区组成。<br>　　PQ和Acronis  Disk  Director这两个工具都可以在不丢失数据的情况下对分区进行调整大小，以及合并等操作，XP系统的话你用PQ，WIN7系统的话用Acronis  Disk Director  操作基本一样，可以去网上找教程来看看，再不重装系统的情况下都能调整分区大小，但是建议你还是先备份下数据再调整，毕竟对硬盘直接进行的操作有一定的危险性。<br>　　net use ipipc$ “ “ &#x2F;user:” “ 建立IPC空链接</p>
+<p>　　net use ipipc$ “密码” &#x2F;user:”用户名” 建立IPC非空链接</p>
+<p>　　net use h: ipc$ “密码” &#x2F;user:”用户名” 直接登陆后映射对方C：到本地为H:</p>
+<p>　　net use h: ipc$ 登陆后映射对方C：到本地为H:</p>
+<p>　　net use ipipc$ &#x2F;del 删除IPC链接</p>
+<p>　　net use h: &#x2F;del 删除映射对方到本地的为H:的映射</p>
+<p>　　net user 用户名　密码　&#x2F;add 建立用户</p>
+<p>　　net user guest &#x2F;active:yes 激活guest用户</p>
+<p>　　net user 查看有哪些用户</p>
+<p>　　net user 帐户名 查看帐户的属性</p>
+<p>　　net localgroup administrators 用户名 &#x2F;add 把“用户”添加到管理员中使其具有管理员权限</p>
+<p>　　net start 查看开启了哪些服务</p>
+<p>　　net start 服务名　开启服务；(如:net start telnet， net start schedule)</p>
+<p>　　net stop 服务名 停止某服务</p>
+<p>　　net time 目标ip 查看对方时间</p>
+<p>　　net time 目标ip &#x2F;set 设置本地计算机时间与“目标IP”主机的时间同步,加上参数&#x2F;yes可取消确认信息</p>
+<p>　　<a href="https://www.zhihu.com/search?q=net%20view&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">net view</a> 查看本地局域网内开启了哪些共享</p>
+<p>　　net view ip 查看对方局域网内开启了哪些共享</p>
+<p>　　net config 显示系统网络设置</p>
+<p>　　net logoff 断开连接的共享</p>
+<p>　　net pause 服务名 暂停某服务</p>
+<p>　　net send ip “文本信息” 向对方发信息</p>
+<p>　　net ver 局域网内正在使用的网络连接类型和信息</p>
+<p>　　net share 查看本地开启的共享</p>
+<p>　　net share ipc$ 开启ipc$共享</p>
+<p>　　net share ipc$ &#x2F;del 删除ipc$共享</p>
+<p>　　net share c$ &#x2F;del 删除C：共享</p>
+<p>　　net user guest 12345 用guest用户登陆后用将密码改为12345</p>
+<p>　　net password 密码 更改系统登陆密码</p>
+<p>　　netstat -a 查看开启了哪些端口,常用<a href="https://www.zhihu.com/search?q=netstat%20-an&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">netstat -an</a></p>
+<p>　　netstat -n 查看端口的网络连接情况，常用netstat -an</p>
+<p>　　netstat -v 查看正在进行的工作</p>
+<p>　　netstat -p 协议名 例：netstat -p tcq&#x2F;ip 查看某协议使用情况</p>
+<p>　　netstat -s 查看正在使用的所有协议使用情况</p>
+<p>　　nbtstat -A ip 对方136到139其中一个端口开了的话，就可查看对方最近登陆的用户名</p>
+<p>　　tracert -参数 ip(或计算机名) 跟踪路由（数据包），参数：“-w数字”用于设置超时间隔。</p>
+<p>　　ping ip(或域名) 向对方主机发送默认大小为32字节的数据，参数：“-l[空格]数据包大小”；“-n发送数据次数”；“-t”指一直ping。</p>
+<p>　　ping -t -l 65550 ip 死亡之ping(发送大于64K的文件并一直ping就成了死亡之ping)</p>
+<p>　　ipconfig (winipcfg) 用于windows NT及XP(windows 95 98)查看本地ip地址，ipconfig可用参数“&#x2F;all”显示全部配置信息</p>
+<p>　　tlist -t 以树行列表显示进程(为系统的附加工具，默认是没有安装的，在安装目录的Support&#x2F;tools文件夹内)</p>
+<p>　　kill -F 进程名 加-F参数后强制结束某进程(为系统的附加工具，默认是没有安装的，在安装目录的Support&#x2F;tools文件夹内)</p>
+<p>　　del -F 文件名  加-F参数后就可删除只读文件,&#x2F;AR、&#x2F;AH、&#x2F;AS、&#x2F;AA分别表示删除只读、隐藏、系统、存档文件，&#x2F;A-R、&#x2F;A-H、&#x2F;A-S、&#x2F;A-A表示删除除只读、隐藏、系统、存档以外的文件。例如“DEL&#x2F;AR  *.*”表示删除当前目录下所有只读文件，“DEL&#x2F;A-S *.*”表示删除当前目录下除系统文件以外的所有文件</p>
+<p>　　del &#x2F;S &#x2F;Q 目录 或用：rmdir &#x2F;s &#x2F;Q 目录 &#x2F;S删除目录及目录下的所有子目录和文件。同时使用参数&#x2F;Q 可取消删除操作时的系统确认就直接删除。（二个命令作用相同）</p>
+<p>　　move 盘符路径要移动的文件名　存放移动文件的路径移动后文件名 移动文件,用参数&#x2F;y将取消确认移动目录存在相同文件的提示就直接覆盖</p>
+<p>　　fc one.txt two.txt &gt; 3st.txt 对比二个文件并把不同之处输出到3st.txt文件中，”&gt; “和”&gt; &gt;” 是重定向命令</p>
+<p>　　at id号 开启已注册的某个计划任务</p>
+<p>　　at &#x2F;delete 停止所有计划任务，用参数&#x2F;yes则不需要确认就直接停止</p>
+<p>　　at id号 &#x2F;delete 停止某个已注册的计划任务</p>
+<p>　　at 查看所有的计划任务</p>
+<p>　　at ip time 程序名(或一个命令) &#x2F;r 在某时间运行对方某程序并重新启动计算机</p>
+<p>　　finger username @host 查看最近有哪些用户登陆</p>
+<p>　　telnet ip 端口 远和登陆服务器,默认端口为23</p>
+<p>　　open ip 连接到IP（属telnet登陆后的命令）</p>
+<p>　　telnet 在本机上直接键入telnet 将进入本机的telnet</p>
+<p>　　copy 路径文件名1　路径文件名2 &#x2F;y 复制文件1到指定的目录为文件2，用参数&#x2F;y就同时取消确认你要改写一份现存目录文件</p>
+<p>　　copy c:srv.exe ipadmin$ 复制本地c:srv.exe到对方的admin下</p>
+<p>　　copy 1st.jpg&#x2F;b+2st.txt&#x2F;a 3st.jpg 将2st.txt的内容藏身到1st.jpg中生成3st.jpg新的文件，注：2st.txt文件头要空三排，参数：&#x2F;b指二进制文件，&#x2F;a指ASCLL格式文件</p>
+<p>　　copy ipadmin$svv.exe c: 或:copyipadmin$<em>.</em> 复制对方admini$共享下的srv.exe文件（所有文件）至本地C：</p>
+<p>　　xcopy 要复制的文件或目录树　目标地址目录名 复制文件和目录树，用参数&#x2F;Y将不提示覆盖相同文件</p>
+<p>　　用参数&#x2F;e才可连目录下的子目录一起复制到目标地址下。</p>
+<p>　　tftp -i 自己IP(用肉机作跳板时这用肉机IP) get server.exec:server.exe  登陆后，将“IP”的server.exe下载到目标主机c:server.exe 参数：-i指以二进制模式传送，如传送exe文件时用，如不加-i  则以ASCII模式（传送文本文件模式）进行传送</p>
+<p>　　tftp -i 对方IP　put c:server.exe 登陆后，上传本地c:server.exe至主机</p>
+<p>　　ftp ip 端口 用于上传文件至服务器或进行文件操作，默认端口为21。bin指用二进制方式传送（可执行文件进）；默认为ASCII格式传送(文本文件时)</p>
+<p>　　route print 显示出IP路由，将主要显示网络地址Network addres，子网掩码Netmask，网关地址Gateway addres，接口地址Interface</p>
+<p>　　arp 查看和处理ARP缓存，ARP是名字解析的意思，负责把一个IP解析成一个物理性的MAC地址。arp -a将显示出全部信息</p>
+<p>　　start 程序名或命令 &#x2F;max 或&#x2F;min 新开一个新窗口并最大化（最小化）运行某程序或命令</p>
+<p>　　mem 查看cpu使用情况</p>
+<p>　　attrib 文件名(目录名) 查看某文件（目录）的属性</p>
+<p>　　attrib 文件名 -A -R -S -H 或 +A +R +S +H 去掉(添加)某文件的 存档，只读，系统，隐藏 属性；用+则是添加为某属性</p>
+<p>　　dir 查看文件，参数：&#x2F;Q显示文件及目录属系统哪个用户，&#x2F;T:C显示文件创建时间，&#x2F;T:A显示文件上次被访问时间，&#x2F;T:W上次被修改时间</p>
+<p>　　date &#x2F;t 、 time &#x2F;t 使用此参数即“DATE&#x2F;T”、“TIME&#x2F;T”将只显示当前日期和时间，而不必输入新日期和时间</p>
+<p>　　set 指定环境变量名称&#x3D;要指派给变量的字符 设置环境变量</p>
+<p>　　set 显示当前所有的环境变量</p>
+<p>　　set p(或其它字符) 显示出当前以字符p(或其它字符)开头的所有环境变量</p>
+<p>　　pause 暂停批处理程序，并显示出：请按任意键继续….</p>
+<p>　　if 在批处理程序中执行条件处理（更多说明见if命令及变量）</p>
+<p>　　goto 标签 将cmd.exe导向到批处理程序中带标签的行（标签必须单独一行，且以冒号打头，例如：“：start”标签）</p>
+<p>　　call 路径批处理文件名 从批处理程序中调用另一个批处理程序 （更多说明见call &#x2F;?）</p>
+<p>　　for 对一组文件中的每一个文件执行某个特定命令（更多说明见for命令及变量）</p>
+<p>　　echo on或off 打开或关闭echo，仅用echo不加参数则显示当前echo设置</p>
+<p>　　echo 信息 在屏幕上显示出信息</p>
+<p>　　echo 信息 &gt;&gt; pass.txt 将”信息”保存到pass.txt文件中</p>
+<p>　　findstr “Hello” aa.txt 在aa.txt文件中寻找字符串hello</p>
+<p>　　find 文件名 查找某文件</p>
+<p>　　title 标题名字 更改CMD窗口标题名字</p>
+<p>　　color 颜色值 设置cmd控制台前景和背景颜色；0&#x3D;黑、1&#x3D;蓝、2&#x3D;绿、3&#x3D;浅绿、4&#x3D;红、5&#x3D;紫、6&#x3D;黄、7&#x3D;白、8&#x3D;灰、9&#x3D;淡蓝、A&#x3D;淡绿、B&#x3D;淡浅绿、C&#x3D;淡红、D&#x3D;淡紫、E&#x3D;淡黄、F&#x3D;亮白</p>
+<p>　　prompt 名称 更改cmd.exe的显示的命令提示符(把C:、D:统一改为：EntSky )</p>
+<p>　　ver 在DOS窗口下显示版本信息</p>
+<p>　　winver 弹出一个窗口显示版本信息（内存大小、系统版本、补丁版本、计算机名）</p>
+<p>　　format 盘符 &#x2F;FS:类型 格式化磁盘,类型:FAT、FAT32、NTFS ,例：Format D: &#x2F;FS:NTFS</p>
+<p>　　md　目录名 创建目录</p>
+<p>　　replace 源文件　要替换文件的目录 替换文件</p>
+<p>　　ren 原文件名　新文件名 重命名文件名</p>
+<p>　　tree 以树形结构显示出目录，用参数-f 将列出第个文件夹中文件名称</p>
+<p>　　type 文件名 显示文本文件的内容</p>
+<p>　　more 文件名 逐屏显示输出文件</p>
+<p>　　doskey 要锁定的命令&#x3D;字符</p>
+<p>　　doskey 要解锁命令&#x3D; 为DOS提供的锁定命令(编辑命令行，重新调用win2k命令，并创建宏)。如：锁定dir命令：doskey dir&#x3D;entsky (不能用doskey dir&#x3D;dir)；解锁：doskey dir&#x3D;</p>
+<p>　　taskmgr 调出任务管理器</p>
+<p>　　chkdsk &#x2F;F D: 检查磁盘D并显示状态报告；加参数&#x2F;f并修复磁盘上的错误</p>
+<p>　　tlntadmn telnt服务admn,键入tlntadmn选择3，再选择8,就可以更改telnet服务默认端口23为其它任何端口</p>
+<p>　　exit 退出cmd.exe程序或目前，用参数&#x2F;B则是退出当前批处理脚本而不是cmd.exe</p>
+<p>　　path 路径可执行文件的文件名 为可执行文件设置一个路径。</p>
+<p>　　cmd 启动一个win2K命令解释窗口。参数：&#x2F;eff、&#x2F;en 关闭、开启命令扩展；更我详细说明见cmd &#x2F;?</p>
+<p>　　regedit &#x2F;s 注册表文件名 导入注册表；参数&#x2F;S指安静模式导入，无任何提示；</p>
+<p>　　regedit &#x2F;e 注册表文件名 导出注册表</p>
+<p>　　cacls 文件名　参数 显示或修改文件访问控制列表（ACL）——针对NTFS格式时。参数：&#x2F;D 用户名:设定拒绝某用户访问；&#x2F;P  用户名:perm 替换指定用户的访问权限；&#x2F;G 用户名:perm 赋予指定用户访问权限；Perm 可以是: N 无，R 读取， W 写入， C  更改(写入)，F 完全控制；例：cacls D: est.txt &#x2F;D pub 设定d: est.txt拒绝pub用户访问。</p>
+<p>　　cacls 文件名 查看文件的访问用户权限列表</p>
+<p>　　REM 文本内容 在批处理文件中添加注解</p>
+<p>　　netsh 查看或更改本地网络配置情况</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>return 0</title>
+    <url>/2023/03/05/return%200/</url>
+    <content><![CDATA[<p>C语言为什么要return 0(个人看法)</p>
+<span id="more"></span>
+
+<p>c语言中的return 0有什么用?<br>用return这种形式就能定义返回值, return 0可以 终止 main() 函数，并返回值 0。<br>return 0 代表程序正常退出，return 1代表程序异常退出！<br>使用return 语句可以返回一个变量内的值或一个指针，也可用return0，表示返回为空。<br>return 代表调到函数外，<br><strong>return 0代表函数正常终止</strong><br><strong>return 1代表函数非正常终止</strong><br>而我觉得还有一个作用就是return之后你至少知道代码成功运行到最后一行，中间没有异常中止，并且return 关键字的还有一个作用是返回程序流程的控制权！其副作用是返回一个值。</p>
 ]]></content>
   </entry>
   <entry>
@@ -1126,390 +1533,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/01/27/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
- <span id="more"></span>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>math faction</title>
-    <url>/2023/02/25/math%20faction/</url>
-    <content><![CDATA[<p>头文件math.h</p>
-<p>实数绝对值函数</p>
-<h2 id="➢指数函数"><a href="#➢指数函数" class="headerlink" title="➢指数函数"></a>➢指数函数</h2><p>double fabs(double x);</p>
-<p>double exp(double x);</p>
-<p>求实数x的绝对值|x|</p>
-<p>求e的实数x次幂ex</p>
-<p>例: fabs(3.5)的值为3.5</p>
-<p>例: exp(1.0)的值约为2.71828</p>
-<p>fabs(-3.5)的值为3.5</p>
-<p>exp(2. 5)的值约为12.1825</p>
-<h2 id="平方根函数"><a href="#平方根函数" class="headerlink" title="平方根函数"></a>平方根函数</h2><p>double sqrt(double x);</p>
-<h2 id="➢对数函数"><a href="#➢对数函数" class="headerlink" title="➢对数函数"></a>➢对数函数</h2><p>double log(double x);</p>
-<p>求实数x的平方根vx</p>
-<p>求以e为底正实数x的对数Inx</p>
-<p>例: sqrt(100.0)的值约为10.0</p>
-<p>double log10(doublex);</p>
-<p>sqrt(12.96)的值约为3.6</p>
-<p>求以10为底正实数x的对数lgx</p>
-<h2 id="➢幂函数"><a href="#➢幂函数" class="headerlink" title="➢幂函数"></a>➢幂函数</h2><p>例: log(2.718283)的值约为1.0</p>
-<p>double pow(double x, doubley); .</p>
-<p>log(45.7)的值约为3.822098</p>
-<p>求实数x的实数y次幂x</p>
-<p>log10(1000.0)的值约为3.0</p>
-<p>例: pow(2.0, 10.0)的值约为1024.0</p>
-<p>log10(6.022e23)的值约为23.7797</p>
-<p>pow(4.3, 2.9)的值约为68.7161</p>
-<p>注: C只提供以e和10为底数的对数函数。当计算</p>
-<p>以其它实数为底数的对数时，可利用换底公式。</p>
-<h2 id="➢双曲函数"><a href="#➢双曲函数" class="headerlink" title="➢双曲函数"></a>➢双曲函数</h2><p>ex-e-x<br>shx或sinhx<br>double sinh(double x);<br>sinh x&#x3D;<br>2<br>chx或cosh xdouble cosh(double x);<br>thx或tanhx<br>double tanh(double x);<br>e*+ e-x<br>例: sinh(1.0)的值约为1.175201<br>coshx&#x3D; -<br>2<br>cosh(1.0)的值约为1.543081<br>tanh(1.0)的值约为0.7615942<br>ex- e-x</p>
-<h2 id="➢取整函数"><a href="#➢取整函数" class="headerlink" title="➢取整函数"></a>➢取整函数</h2><p>tanh x &#x3D;ex+ e-x<br>[x1 double ceil(double x);<br>. lx」<br>double floor(double x);<br>例: ceil(1.1)的值约为2.0, ceil(-1.1)的值约为-1.0<br>floor(1.1)的值约为1.0, floor(-1.1)的值约为-2.0<br>ceil(1.0)和floor(1.0)的值都约为1.0, ceil(-1.0)和floor(-1.0)的值都约为-1.0</p>
-<h2 id="➢取模函数"><a href="#➢取模函数" class="headerlink" title="➢取模函数"></a>➢取模函数</h2><p>xmody<br>double fmod(double x, double y);<br>例: fmod(14.0, 3.0)的值约为2.0, fmod(-14.0, -3.0)的值约为-2.0<br>fmod(-6.5, -3.2)的值约为-0.1, fmod(6.5, -3.2)的值约为0.1</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>c++的STL</title>
-    <url>/2023/03/15/STL/</url>
-    <content><![CDATA[<h1 id="c-的STL"><a href="#c-的STL" class="headerlink" title="c++的STL"></a>c++的STL</h1><h2 id="sort排序"><a href="#sort排序" class="headerlink" title="sort排序"></a>sort排序</h2><h3 id="用法一"><a href="#用法一" class="headerlink" title="用法一"></a>用法一</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[] = &#123;<span class="number">15</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">6</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">sort</span>(a,a+<span class="number">7</span>);</span><br></pre></td></tr></table></figure>
-
-<h3 id="用法二-从大到小"><a href="#用法二-从大到小" class="headerlink" title="用法二 -从大到小"></a>用法二 -从大到小</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[] = &#123;<span class="number">15</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">2</span> ,<span class="number">6</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">sort</span>(a+<span class="number">1</span>,a+<span class="number">4</span>,<span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;());</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-<h3 id="用法三-结构体"><a href="#用法三-结构体" class="headerlink" title="用法三-结构体"></a>用法三-结构体</h3><p>sort(数组名+n1，数组名+n2,排序规则结构名());</p>
-<p>排序规则结构的定义方式</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> 结构名</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">​     <span class="function"><span class="type">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">( <span class="type">const</span> T &amp; a1,<span class="type">const</span> T &amp; a2)</span> <span class="type">const</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//若a1在a2前面，则返回true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//eles返回false</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>CMD</title>
-    <url>/2023/03/01/cmd/</url>
-    <content><![CDATA[<p>链接：<a href="https://link.zhihu.com/?target=https://www.cnblogs.com/walkwaters/p/12153364.html">CMD命令大全</a><br>CMD命令：开始－&gt;运行－&gt;键入cmd或command（在命令行里可以看到系统版本、文件系统版本）<br>chcp 修改默认字符集<br>chcp 936默认中文<br>chcp 65001</p>
-<ol>
-<li>appwiz.cpl：程序和功能</li>
-<li>calc：启动计算器</li>
-<li>chkdsk.exe：Chkdsk磁盘检查（管理员身份运行命令提示符）</li>
-<li>cleanmgr: 打开磁盘清理工具</li>
-<li>cmd.exe：CMD命令提示符</li>
-<li>自动关机命令<br>　 Shutdown -s -t 600：表示600秒后自动关机<br>　 <a href="https://www.zhihu.com/search?q=shutdown%20-a&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">shutdown -a</a> ：可取消定时关机<br>　 Shutdown -r -t 600：表示600秒后自动重启</li>
-<li>CompMgmtLauncher：计算机管理</li>
-<li>compmgmt.msc：计算机管理</li>
-<li>credwiz：备份或还原储存的用户名和密码</li>
-<li>control：控制面版</li>
-<li>dcomcnfg：打开系统组件服务</li>
-<li>devmgmt.msc：设备管理器</li>
-<li>desk.cpl：屏幕分辨率</li>
-<li>dfrgui：优化驱动器   Windows 7→dfrg.msc：磁盘碎片整理程序</li>
-<li>dialer：电话拨号程序</li>
-<li>diskmgmt.msc：磁盘管理</li>
-<li>dvdplay：DVD播放器</li>
-<li>dxdiag：检查DirectX信息</li>
-<li>eudcedit：造字程序</li>
-<li>eventvwr：事件查看器</li>
-<li>explorer：打开资源管理器</li>
-<li>Firewall.cpl：Windows防火墙</li>
-<li>fsmgmt.msc：共享文件夹管理器</li>
-<li><span id="more"></span></li>
-<li>gpedit.msc：组策略</li>
-<li>hdwwiz.cpl：设备管理器</li>
-<li><a href="https://www.zhihu.com/search?q=inetcpl.cpl&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">inetcpl.cpl</a>：Internet属性</li>
-<li>intl.cpl：区域</li>
-<li>iexpress：木马捆绑工具，系统自带</li>
-<li>joy.cpl：游戏控制器</li>
-<li>logoff：注销命令</li>
-<li>lusrmgr.msc：本地用户和组</li>
-<li>lpksetup：语言包安装&#x2F;删除向导，安装向导会提示下载语言包</li>
-<li>lusrmgr.msc：本机用户和组</li>
-<li>main.cpl：鼠标属性</li>
-<li>mmsys.cpl：声音</li>
-<li>mem.exe：显示内存使用情况（如果直接运行无效，可以先管理员身份运行命令提示符，在命令提示符里输入mem.exe&gt;d:a.txt 即可打开d盘查看a.txt，里面的就是内存使用情况了。当然什么盘什么文件名可自己决定。）</li>
-<li>mmc：打开控制台</li>
-<li>mobsync：同步命令</li>
-<li>Msconfig.exe：系统配置实用程序</li>
-<li>msdt：微软支持诊断工具</li>
-<li>msinfo32：系统信息</li>
-<li>mspaint：画图</li>
-<li>Msra：Windows远程协助</li>
-<li>mstsc：远程桌面连接</li>
-<li>NAPCLCFG.MSC：客户端配置</li>
-<li>ncpa.cpl：网络连接</li>
-<li>narrator：屏幕“讲述人”</li>
-<li>Netplwiz：高级用户帐户控制面板，设置登陆安全相关的选项</li>
-<li>netstat : an(TC)命令检查接口</li>
-<li>notepad：打开记事本</li>
-<li>Nslookup：IP地址侦测器</li>
-<li>odbcad32：ODBC数据源管理器</li>
-<li>OptionalFeatures：打开“打开或关闭Windows功能”对话框</li>
-<li>osk：打开屏幕键盘</li>
-<li>perfmon.msc：计算机性能监测器</li>
-<li>perfmon：计算机性能监测器</li>
-<li>PowerShell：提供强大远程处理能力</li>
-<li>printmanagement.msc：打印管理</li>
-<li>powercfg.cpl：电源选项</li>
-<li>psr：问题步骤记录器</li>
-<li>Rasphone：网络连接</li>
-<li>Recdisc：创建系统修复光盘</li>
-<li>Resmon：资源监视器</li>
-<li>Rstrui：系统还原</li>
-<li>regedit.exe：注册表</li>
-<li>regedt32：注册表编辑器</li>
-<li>rsop.msc：组策略结果集</li>
-<li>sdclt：备份状态与配置，就是查看系统是否已备份</li>
-<li>secpol.msc：本地安全策略</li>
-<li>services.msc：本地服务设置</li>
-<li>sfc &#x2F;scannow：扫描错误并复原&#x2F;windows文件保护</li>
-<li>sfc.exe：系统文件检查器</li>
-<li>shrpubw：创建共享文件夹</li>
-<li>sigverif：文件签名验证程序</li>
-<li>slui：Windows激活，查看系统激活信息</li>
-<li>slmgr.vbs -dlv ：显示详细的许可证信息<br>　 slmgr.vbs -dli ：显示许可证信息<br>　 <a href="https://www.zhihu.com/search?q=slmgr.vbs%20-xpr&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">slmgr.vbs -xpr</a> ：当前许可证截止日期<br>　 slmgr.vbs -dti ：显示安装ID 以进行脱机激<br>　 <a href="https://www.zhihu.com/search?q=slmgr.vbs%20-ipk&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">slmgr.vbs -ipk</a> ：(Product Key)安装产品密钥<br>　 slmgr.vbs -ato ：激活Windows<br>　 <a href="https://www.zhihu.com/search?q=slmgr.vbs%20-cpky&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">slmgr.vbs -cpky</a> ：从注册表中清除产品密钥（防止泄露引起的攻击）<br>　 slmgr.vbs -ilc ：(License file)安装许可证<br>　 <a href="https://www.zhihu.com/search?q=slmgr.vbs%20-upk&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">slmgr.vbs -upk</a> ：卸载产品密钥<br>　 slmgr.vbs -skms ：(name[ort] )批量授权</li>
-<li>snippingtool：截图工具，支持无规则截图</li>
-<li><a href="https://www.zhihu.com/search?q=soundrecorder&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">soundrecorder</a>：录音机，没有录音时间的限制</li>
-<li>StikyNot：便笺</li>
-<li>sysdm.cpl：系统属性</li>
-<li>sysedit：系统配置编辑器</li>
-<li>syskey：系统加密，一旦加密就不能解开，保护系统的双重密码</li>
-<li>taskmgr：任务管理器（旧版）</li>
-<li>TM任务管理器（新版）</li>
-<li>taskschd.msc：任务计划程序</li>
-<li>timedate.cpl：日期和时间</li>
-<li>UserAccountControlSettings用户账户控制设置</li>
-<li>utilman：辅助工具管理器</li>
-<li>wf.msc：高级安全Windows防火墙</li>
-<li>WFS：Windows传真和扫描</li>
-<li>wiaacmgr：扫描仪和照相机向导</li>
-<li>winver：关于Windows</li>
-<li>wmimgmt.msc：打开windows管理体系结构(WMI)</li>
-<li>write：写字板</li>
-<li>wscui.cpl：操作中心</li>
-<li>wscript：windows脚本宿主设置</li>
-<li>wuapp：Windows更新</li>
-</ol>
-<!-- more -->
-
-<p>　　1. gpedit.msc—–组策略</p>
-<p>　　2. sndrec32——-录音机</p>
-<p>　　3. Nslookup——-IP地址侦测器 ，是一个 监测网络中 DNS 服务器是否能正确实现域名解析的命令行工具。 它在 Windows NT&#x2F;2000&#x2F;XP 中均可使用 , 但在 Windows 98 中却没有集成这一个工具。</p>
-<p>　　4. explorer——-打开资源管理器</p>
-<p>　　5. logoff———注销命令</p>
-<p>　　6. shutdown——-60秒倒计时关机命令</p>
-<p>　　7. lusrmgr.msc—-本机用户和组</p>
-<p>　　8. services.msc—本地服务设置</p>
-<p>　　9. oobe&#x2F;msoobe &#x2F;a—-检查XP是否激活</p>
-<p>　　10. notepad——–打开记事本</p>
-<p>　　11. cleanmgr——-垃圾整理</p>
-<p>　　12. net start messenger—-开始信使服务</p>
-<p>　　13. compmgmt.msc—计算机管理</p>
-<p>　　14. net stop messenger—–停止信使服务</p>
-<p>　　15. conf———–启动netmeeting</p>
-<p>　　16. dvdplay——–DVD播放器</p>
-<p>　　17. charmap——–启动字符映射表</p>
-<p>　　18. diskmgmt.msc—磁盘管理实用程序</p>
-<p>　　19. calc———–启动计算器</p>
-<p>　　20. dfrg.msc——-磁盘碎片整理程序</p>
-<p>　　21. chkdsk.exe—–Chkdsk磁盘检查</p>
-<p>　　22. devmgmt.msc— 设备管理器</p>
-<p>　　23. regsvr32 &#x2F;u *.dll—-停止dll文件运行</p>
-<p>　　24. drwtsn32—— 系统医生</p>
-<p>　　25. rononce -p—-15秒关机</p>
-<p>　　26. dxdiag———检查DirectX信息</p>
-<p>　　27. regedt32——-注册表编辑器</p>
-<p>　　28. Msconfig.exe—系统配置实用程序</p>
-<p>　　29. rsop.msc——-组策略结果集</p>
-<p>　　30. mem.exe——–显示内存使用情况</p>
-<p>　　31. regedit.exe—-注册表</p>
-<p>　　32. winchat——–XP自带局域网聊天</p>
-<p>　　33. progman——–程序管理器</p>
-<p>　　34. winmsd———系统信息</p>
-<p>　　35. perfmon.msc—-计算机性能监测程序</p>
-<p>　　36. winver———检查Windows版本</p>
-<p>　　37. sfc &#x2F;scannow—–扫描错误并复原</p>
-<p>　　38. <a href="https://www.zhihu.com/search?q=taskmgr&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">taskmgr</a>—–任务管理器（2000&#x2F;xp&#x2F;2003</p>
-<p>　　39. winver———检查Windows版本</p>
-<p>　　40. wmimgmt.msc—-打开windows管理体系结构(WMI)</p>
-<p>　　41. wupdmgr——–windows更新程序</p>
-<p>　　42. wscript——–windows脚本宿主设置</p>
-<p>　　43. write———-写字板</p>
-<p>　　44. winmsd———系统信息</p>
-<p>　　45. wiaacmgr——-扫描仪和照相机向导</p>
-<p>　　46. winchat——–XP自带局域网聊天</p>
-<p>　　47. mem.exe——–显示内存使用情况</p>
-<p>　　48. Msconfig.exe—系统配置实用程序</p>
-<p>　　49. mplayer2——-简易widnows media player</p>
-<p>　　50. mspaint——–画图板</p>
-<p>　　51. mstsc———-远程桌面连接</p>
-<p>　　52. mplayer2——-媒体播放机</p>
-<p>　　53. magnify——–放大镜实用程序</p>
-<p>　　54. mmc————打开控制台</p>
-<p>　　55. mobsync——–同步命令</p>
-<p>　　56. dxdiag———检查DirectX信息</p>
-<p>　　57. iexpress——-木马捆绑工具，系统自带 58. fsmgmt.msc—–共享文件夹管理器</p>
-<p>　　58. utilman——–辅助工具管理器</p>
-<p>　　59. diskmgmt.msc—磁盘管理实用程序</p>
-<p>　　60. dcomcnfg——-打开系统组件服务</p>
-<p>　　61. ddeshare——-打开DDE共享设置</p>
-<p>　　62.  osk————打开屏幕键盘</p>
-<p>　　63.  odbcad32——-ODBC数据源管理器</p>
-<p>　　64.  oobe&#x2F;msoobe &#x2F;a—-检查XP是否激活 114. logoff———注销命令</p>
-<p>　　65. notepad——–打开记事本</p>
-<p>　　66. nslookup——-网络管理的工具向导</p>
-<p>　　67. ntbackup——-系统备份和还原</p>
-<p>　　68. narrator——-屏幕“讲述人”</p>
-<p>　　69. ntmsmgr.msc—-移动存储管理器</p>
-<p>　　70. ntmsoprq.msc—移动存储管理员操作请求</p>
-<p>　　71. netstat -an—-(TC)命令检查接口</p>
-<p>　　72. syncapp——–创建一个公文包</p>
-<p>　　73. sysedit——–系统配置编辑器</p>
-<p>　　74. sigverif——-文件签名验证程序</p>
-<p>　　75. ciadv.msc——索引服务程序</p>
-<p>　　76. shrpubw——–创建共享文件夹</p>
-<p>　　77. secpol.msc—–本地安全策略</p>
-<p>　　78. syskey———系统加密，一旦加密就不能解开，保护windows xp系统的双重密码</p>
-<p>　　79. services.msc—本地服务设置</p>
-<p>　　80. Sndvol32——-音量控制程序</p>
-<p>　　81. sfc.exe——–系统文件检查器</p>
-<p>　　82. sfc &#x2F;scannow—windows文件保护</p>
-<p>　　83. ciadv.msc——索引服务程序</p>
-<p>　　84. tourstart——xp简介（安装完成后出现的漫游xp程序）</p>
-<p>　　86. taskmgr——–任务管理器</p>
-<p>　　87. eventvwr——-事件查看器</p>
-<p>　　88. eudcedit——-造字程序</p>
-<p>　　89. compmgmt.msc—计算机管理</p>
-<p>　　90. packager——-对象包装程序</p>
-<p>　　91. perfmon.msc—-计算机性能监测程序</p>
-<p>　　92. charmap——–启动字符映射表</p>
-<p>　　93. cliconfg——-SQL SERVER 客户端网络实用程序</p>
-<p>　　94. Clipbrd——–剪贴板查看器</p>
-<p>　　95. conf———–启动<a href="https://www.zhihu.com/search?q=netmeeting&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">netmeeting</a></p>
-<p>　　96. certmgr.msc—-证书管理实用程序</p>
-<p>　　97. regsvr32 &#x2F;u *.dll—-停止dll文件运行</p>
-<p>　　98. regsvr32 &#x2F;u zipfldr.dll——取消ZIP支持</p>
-<p>　　99. cmd.exe——–CMD命令提示符</p>
-<p>　　100. chkdsk.exe—–Chkdsk磁盘检查</p>
-<p>1.磁盘操作，<br>　　fdisk 隐含 参数 &#x2F;mbr 重建主引导记录fdisk &#x2F;mbr 重建主引导记录<br>　　fdisk 在DOS7.0以后增加了&#x2F;cmbr参数，可在挂接多个物理硬盘时，重建排序在后面的硬盘的主引导记录，例如：fdisk &#x2F;cmbr 2，可重写第二个硬盘的主引导记录。（在使用时要十分小心，避免把好的硬盘引导记录损坏）<br>　　format 参数： &#x2F;q 快速格式化 &#x2F;u 不可恢复 &#x2F;autotest 不提示 &#x2F;s 创建 MS-DOS 引导盘 format c: &#x2F;q &#x2F;u &#x2F;autotest<br>2.目录操作<br>　　DIR [目录名或文件名] [&#x2F;S][&#x2F;W][&#x2F;P][&#x2F;A] 列出目录 参数: &#x2F;s 查找子目录&#x2F;w 只显示文件名 &#x2F;p 分页&#x2F;a 显示隐藏文件 DIR format.exe &#x2F;s查找该盘的format.exe文件并报告位置<br>　　MD (MKDIR) [目录名] 创建目录 MKDIR HELLOWORLD 创建HELLOWORLD目录<br>　　CD (CHDIR) [目录名] PS:可以使用相对目录或绝对目录 进入目录 CD AA 进入当前文件夹下的AA目录,cd .. 进入上一个文件夹cd \返回根目录;cd c:\windows 进入c:\windows文件夹<br>　　RD ( RMDIR) [目录名] 删除目录 RD HELLOWORLD 删除HELLOWORLD目录<br>3.文件操作<br>　　删除目录及其文件： rmdir [目录名或文件名] [&#x2F;S][&#x2F;W][&#x2F;P][&#x2F;A] 。例 rmdir c:\qqdownload&#x2F;s 删除C盘的qqdownload目录。<br>　　del [目录名或文件名] [&#x2F;f][&#x2F;s][&#x2F;q] 删除 参数:&#x2F;f 删除只读文件&#x2F;s 删除该目录及其下的所有内容 &#x2F;q 删除前不确认<br>　　del c:\del &#x2F;s &#x2F;q 自动删除c盘的del目录。<br>　　copy [源文件或目录] [目标目录] 复制文件 copy d:\pwin98*.* c:\presetup 将d盘的pwin98的所有文件复制到c盘的presetup下。<br>　　attrib  [参数][源文件或目录]  文件属性操作命令，attrib命令可以列出或修改磁盘上文件的属性，文件属性包括文档（A）、只读(R)、隐藏(H)、系统(S)，例如：attrib  -h -r -s io.sys  执行这一命令后，将把DOS系统文件io.sys文件的只读、隐藏、系统属性去掉，这时将可以直接通过dir命令看到io.sys文件。attrib  +h +r +s autoexec.bat将为自动批处理文件增加以上属性。<br>4.内存操作<br>　　debug 调试内存 参数 -w [文件名] 写入二进制文件 -o [地址1] [地址2] 输出内存 -q 退出 exp:o 70 10[return] o 71 01<br>　　[return] 01[return] q[return] DOS下通过写70h&#x2F;71h PORT改变BIOS密码在CMOS中存放的对应位置的值,用以清除AWARD BIOS密码.debug 还可以破解硬盘保护卡等,但只可以在纯DOS下用。<br>5.分区操作<br>　　给磁盘分区，一般都会分成四个区，磁盘分区由主分区、扩展分区、逻辑分区组成。<br>　　PQ和Acronis  Disk  Director这两个工具都可以在不丢失数据的情况下对分区进行调整大小，以及合并等操作，XP系统的话你用PQ，WIN7系统的话用Acronis  Disk Director  操作基本一样，可以去网上找教程来看看，再不重装系统的情况下都能调整分区大小，但是建议你还是先备份下数据再调整，毕竟对硬盘直接进行的操作有一定的危险性。<br>　　net use ipipc$ “ “ &#x2F;user:” “ 建立IPC空链接</p>
-<p>　　net use ipipc$ “密码” &#x2F;user:”用户名” 建立IPC非空链接</p>
-<p>　　net use h: ipc$ “密码” &#x2F;user:”用户名” 直接登陆后映射对方C：到本地为H:</p>
-<p>　　net use h: ipc$ 登陆后映射对方C：到本地为H:</p>
-<p>　　net use ipipc$ &#x2F;del 删除IPC链接</p>
-<p>　　net use h: &#x2F;del 删除映射对方到本地的为H:的映射</p>
-<p>　　net user 用户名　密码　&#x2F;add 建立用户</p>
-<p>　　net user guest &#x2F;active:yes 激活guest用户</p>
-<p>　　net user 查看有哪些用户</p>
-<p>　　net user 帐户名 查看帐户的属性</p>
-<p>　　net localgroup administrators 用户名 &#x2F;add 把“用户”添加到管理员中使其具有管理员权限</p>
-<p>　　net start 查看开启了哪些服务</p>
-<p>　　net start 服务名　开启服务；(如:net start telnet， net start schedule)</p>
-<p>　　net stop 服务名 停止某服务</p>
-<p>　　net time 目标ip 查看对方时间</p>
-<p>　　net time 目标ip &#x2F;set 设置本地计算机时间与“目标IP”主机的时间同步,加上参数&#x2F;yes可取消确认信息</p>
-<p>　　<a href="https://www.zhihu.com/search?q=net%20view&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">net view</a> 查看本地局域网内开启了哪些共享</p>
-<p>　　net view ip 查看对方局域网内开启了哪些共享</p>
-<p>　　net config 显示系统网络设置</p>
-<p>　　net logoff 断开连接的共享</p>
-<p>　　net pause 服务名 暂停某服务</p>
-<p>　　net send ip “文本信息” 向对方发信息</p>
-<p>　　net ver 局域网内正在使用的网络连接类型和信息</p>
-<p>　　net share 查看本地开启的共享</p>
-<p>　　net share ipc$ 开启ipc$共享</p>
-<p>　　net share ipc$ &#x2F;del 删除ipc$共享</p>
-<p>　　net share c$ &#x2F;del 删除C：共享</p>
-<p>　　net user guest 12345 用guest用户登陆后用将密码改为12345</p>
-<p>　　net password 密码 更改系统登陆密码</p>
-<p>　　netstat -a 查看开启了哪些端口,常用<a href="https://www.zhihu.com/search?q=netstat%20-an&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">netstat -an</a></p>
-<p>　　netstat -n 查看端口的网络连接情况，常用netstat -an</p>
-<p>　　netstat -v 查看正在进行的工作</p>
-<p>　　netstat -p 协议名 例：netstat -p tcq&#x2F;ip 查看某协议使用情况</p>
-<p>　　netstat -s 查看正在使用的所有协议使用情况</p>
-<p>　　nbtstat -A ip 对方136到139其中一个端口开了的话，就可查看对方最近登陆的用户名</p>
-<p>　　tracert -参数 ip(或计算机名) 跟踪路由（数据包），参数：“-w数字”用于设置超时间隔。</p>
-<p>　　ping ip(或域名) 向对方主机发送默认大小为32字节的数据，参数：“-l[空格]数据包大小”；“-n发送数据次数”；“-t”指一直ping。</p>
-<p>　　ping -t -l 65550 ip 死亡之ping(发送大于64K的文件并一直ping就成了死亡之ping)</p>
-<p>　　ipconfig (winipcfg) 用于windows NT及XP(windows 95 98)查看本地ip地址，ipconfig可用参数“&#x2F;all”显示全部配置信息</p>
-<p>　　tlist -t 以树行列表显示进程(为系统的附加工具，默认是没有安装的，在安装目录的Support&#x2F;tools文件夹内)</p>
-<p>　　kill -F 进程名 加-F参数后强制结束某进程(为系统的附加工具，默认是没有安装的，在安装目录的Support&#x2F;tools文件夹内)</p>
-<p>　　del -F 文件名  加-F参数后就可删除只读文件,&#x2F;AR、&#x2F;AH、&#x2F;AS、&#x2F;AA分别表示删除只读、隐藏、系统、存档文件，&#x2F;A-R、&#x2F;A-H、&#x2F;A-S、&#x2F;A-A表示删除除只读、隐藏、系统、存档以外的文件。例如“DEL&#x2F;AR  *.*”表示删除当前目录下所有只读文件，“DEL&#x2F;A-S *.*”表示删除当前目录下除系统文件以外的所有文件</p>
-<p>　　del &#x2F;S &#x2F;Q 目录 或用：rmdir &#x2F;s &#x2F;Q 目录 &#x2F;S删除目录及目录下的所有子目录和文件。同时使用参数&#x2F;Q 可取消删除操作时的系统确认就直接删除。（二个命令作用相同）</p>
-<p>　　move 盘符路径要移动的文件名　存放移动文件的路径移动后文件名 移动文件,用参数&#x2F;y将取消确认移动目录存在相同文件的提示就直接覆盖</p>
-<p>　　fc one.txt two.txt &gt; 3st.txt 对比二个文件并把不同之处输出到3st.txt文件中，”&gt; “和”&gt; &gt;” 是重定向命令</p>
-<p>　　at id号 开启已注册的某个计划任务</p>
-<p>　　at &#x2F;delete 停止所有计划任务，用参数&#x2F;yes则不需要确认就直接停止</p>
-<p>　　at id号 &#x2F;delete 停止某个已注册的计划任务</p>
-<p>　　at 查看所有的计划任务</p>
-<p>　　at ip time 程序名(或一个命令) &#x2F;r 在某时间运行对方某程序并重新启动计算机</p>
-<p>　　finger username @host 查看最近有哪些用户登陆</p>
-<p>　　telnet ip 端口 远和登陆服务器,默认端口为23</p>
-<p>　　open ip 连接到IP（属telnet登陆后的命令）</p>
-<p>　　telnet 在本机上直接键入telnet 将进入本机的telnet</p>
-<p>　　copy 路径文件名1　路径文件名2 &#x2F;y 复制文件1到指定的目录为文件2，用参数&#x2F;y就同时取消确认你要改写一份现存目录文件</p>
-<p>　　copy c:srv.exe ipadmin$ 复制本地c:srv.exe到对方的admin下</p>
-<p>　　copy 1st.jpg&#x2F;b+2st.txt&#x2F;a 3st.jpg 将2st.txt的内容藏身到1st.jpg中生成3st.jpg新的文件，注：2st.txt文件头要空三排，参数：&#x2F;b指二进制文件，&#x2F;a指ASCLL格式文件</p>
-<p>　　copy ipadmin$svv.exe c: 或:copyipadmin$<em>.</em> 复制对方admini$共享下的srv.exe文件（所有文件）至本地C：</p>
-<p>　　xcopy 要复制的文件或目录树　目标地址目录名 复制文件和目录树，用参数&#x2F;Y将不提示覆盖相同文件</p>
-<p>　　用参数&#x2F;e才可连目录下的子目录一起复制到目标地址下。</p>
-<p>　　tftp -i 自己IP(用肉机作跳板时这用肉机IP) get server.exec:server.exe  登陆后，将“IP”的server.exe下载到目标主机c:server.exe 参数：-i指以二进制模式传送，如传送exe文件时用，如不加-i  则以ASCII模式（传送文本文件模式）进行传送</p>
-<p>　　tftp -i 对方IP　put c:server.exe 登陆后，上传本地c:server.exe至主机</p>
-<p>　　ftp ip 端口 用于上传文件至服务器或进行文件操作，默认端口为21。bin指用二进制方式传送（可执行文件进）；默认为ASCII格式传送(文本文件时)</p>
-<p>　　route print 显示出IP路由，将主要显示网络地址Network addres，子网掩码Netmask，网关地址Gateway addres，接口地址Interface</p>
-<p>　　arp 查看和处理ARP缓存，ARP是名字解析的意思，负责把一个IP解析成一个物理性的MAC地址。arp -a将显示出全部信息</p>
-<p>　　start 程序名或命令 &#x2F;max 或&#x2F;min 新开一个新窗口并最大化（最小化）运行某程序或命令</p>
-<p>　　mem 查看cpu使用情况</p>
-<p>　　attrib 文件名(目录名) 查看某文件（目录）的属性</p>
-<p>　　attrib 文件名 -A -R -S -H 或 +A +R +S +H 去掉(添加)某文件的 存档，只读，系统，隐藏 属性；用+则是添加为某属性</p>
-<p>　　dir 查看文件，参数：&#x2F;Q显示文件及目录属系统哪个用户，&#x2F;T:C显示文件创建时间，&#x2F;T:A显示文件上次被访问时间，&#x2F;T:W上次被修改时间</p>
-<p>　　date &#x2F;t 、 time &#x2F;t 使用此参数即“DATE&#x2F;T”、“TIME&#x2F;T”将只显示当前日期和时间，而不必输入新日期和时间</p>
-<p>　　set 指定环境变量名称&#x3D;要指派给变量的字符 设置环境变量</p>
-<p>　　set 显示当前所有的环境变量</p>
-<p>　　set p(或其它字符) 显示出当前以字符p(或其它字符)开头的所有环境变量</p>
-<p>　　pause 暂停批处理程序，并显示出：请按任意键继续….</p>
-<p>　　if 在批处理程序中执行条件处理（更多说明见if命令及变量）</p>
-<p>　　goto 标签 将cmd.exe导向到批处理程序中带标签的行（标签必须单独一行，且以冒号打头，例如：“：start”标签）</p>
-<p>　　call 路径批处理文件名 从批处理程序中调用另一个批处理程序 （更多说明见call &#x2F;?）</p>
-<p>　　for 对一组文件中的每一个文件执行某个特定命令（更多说明见for命令及变量）</p>
-<p>　　echo on或off 打开或关闭echo，仅用echo不加参数则显示当前echo设置</p>
-<p>　　echo 信息 在屏幕上显示出信息</p>
-<p>　　echo 信息 &gt;&gt; pass.txt 将”信息”保存到pass.txt文件中</p>
-<p>　　findstr “Hello” aa.txt 在aa.txt文件中寻找字符串hello</p>
-<p>　　find 文件名 查找某文件</p>
-<p>　　title 标题名字 更改CMD窗口标题名字</p>
-<p>　　color 颜色值 设置cmd控制台前景和背景颜色；0&#x3D;黑、1&#x3D;蓝、2&#x3D;绿、3&#x3D;浅绿、4&#x3D;红、5&#x3D;紫、6&#x3D;黄、7&#x3D;白、8&#x3D;灰、9&#x3D;淡蓝、A&#x3D;淡绿、B&#x3D;淡浅绿、C&#x3D;淡红、D&#x3D;淡紫、E&#x3D;淡黄、F&#x3D;亮白</p>
-<p>　　prompt 名称 更改cmd.exe的显示的命令提示符(把C:、D:统一改为：EntSky )</p>
-<p>　　ver 在DOS窗口下显示版本信息</p>
-<p>　　winver 弹出一个窗口显示版本信息（内存大小、系统版本、补丁版本、计算机名）</p>
-<p>　　format 盘符 &#x2F;FS:类型 格式化磁盘,类型:FAT、FAT32、NTFS ,例：Format D: &#x2F;FS:NTFS</p>
-<p>　　md　目录名 创建目录</p>
-<p>　　replace 源文件　要替换文件的目录 替换文件</p>
-<p>　　ren 原文件名　新文件名 重命名文件名</p>
-<p>　　tree 以树形结构显示出目录，用参数-f 将列出第个文件夹中文件名称</p>
-<p>　　type 文件名 显示文本文件的内容</p>
-<p>　　more 文件名 逐屏显示输出文件</p>
-<p>　　doskey 要锁定的命令&#x3D;字符</p>
-<p>　　doskey 要解锁命令&#x3D; 为DOS提供的锁定命令(编辑命令行，重新调用win2k命令，并创建宏)。如：锁定dir命令：doskey dir&#x3D;entsky (不能用doskey dir&#x3D;dir)；解锁：doskey dir&#x3D;</p>
-<p>　　taskmgr 调出任务管理器</p>
-<p>　　chkdsk &#x2F;F D: 检查磁盘D并显示状态报告；加参数&#x2F;f并修复磁盘上的错误</p>
-<p>　　tlntadmn telnt服务admn,键入tlntadmn选择3，再选择8,就可以更改telnet服务默认端口23为其它任何端口</p>
-<p>　　exit 退出cmd.exe程序或目前，用参数&#x2F;B则是退出当前批处理脚本而不是cmd.exe</p>
-<p>　　path 路径可执行文件的文件名 为可执行文件设置一个路径。</p>
-<p>　　cmd 启动一个win2K命令解释窗口。参数：&#x2F;eff、&#x2F;en 关闭、开启命令扩展；更我详细说明见cmd &#x2F;?</p>
-<p>　　regedit &#x2F;s 注册表文件名 导入注册表；参数&#x2F;S指安静模式导入，无任何提示；</p>
-<p>　　regedit &#x2F;e 注册表文件名 导出注册表</p>
-<p>　　cacls 文件名　参数 显示或修改文件访问控制列表（ACL）——针对NTFS格式时。参数：&#x2F;D 用户名:设定拒绝某用户访问；&#x2F;P  用户名:perm 替换指定用户的访问权限；&#x2F;G 用户名:perm 赋予指定用户访问权限；Perm 可以是: N 无，R 读取， W 写入， C  更改(写入)，F 完全控制；例：cacls D: est.txt &#x2F;D pub 设定d: est.txt拒绝pub用户访问。</p>
-<p>　　cacls 文件名 查看文件的访问用户权限列表</p>
-<p>　　REM 文本内容 在批处理文件中添加注解</p>
-<p>　　netsh 查看或更改本地网络配置情况</p>
-]]></content>
-  </entry>
-  <entry>
     <title>test</title>
     <url>/2023/01/29/test/</url>
     <content><![CDATA[]]></content>
@@ -1518,29 +1541,6 @@
     <title>路线</title>
     <url>/2023/02/28/image/%E8%B7%AF%E7%BA%BF/%E8%B7%AF%E7%BA%BF/</url>
     <content><![CDATA[<p><img src="/image/%E8%B7%AF%E7%BA%BF/1677584772371.png" alt="路线"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>return 0</title>
-    <url>/2023/03/05/return%200/</url>
-    <content><![CDATA[<p>C语言为什么要return 0(个人看法)</p>
-<span id="more"></span>
-
-<p>c语言中的return 0有什么用?<br>用return这种形式就能定义返回值, return 0可以 终止 main() 函数，并返回值 0。<br>return 0 代表程序正常退出，return 1代表程序异常退出！<br>使用return 语句可以返回一个变量内的值或一个指针，也可用return0，表示返回为空。<br>return 代表调到函数外，<br><strong>return 0代表函数正常终止</strong><br><strong>return 1代表函数非正常终止</strong><br>而我觉得还有一个作用就是return之后你至少知道代码成功运行到最后一行，中间没有异常中止，并且return 关键字的还有一个作用是返回程序流程的控制权！其副作用是返回一个值。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>流</title>
-    <url>/2023/03/03/liu/</url>
-    <content><![CDATA[<h1 id="主要介绍："><a href="#主要介绍：" class="headerlink" title="主要介绍："></a>主要介绍：</h1><p>  什么是“流”，“流”的基本概念，“流”对于内存和外部设备着什么样的作用，C语言默认打开的三个“流”：stdin、stdout、stderr👀。</p>
-<p>通过《C语言》文件这一章的学习，我们学会了如何向文件进行读写操作，也就是如何让数据从内存中保存到硬盘上，或是如何从硬盘上读取数据放到内存中。硬盘其实是一个外部设备，那有人就要问了：我们能否对其他<strong>外部</strong>设进行读写操作呢？例如：屏幕、键盘、鼠标、U盘、光盘、网络…… ，答案当然是肯定的。</p>
-<h2 id="但值得注意"><a href="#但值得注意" class="headerlink" title="但值得注意"></a>但值得注意</h2><p> 的是，<em>每一种外部设备的读写方式是有所差异的</em>，就比如：写硬盘和写屏幕，读键盘和读网络。那大家想一下，如果一个程序员写代码的时候，必须要把每种外部设备的读和写的方式都理解透彻，是不是太麻烦了！</p>
-<p>  所以，为了能够<em>让程序员更加方便的对外部设备进行读写操作</em>，我们会在外部设备前抽象出来一层东西，称为：“流”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由C语言底层的封装来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个中转站，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  所以，为了能够让程序员更加方便的对外部设备进行读写操作，我们会<em>在外部设备前抽象出来一层东西</em>，称为：“<strong>流</strong>”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由<strong>C语言底层的封装</strong>来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个<strong>中转站</strong>，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  “流”是一个比较抽象的概念，数据就像水管里的水流，可以从内存中流向外部设备，也可以从外部设备流向内存，但只能<strong>单方向</strong>的流。由此可见“流”是有明确的方向性的，所以可以将“流”分为两种：以内存为第一人称，<strong>数据从内存向外流的称为输出流，数据由外向内存流的称为输入流</strong>。</p>
-<p>  还值得补充的一点是，不知道大家有没有发现，我们在对一个文件操作前必须先打开它，获得与之关联的文件指针，这个指针就可以称为“文件流”，因为这个指针指向了数据的目的地 &#x2F; 源头。但我们在对屏幕写出数据时或从键盘上读入数据时，并没有对这些外部设备进行打开操作获得所对应的“流”啊，而且在scanf和printf操作的时候也没有要求你给出数据的流向，最后却还能实现，这是为什么呢？<br>因为任意一个C程序只要运行起来，就会默认打开3个“流”：</p>
-<blockquote>
-<p>stdin —— 标准输入流（键盘）</br><br>stdout —— 标准输出流（屏幕）</br><br>stderr —— 标准错误流（屏幕）</br></p>
-</blockquote>
-<p>  所以printf()会默认将数据发送到stdout这个“流”上，scanf()会默从stdin这个“流”上读取数据，不需要我们手动打开和关闭“流”。但对于文件来说，我们就必须先打开这个文件从而获得这个“流”，然后才能从这个“流”里面读取数据或向这个“流”里面写数据，最后还得关闭“流”。<br>  那有同学就要问了：能不能用格式化输出函数fprintf()来向屏幕上输出一段内容？答案当然是可以的.</p>
 ]]></content>
   </entry>
   <entry>
