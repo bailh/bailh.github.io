@@ -22,30 +22,32 @@
     var CONFIG = {"hostname":"lisihan.com.cn","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="认真做好每一件事">
-<meta property="og:type" content="website">
+  <meta name="description" content="C++核心编程本阶段主要针对C++&#x3D;&#x3D;面向对象&#x3D;&#x3D;编程技术做详细讲解，探讨C++中的核心和精髓。 1 内存分区模型C++程序在执行时，将内存大方向划分为4个区域  代码区：存放函数体的二进制代码，由操作系统进行管理的 全局区：存放全局变量和静态变量以及常量 栈区：由编译器自动分配释放, 存放函数的参数值,局部变量等 堆区：由程序员分配和释放,若程序员不释放,">
+<meta property="og:type" content="article">
 <meta property="og:title" content="北辰星">
-<meta property="og:url" content="https://lisihan.com.cn/index.html">
+<meta property="og:url" content="https://lisihan.com.cn/2023/04/05/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="北辰星">
-<meta property="og:description" content="认真做好每一件事">
+<meta property="og:description" content="C++核心编程本阶段主要针对C++&#x3D;&#x3D;面向对象&#x3D;&#x3D;编程技术做详细讲解，探讨C++中的核心和精髓。 1 内存分区模型C++程序在执行时，将内存大方向划分为4个区域  代码区：存放函数体的二进制代码，由操作系统进行管理的 全局区：存放全局变量和静态变量以及常量 栈区：由编译器自动分配释放, 存放函数的参数值,局部变量等 堆区：由程序员分配和释放,若程序员不释放,">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-04-05T03:49:51.313Z">
+<meta property="article:modified_time" content="2023-04-05T03:48:28.855Z">
 <meta property="article:author" content="疯子">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://lisihan.com.cn/">
+<link rel="canonical" href="https://lisihan.com.cn/2023/04/05/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>北辰星</title>
+  <title> | 北辰星</title>
   
 
 
@@ -163,9 +165,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -181,10 +184,9 @@
       <meta itemprop="name" content="北辰星">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/04/05/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          <a href="https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name_posts/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil-alt"></i></a>
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -198,6 +200,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -208,7 +217,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="C-核心编程"><a href="#C-核心编程" class="headerlink" title="C++核心编程"></a>C++核心编程</h1><p>本阶段主要针对C++&#x3D;&#x3D;面向对象&#x3D;&#x3D;编程技术做详细讲解，探讨C++中的核心和精髓。</p>
+        <h1 id="C-核心编程"><a href="#C-核心编程" class="headerlink" title="C++核心编程"></a>C++核心编程</h1><p>本阶段主要针对C++&#x3D;&#x3D;面向对象&#x3D;&#x3D;编程技术做详细讲解，探讨C++中的核心和精髓。</p>
 <h2 id="1-内存分区模型"><a href="#1-内存分区模型" class="headerlink" title="1 内存分区模型"></a>1 内存分区模型</h2><p>C++程序在执行时，将内存大方向划分为<strong>4个区域</strong></p>
 <ul>
 <li>代码区：存放函数体的二进制代码，由操作系统进行管理的</li>
@@ -1275,7 +1284,6 @@
 <li>文件输入流对象 可以通过read函数，以二进制方式读数据</li>
 </ul>
 
-      
     </div>
 
     
@@ -1283,795 +1291,63 @@
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
+        <div class="reward-container">
+  <div>原创技术分享，您的支持将鼓励我继续创作</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lisihan.com.cn/2023/03/15/STL/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="疯子">
-      <meta itemprop="description" content="认真做好每一件事">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="北辰星">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/15/STL/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-15 15:53:45 / 修改时间：16:19:30" itemprop="dateCreated datePublished" datetime="2023-03-15T15:53:45+08:00">2023-03-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="疯子 微信支付">
+        <p>微信支付</p>
+      </div>
       
-          <h1 id="c-的STL"><a href="#c-的STL" class="headerlink" title="c++的STL"></a>c++的STL</h1><h2 id="sort排序"><a href="#sort排序" class="headerlink" title="sort排序"></a>sort排序</h2><h3 id="用法一"><a href="#用法一" class="headerlink" title="用法一"></a>用法一</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[] = &#123;<span class="number">15</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">6</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">sort</span>(a,a+<span class="number">7</span>);</span><br></pre></td></tr></table></figure>
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="疯子 支付宝">
+        <p>支付宝</p>
+      </div>
 
-<h3 id="用法二-从大到小"><a href="#用法二-从大到小" class="headerlink" title="用法二 -从大到小"></a>用法二 -从大到小</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[] = &#123;<span class="number">15</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">2</span> ,<span class="number">6</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">sort</span>(a+<span class="number">1</span>,a+<span class="number">4</span>,<span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;());</span><br></pre></td></tr></table></figure>
+  </div>
+</div>
 
-<h3 id="用法三-结构体"><a href="#用法三-结构体" class="headerlink" title="用法三-结构体"></a>用法三-结构体</h3><p>sort(数组名+n1，数组名+n2,排序规则结构名());</p>
-<p>排序规则结构的定义方式</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> 结构名</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">​     <span class="function"><span class="type">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">( <span class="type">const</span> T &amp; a1,<span class="type">const</span> T &amp; a2)</span> <span class="type">const</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//若a1在a2前面，则返回true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//eles返回false</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lisihan.com.cn/2023/03/05/return%200/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="疯子">
-      <meta itemprop="description" content="认真做好每一件事">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="北辰星">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/05/return%200/" class="post-title-link" itemprop="url">return 0;</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-05 21:13:31 / 修改时间：21:14:02" itemprop="dateCreated datePublished" datetime="2023-03-05T21:13:31+08:00">2023-03-05</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>C语言为什么要return 0(个人看法)</p>
-<p>c语言中的return 0有什么用?<br>用return这种形式就能定义返回值, return 0可以 终止 main() 函数，并返回值 0。<br>return 0 代表程序正常退出，return 1代表程序异常退出！<br>使用return 语句可以返回一个变量内的值或一个指针，也可用return0，表示返回为空。<br>return 代表调到函数外，<br><strong>return 0代表函数正常终止</strong><br><strong>return 1代表函数非正常终止</strong><br>而我觉得还有一个作用就是return之后你至少知道代码成功运行到最后一行，中间没有异常中止，并且return 关键字的还有一个作用是返回程序流程的控制权！其副作用是返回一个值。</p>
-
-      
-    </div>
-
-    
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lisihan.com.cn/2023/03/03/liu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="疯子">
-      <meta itemprop="description" content="认真做好每一件事">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="北辰星">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/03/liu/" class="post-title-link" itemprop="url">流</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-03 16:56:14 / 修改时间：17:08:20" itemprop="dateCreated datePublished" datetime="2023-03-03T16:56:14+08:00">2023-03-03</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="主要介绍："><a href="#主要介绍：" class="headerlink" title="主要介绍："></a>主要介绍：</h1><p>  什么是“流”，“流”的基本概念，“流”对于内存和外部设备着什么样的作用，C语言默认打开的三个“流”：stdin、stdout、stderr👀。</p>
-<p>通过《C语言》文件这一章的学习，我们学会了如何向文件进行读写操作，也就是如何让数据从内存中保存到硬盘上，或是如何从硬盘上读取数据放到内存中。硬盘其实是一个外部设备，那有人就要问了：我们能否对其他<strong>外部</strong>设进行读写操作呢？例如：屏幕、键盘、鼠标、U盘、光盘、网络…… ，答案当然是肯定的。</p>
-<h2 id="但值得注意"><a href="#但值得注意" class="headerlink" title="但值得注意"></a>但值得注意</h2><p> 的是，<em>每一种外部设备的读写方式是有所差异的</em>，就比如：写硬盘和写屏幕，读键盘和读网络。那大家想一下，如果一个程序员写代码的时候，必须要把每种外部设备的读和写的方式都理解透彻，是不是太麻烦了！</p>
-<p>  所以，为了能够<em>让程序员更加方便的对外部设备进行读写操作</em>，我们会在外部设备前抽象出来一层东西，称为：“流”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由C语言底层的封装来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个中转站，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  所以，为了能够让程序员更加方便的对外部设备进行读写操作，我们会<em>在外部设备前抽象出来一层东西</em>，称为：“<strong>流</strong>”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由<strong>C语言底层的封装</strong>来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个<strong>中转站</strong>，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  “流”是一个比较抽象的概念，数据就像水管里的水流，可以从内存中流向外部设备，也可以从外部设备流向内存，但只能<strong>单方向</strong>的流。由此可见“流”是有明确的方向性的，所以可以将“流”分为两种：以内存为第一人称，<strong>数据从内存向外流的称为输出流，数据由外向内存流的称为输入流</strong>。</p>
-<p>  还值得补充的一点是，不知道大家有没有发现，我们在对一个文件操作前必须先打开它，获得与之关联的文件指针，这个指针就可以称为“文件流”，因为这个指针指向了数据的目的地 &#x2F; 源头。但我们在对屏幕写出数据时或从键盘上读入数据时，并没有对这些外部设备进行打开操作获得所对应的“流”啊，而且在scanf和printf操作的时候也没有要求你给出数据的流向，最后却还能实现，这是为什么呢？<br>因为任意一个C程序只要运行起来，就会默认打开3个“流”：</p>
-<blockquote>
-<p>stdin —— 标准输入流（键盘）</br><br>stdout —— 标准输出流（屏幕）</br><br>stderr —— 标准错误流（屏幕）</br></p>
-</blockquote>
-<p>  所以printf()会默认将数据发送到stdout这个“流”上，scanf()会默从stdin这个“流”上读取数据，不需要我们手动打开和关闭“流”。但对于文件来说，我们就必须先打开这个文件从而获得这个“流”，然后才能从这个“流”里面读取数据或向这个“流”里面写数据，最后还得关闭“流”。<br>  那有同学就要问了：能不能用格式化输出函数fprintf()来向屏幕上输出一段内容？答案当然是可以的.</p>
-
-      
-    </div>
-
-    
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lisihan.com.cn/2023/03/01/clock/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="疯子">
-      <meta itemprop="description" content="认真做好每一件事">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="北辰星">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/01/clock/" class="post-title-link" itemprop="url">clock</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-01 18:27:56 / 修改时间：18:44:11" itemprop="dateCreated datePublished" datetime="2023-03-01T18:27:56+08:00">2023-03-01</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="clock"><a href="#clock" class="headerlink" title="clock"></a>clock</h1><p>C语言中的函数clock（ ），它可以捕捉从程序开始运行到clock( )被调用时所耗费的时间。它计时所用的单位是clock tick，翻译成中文就是“时钟打点”。</p>
-<p>与之配套的还有一个常数CLK_TCK，实际上就是“clock tick”的缩写。它给出的是机器时钟每秒所走的时钟打点数。这个数在不同机器中可能不一样，可以通过写程序得到一台机器的CLK_TCK。</p>
-<p>代码如下：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">( )</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, CLK_TCK);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<p>将clock( )函数和常数CLK_TCK两个配合在一起，就可以计算出来一个函数到底跑了多少秒钟。</p>
-<p>以下是一个常用的模板：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;studio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="comment">/*要用clock( )函数必须要包含time.h*/</span></span><br><span class="line"><span class="type">clock_t</span> start,stop;<span class="comment">/*clock_t是clock( )函数返回的变量类型*/</span></span><br><span class="line"><span class="type">double</span> duration;<span class="comment">/*记录被测函数运行时间，以秒为单位*/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">( )</span></span><br><span class="line">&#123;   <span class="comment">/*不在测试范围内的准备工作写在clock( )调用之前*/</span></span><br><span class="line">    start=clock();<span class="comment">/*开始计时*/</span></span><br><span class="line">    MyFunction();<span class="comment">/*把被测函数加在这里*/</span></span><br><span class="line">    stop=clock();<span class="comment">/*停止计时*/</span></span><br><span class="line">    duration=((<span class="type">double</span>)(stop-start))/CLK_TCK;<span class="comment">/*计算运行时间*/</span></span><br><span class="line">    <span class="comment">/*其他不在测试范围的处理写在后面，例如输出duration的值*/</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<p>下面是一个具体的例子</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="type">clock_t</span> start, stop;</span><br><span class="line"><span class="type">double</span> duration;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXN 10</span></span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> a[MAXN];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; MAXN; i++)  a[i] = (<span class="type">double</span>)i;</span><br><span class="line"></span><br><span class="line">    start = clock();</span><br><span class="line">    f(MAXN - <span class="number">1</span>, a, <span class="number">1.1</span>);</span><br><span class="line">    stop = clock();</span><br><span class="line">    duration = ((<span class="type">double</span>)(stop - start)) / CLK_TCK;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ticks=%f\n&quot;</span>, (<span class="type">double</span>)(stop - start));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;duration=%6.2e\n&quot;</span>, duration);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> p = a[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        p += (a[i] * <span class="built_in">pow</span>(x,i));</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>计算结果都是0，是因为这个函数跑的实在是太快了，它的运行时间不到一个tick，所以clock函数铺捉不到它。解决方法就是让被测函数<strong>重复运行</strong>充分多次，使得测出的总的时钟打点间隔充分长，最后计算被测函数<strong>平均每次</strong>运行的时间即可。</p>
-<p>调整后的代码如下：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="type">clock_t</span> start, stop;</span><br><span class="line"><span class="type">double</span> duration;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXN 10</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXK 1e7<span class="comment">/*被测函数最大重复调用次数*/</span></span></span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> a[MAXN];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; MAXN; i++)  a[i] = (<span class="type">double</span>)i;</span><br><span class="line"></span><br><span class="line">    start = clock();</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=MAXK;i++)<span class="comment">/*重复调用函数已获得充分多的时钟打点数*/</span></span><br><span class="line">        f(MAXN - <span class="number">1</span>, a, <span class="number">1.1</span>);</span><br><span class="line">    stop = clock();</span><br><span class="line">    duration = ((<span class="type">double</span>)(stop - start)) / CLK_TCK/MAXK;<span class="comment">/*计算函数单次运行的时间*/</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ticks=%f\n&quot;</span>, (<span class="type">double</span>)(stop - start));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;duration=%6.2e\n&quot;</span>, duration);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> p = a[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        p += (a[i] * <span class="built_in">pow</span>(x,i));</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>这个数据在不同的电脑上运行出来的结果不同，因为不同机器的CLK_TCK不一定相同</p>
-<p><img src="/image/clock/1677666755946.png" alt="1677666755946"></p>
-
-      
-    </div>
-
-    
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lisihan.com.cn/2023/03/01/cmd/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="疯子">
-      <meta itemprop="description" content="认真做好每一件事">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="北辰星">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/01/cmd/" class="post-title-link" itemprop="url">CMD</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-01 12:46:04 / 修改时间：18:47:34" itemprop="dateCreated datePublished" datetime="2023-03-01T12:46:04+08:00">2023-03-01</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>链接：<a href="https://link.zhihu.com/?target=https://www.cnblogs.com/walkwaters/p/12153364.html">CMD命令大全</a><br>CMD命令：开始－&gt;运行－&gt;键入cmd或command（在命令行里可以看到系统版本、文件系统版本）<br>chcp 修改默认字符集<br>chcp 936默认中文<br>chcp 65001</p>
-<ol>
-<li>appwiz.cpl：程序和功能</li>
-<li>calc：启动计算器</li>
-<li>chkdsk.exe：Chkdsk磁盘检查（管理员身份运行命令提示符）</li>
-<li>cleanmgr: 打开磁盘清理工具</li>
-<li>cmd.exe：CMD命令提示符</li>
-<li>自动关机命令<br>　 Shutdown -s -t 600：表示600秒后自动关机<br>　 <a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=shutdown%20-a&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">shutdown -a</a> ：可取消定时关机<br>　 Shutdown -r -t 600：表示600秒后自动重启</li>
-<li>CompMgmtLauncher：计算机管理</li>
-<li>compmgmt.msc：计算机管理</li>
-<li>credwiz：备份或还原储存的用户名和密码</li>
-<li>control：控制面版</li>
-<li>dcomcnfg：打开系统组件服务</li>
-<li>devmgmt.msc：设备管理器</li>
-<li>desk.cpl：屏幕分辨率</li>
-<li>dfrgui：优化驱动器   Windows 7→dfrg.msc：磁盘碎片整理程序</li>
-<li>dialer：电话拨号程序</li>
-<li>diskmgmt.msc：磁盘管理</li>
-<li>dvdplay：DVD播放器</li>
-<li>dxdiag：检查DirectX信息</li>
-<li>eudcedit：造字程序</li>
-<li>eventvwr：事件查看器</li>
-<li>explorer：打开资源管理器</li>
-<li>Firewall.cpl：Windows防火墙</li>
-<li>fsmgmt.msc：共享文件夹管理器</li>
-<li>gpedit.msc：组策略</li>
-<li>hdwwiz.cpl：设备管理器</li>
-<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=inetcpl.cpl&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">inetcpl.cpl</a>：Internet属性</li>
-<li>intl.cpl：区域</li>
-<li>iexpress：木马捆绑工具，系统自带</li>
-<li>joy.cpl：游戏控制器</li>
-<li>logoff：注销命令</li>
-<li>lusrmgr.msc：本地用户和组</li>
-<li>lpksetup：语言包安装&#x2F;删除向导，安装向导会提示下载语言包</li>
-<li>lusrmgr.msc：本机用户和组</li>
-<li>main.cpl：鼠标属性</li>
-<li>mmsys.cpl：声音</li>
-<li>mem.exe：显示内存使用情况（如果直接运行无效，可以先管理员身份运行命令提示符，在命令提示符里输入mem.exe&gt;d:a.txt 即可打开d盘查看a.txt，里面的就是内存使用情况了。当然什么盘什么文件名可自己决定。）</li>
-<li>mmc：打开控制台</li>
-<li>mobsync：同步命令</li>
-<li>Msconfig.exe：系统配置实用程序</li>
-<li>msdt：微软支持诊断工具</li>
-<li>msinfo32：系统信息</li>
-<li>mspaint：画图</li>
-<li>Msra：Windows远程协助</li>
-<li>mstsc：远程桌面连接</li>
-<li>NAPCLCFG.MSC：客户端配置</li>
-<li>ncpa.cpl：网络连接</li>
-<li>narrator：屏幕“讲述人”</li>
-<li>Netplwiz：高级用户帐户控制面板，设置登陆安全相关的选项</li>
-<li>netstat : an(TC)命令检查接口</li>
-<li>notepad：打开记事本</li>
-<li>Nslookup：IP地址侦测器</li>
-<li>odbcad32：ODBC数据源管理器</li>
-<li>OptionalFeatures：打开“打开或关闭Windows功能”对话框</li>
-<li>osk：打开屏幕键盘</li>
-<li>perfmon.msc：计算机性能监测器</li>
-<li>perfmon：计算机性能监测器</li>
-<li>PowerShell：提供强大远程处理能力</li>
-<li>printmanagement.msc：打印管理</li>
-<li>powercfg.cpl：电源选项</li>
-<li>psr：问题步骤记录器</li>
-<li>Rasphone：网络连接</li>
-<li>Recdisc：创建系统修复光盘</li>
-<li>Resmon：资源监视器</li>
-<li>Rstrui：系统还原</li>
-<li>regedit.exe：注册表</li>
-<li>regedt32：注册表编辑器</li>
-<li>rsop.msc：组策略结果集</li>
-<li>sdclt：备份状态与配置，就是查看系统是否已备份</li>
-<li>secpol.msc：本地安全策略</li>
-<li>services.msc：本地服务设置</li>
-<li>sfc &#x2F;scannow：扫描错误并复原&#x2F;windows文件保护</li>
-<li>sfc.exe：系统文件检查器</li>
-<li>shrpubw：创建共享文件夹</li>
-<li>sigverif：文件签名验证程序</li>
-<li>slui：Windows激活，查看系统激活信息</li>
-<li>slmgr.vbs -dlv ：显示详细的许可证信息<br>　 slmgr.vbs -dli ：显示许可证信息<br>　 <a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=slmgr.vbs%20-xpr&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">slmgr.vbs -xpr</a> ：当前许可证截止日期<br>　 slmgr.vbs -dti ：显示安装ID 以进行脱机激<br>　 <a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=slmgr.vbs%20-ipk&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">slmgr.vbs -ipk</a> ：(Product Key)安装产品密钥<br>　 slmgr.vbs -ato ：激活Windows<br>　 <a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=slmgr.vbs%20-cpky&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">slmgr.vbs -cpky</a> ：从注册表中清除产品密钥（防止泄露引起的攻击）<br>　 slmgr.vbs -ilc ：(License file)安装许可证<br>　 <a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=slmgr.vbs%20-upk&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">slmgr.vbs -upk</a> ：卸载产品密钥<br>　 slmgr.vbs -skms ：(name[ort] )批量授权</li>
-<li>snippingtool：截图工具，支持无规则截图</li>
-<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=soundrecorder&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22209115733%22%7D">soundrecorder</a>：录音机，没有录音时间的限制</li>
-<li>StikyNot：便笺</li>
-<li>sysdm.cpl：系统属性</li>
-<li>sysedit：系统配置编辑器</li>
-<li>syskey：系统加密，一旦加密就不能解开，保护系统的双重密码</li>
-<li>taskmgr：任务管理器（旧版）</li>
-<li>TM任务管理器（新版）</li>
-<li>taskschd.msc：任务计划程序</li>
-<li>timedate.cpl：日期和时间</li>
-<li>UserAccountControlSettings用户账户控制设置</li>
-<li>utilman：辅助工具管理器</li>
-<li>wf.msc：高级安全Windows防火墙</li>
-<li>WFS：Windows传真和扫描</li>
-<li>wiaacmgr：扫描仪和照相机向导</li>
-<li>winver：关于Windows</li>
-<li>wmimgmt.msc：打开windows管理体系结构(WMI)</li>
-<li>write：写字板</li>
-<li>wscui.cpl：操作中心</li>
-<li>wscript：windows脚本宿主设置</li>
-<li>wuapp：Windows更新</li>
-</ol>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/03/01/cmd/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-    
-    
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>疯子
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://lisihan.com.cn/2023/04/05/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B/" title="">https://lisihan.com.cn/2023/04/05/C++核心编程/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lisihan.com.cn/2023/02/28/image/%E8%B7%AF%E7%BA%BF/%E8%B7%AF%E7%BA%BF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="疯子">
-      <meta itemprop="description" content="认真做好每一件事">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="北辰星">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/28/image/%E8%B7%AF%E7%BA%BF/%E8%B7%AF%E7%BA%BF/" class="post-title-link" itemprop="url">路线</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-02-28 19:45:58" itemprop="dateCreated datePublished" datetime="2023-02-28T19:45:58+08:00">2023-02-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-15 15:54:05" itemprop="dateModified" datetime="2023-03-15T15:54:05+08:00">2023-03-15</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="/image/%E8%B7%AF%E7%BA%BF/1677584772371.png" alt="路线"></p>
-
-      
-    </div>
-
-    
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lisihan.com.cn/2023/02/28/pointers%20on%20c/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="疯子">
-      <meta itemprop="description" content="认真做好每一件事">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="北辰星">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/28/pointers%20on%20c/" class="post-title-link" itemprop="url">Pointers On C</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-02-28 19:25:17" itemprop="dateCreated datePublished" datetime="2023-02-28T19:25:17+08:00">2023-02-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-03 17:47:55" itemprop="dateModified" datetime="2023-03-03T17:47:55+08:00">2023-03-03</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="《Pointers-On-C》（Kenneth-Reek）-【US】"><a href="#《Pointers-On-C》（Kenneth-Reek）-【US】" class="headerlink" title="《Pointers On C》（Kenneth Reek） 【US】 "></a><center>《Pointers On C》（Kenneth Reek） 【US】 </center></h1><h2 id="第一章-快速上手"><a href="#第一章-快速上手" class="headerlink" title="第一章 快速上手"></a>第一章 快速上手</h2><h3 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h3><h4 id="1-1-1-空白和注释"><a href="#1-1-1-空白和注释" class="headerlink" title="1.1.1 空白和注释"></a>1.1.1 空白和注释</h4><p>注释并不能真正将代码从源文件中删除（&#x2F;**&#x2F;）</p>
-<blockquote>
-<p>从<strong>逻辑</strong>上删除C代码——#if指令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#if 0   </span><br><span class="line">statements   </span><br><span class="line">#endif   </span><br></pre></td></tr></table></figure>
-
-<p>在#if和#endif之间的程序段可以去除</p>
-</blockquote>
-<h4 id="1-1-2-预处理指令"><a href="#1-1-2-预处理指令" class="headerlink" title="1.1.2 预处理指令"></a>1.1.2 <span id="jump">预处理指令</h4><p> #include &lt;stdio.h&gt;<br /><br> #include &lt;stdlib.h&gt;<br /><br> #include &lt;string.h&gt;<br /><br> #define ABC 20&#96;&#96;<!--定义--> <br /><br>  由<strong>预处理器</strong>解释的:预处理器读入源代码，根据预处理指令对其进行修改，然后将修改过的代码递交给编译器。<br /><br>eg:&lt;stdio.h&gt;-&gt;#include</p>
-<h4 id="1-1-3-main函数"><a href="#1-1-3-main函数" class="headerlink" title="1.1.3 main函数"></a>1.1.3 main函数</h4><p>每个C程序都必须有一个main函数–&gt;程序执行的<strong>起点</strong><br>main函数<strong>内容</strong>:花括号之间({})</p>
-<p>  关键字:int 表示函数返回一个整型值</p>
-<h4 id="amp-emsp-amp-emsp-amp-emsp-void表示函数不返回任何值"><a href="#amp-emsp-amp-emsp-amp-emsp-void表示函数不返回任何值" class="headerlink" title="&amp;emsp;&amp;emsp;&amp;emsp;void表示函数不返回任何值"></a>&amp;emsp;&amp;emsp;&amp;emsp;void表示函数不返回任何值</h4><blockquote>
-<p>传递方式<br>数组参数: 引用<a href="%E5%8D%B3%E5%9C%B0%E5%9D%80%E8%B0%83%E7%94%A8.">^引用</a><br>标量和常量:  值</p>
-</blockquote>
-<p>C函数的参数传递规则如下：<font color=red>所有传递给函数的参数都是按值传递的 </font></p>
-<blockquote>
-<p>字符串:一串以[^NUL]NUL字节结尾的字符。<br>字符串常量:“&amp;emsp; ”中间的</p>
-</blockquote>
-<h4 id="1-1-4-read-column-numbers函数"><a href="#1-1-4-read-column-numbers函数" class="headerlink" title=" 1.1.4 read_column_numbers函数 "></a><font color=pink> 1.1.4 read_column_numbers函数 </font></h4><h4 id="1-1-5-rearrange函数"><a href="#1-1-5-rearrange函数" class="headerlink" title=" 1.1.5 rearrange函数 "></a><font color=pink> 1.1.5 rearrange函数 </font></h4><h3 id="1-2-补充说明"><a href="#1-2-补充说明" class="headerlink" title="1.2 补充说明"></a>1.2 补充说明</h3><h3 id="1-3-编译"><a href="#1-3-编译" class="headerlink" title="1.3 编译"></a>1.3 编译</h3><h3 id="1-4-总结"><a href="#1-4-总结" class="headerlink" title="1.4 总结"></a>1.4 总结</h3><table>
-<thead>
-<tr>
-<th>格式化输入与输出</th>
-<th>非格式化输入与输出</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>printf</td>
-<td>putchar</td>
-</tr>
-<tr>
-<td>scanf</td>
-<td>getchar</td>
-</tr>
-</tbody></table>
-<h3 id="1-5-警告的总结"><a href="#1-5-警告的总结" class="headerlink" title="1.5 警告的总结"></a>1.5 警告的总结</h3><p>1.在scanf函数的<a href="%E5%9C%A8C%E8%AF%AD%E8%A8%80%E4%B8%AD%EF%BC%8C%E6%9E%9A%E4%B8%BE%E5%9E%8B%E3%80%81%E5%AD%97%E7%AC%A6%E5%9E%8B%E5%92%8C%E5%90%84%E7%A7%8D%E6%95%B4%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%BD%A2%E5%BC%8F%E7%BB%9F%E4%B8%80%E5%8F%AB%E5%81%9A%E6%A0%87%E9%87%8F%E7%B1%BB%E5%9E%8B.%E5%BD%93%E5%9C%A8C%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%A0%87%E9%87%8F%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%80%BC%E6%97%B6%EF%BC%8C%E7%BC%96%E8%AF%91%E5%99%A8%E5%B0%B1%E4%BC%9A%E8%87%AA%E5%8A%A8%E5%B0%86%E8%BF%99%E4%BA%9B%E6%A0%87%E8%AF%86%E7%AC%A6%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%95%B4%E6%95%B0%E4%BF%9D%E5%AD%98.%E8%BF%99%E7%A7%8D%E6%9C%BA%E5%88%B6%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%EF%BC%8C%E5%9C%A8%E8%BF%99%E4%BA%9B%E6%A0%87%E9%87%8F%E7%B1%BB%E5%9E%8B%E4%B8%8A%E6%89%A7%E8%A1%8C%E7%9A%84%E6%93%8D%E4%BD%9C%E4%B8%8E%E6%95%B4%E5%9E%8B%E4%B8%8A%E6%89%A7%E8%A1%8C%E7%9A%84%E6%93%8D%E4%BD%9C%E5%AE%8C%E5%85%A8%E4%B8%80%E6%A0%B7.">^标量参数</a>前未加 <font color=red> &amp; </font>.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/02/28/pointers%20on%20c/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/03/15/STL/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
   
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lisihan.com.cn/2023/02/25/math%20faction/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="疯子">
-      <meta itemprop="description" content="认真做好每一件事">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="北辰星">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/25/math%20faction/" class="post-title-link" itemprop="url">math faction</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-02-25 12:17:05" itemprop="dateCreated datePublished" datetime="2023-02-25T12:17:05+08:00">2023-02-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-28 19:19:09" itemprop="dateModified" datetime="2023-02-28T19:19:09+08:00">2023-02-28</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>头文件math.h</p>
-<p>实数绝对值函数</p>
-<h2 id="➢指数函数"><a href="#➢指数函数" class="headerlink" title="➢指数函数"></a>➢指数函数</h2><p>double fabs(double x);</p>
-<p>double exp(double x);</p>
-<p>求实数x的绝对值|x|</p>
-<p>求e的实数x次幂ex</p>
-<p>例: fabs(3.5)的值为3.5</p>
-<p>例: exp(1.0)的值约为2.71828</p>
-<p>fabs(-3.5)的值为3.5</p>
-<p>exp(2. 5)的值约为12.1825</p>
-<h2 id="平方根函数"><a href="#平方根函数" class="headerlink" title="平方根函数"></a>平方根函数</h2><p>double sqrt(double x);</p>
-<h2 id="➢对数函数"><a href="#➢对数函数" class="headerlink" title="➢对数函数"></a>➢对数函数</h2><p>double log(double x);</p>
-<p>求实数x的平方根vx</p>
-<p>求以e为底正实数x的对数Inx</p>
-<p>例: sqrt(100.0)的值约为10.0</p>
-<p>double log10(doublex);</p>
-<p>sqrt(12.96)的值约为3.6</p>
-<p>求以10为底正实数x的对数lgx</p>
-<h2 id="➢幂函数"><a href="#➢幂函数" class="headerlink" title="➢幂函数"></a>➢幂函数</h2><p>例: log(2.718283)的值约为1.0</p>
-<p>double pow(double x, doubley); .</p>
-<p>log(45.7)的值约为3.822098</p>
-<p>求实数x的实数y次幂x</p>
-<p>log10(1000.0)的值约为3.0</p>
-<p>例: pow(2.0, 10.0)的值约为1024.0</p>
-<p>log10(6.022e23)的值约为23.7797</p>
-<p>pow(4.3, 2.9)的值约为68.7161</p>
-<p>注: C只提供以e和10为底数的对数函数。当计算</p>
-<p>以其它实数为底数的对数时，可利用换底公式。</p>
-<h2 id="➢双曲函数"><a href="#➢双曲函数" class="headerlink" title="➢双曲函数"></a>➢双曲函数</h2><p>ex-e-x<br>shx或sinhx<br>double sinh(double x);<br>sinh x&#x3D;<br>2<br>chx或cosh xdouble cosh(double x);<br>thx或tanhx<br>double tanh(double x);<br>e*+ e-x<br>例: sinh(1.0)的值约为1.175201<br>coshx&#x3D; -<br>2<br>cosh(1.0)的值约为1.543081<br>tanh(1.0)的值约为0.7615942<br>ex- e-x</p>
-<h2 id="➢取整函数"><a href="#➢取整函数" class="headerlink" title="➢取整函数"></a>➢取整函数</h2><p>tanh x &#x3D;ex+ e-x<br>[x1 double ceil(double x);<br>. lx」<br>double floor(double x);<br>例: ceil(1.1)的值约为2.0, ceil(-1.1)的值约为-1.0<br>floor(1.1)的值约为1.0, floor(-1.1)的值约为-2.0<br>ceil(1.0)和floor(1.0)的值都约为1.0, ceil(-1.0)和floor(-1.0)的值都约为-1.0</p>
-<h2 id="➢取模函数"><a href="#➢取模函数" class="headerlink" title="➢取模函数"></a>➢取模函数</h2><p>xmody<br>double fmod(double x, double y);<br>例: fmod(14.0, 3.0)的值约为2.0, fmod(-14.0, -3.0)的值约为-2.0<br>fmod(-6.5, -3.2)的值约为-0.1, fmod(6.5, -3.2)的值约为0.1</p>
-
-      
-    </div>
-
-    
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lisihan.com.cn/2023/01/29/test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="疯子">
-      <meta itemprop="description" content="认真做好每一件事">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="北辰星">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/29/test/" class="post-title-link" itemprop="url">test</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-01-29 12:12:53" itemprop="dateCreated datePublished" datetime="2023-01-29T12:12:53+08:00">2023-01-29</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
 
 
 
@@ -2123,6 +1399,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">C++核心编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%86%85%E5%AD%98%E5%88%86%E5%8C%BA%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">1 内存分区模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E5%89%8D"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 程序运行前</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E5%90%8E"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 程序运行后</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-new%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 new操作符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%BC%95%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">2 引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E5%BC%95%E7%94%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 引用的基本使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E5%BC%95%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 引用注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E5%BC%95%E7%94%A8%E5%81%9A%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 引用做函数参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E5%BC%95%E7%94%A8%E5%81%9A%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4 引用做函数返回值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-%E5%BC%95%E7%94%A8%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="nav-number">1.2.5.</span> <span class="nav-text">2.5 引用的本质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8"><span class="nav-number">1.2.6.</span> <span class="nav-text">2.6 常量引用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%87%BD%E6%95%B0%E6%8F%90%E9%AB%98"><span class="nav-number">1.3.</span> <span class="nav-text">3 函数提高</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%87%BD%E6%95%B0%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 函数默认参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%87%BD%E6%95%B0%E5%8D%A0%E4%BD%8D%E5%8F%82%E6%95%B0"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 函数占位参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3 函数重载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-1-%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD%E6%A6%82%E8%BF%B0"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">3.3.1 函数重载概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2-%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">3.3.2 函数重载注意事项</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.4.</span> <span class="nav-text">4 类和对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E5%B0%81%E8%A3%85"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1 封装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-1-%E5%B0%81%E8%A3%85%E7%9A%84%E6%84%8F%E4%B9%89"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">4.1.1  封装的意义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-2-struct%E5%92%8Cclass%E5%8C%BA%E5%88%AB"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">4.1.2 struct和class区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-3-%E6%88%90%E5%91%98%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE%E4%B8%BA%E7%A7%81%E6%9C%89"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">4.1.3 成员属性设置为私有</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E6%B8%85%E7%90%86"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2 对象的初始化和清理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">4.2.1 构造函数和析构函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-2-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E8%B0%83%E7%94%A8"><span class="nav-number">1.4.2.2.</span> <span class="nav-text">4.2.2 构造函数的分类及调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-3-%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%97%B6%E6%9C%BA"><span class="nav-number">1.4.2.3.</span> <span class="nav-text">4.2.3 拷贝构造函数调用时机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-4-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E8%A7%84%E5%88%99"><span class="nav-number">1.4.2.4.</span> <span class="nav-text">4.2.4 构造函数调用规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-5-%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="nav-number">1.4.2.5.</span> <span class="nav-text">4.2.5 深拷贝与浅拷贝</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-6-%E5%88%9D%E5%A7%8B%E5%8C%96%E5%88%97%E8%A1%A8"><span class="nav-number">1.4.2.6.</span> <span class="nav-text">4.2.6 初始化列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-7-%E7%B1%BB%E5%AF%B9%E8%B1%A1%E4%BD%9C%E4%B8%BA%E7%B1%BB%E6%88%90%E5%91%98"><span class="nav-number">1.4.2.7.</span> <span class="nav-text">4.2.7 类对象作为类成员</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-8-%E9%9D%99%E6%80%81%E6%88%90%E5%91%98"><span class="nav-number">1.4.2.8.</span> <span class="nav-text">4.2.8 静态成员</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-C-%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B%E5%92%8Cthis%E6%8C%87%E9%92%88"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3 C++对象模型和this指针</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-1-%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%92%8C%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E5%88%86%E5%BC%80%E5%AD%98%E5%82%A8"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">4.3.1 成员变量和成员函数分开存储</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-2-this%E6%8C%87%E9%92%88%E6%A6%82%E5%BF%B5"><span class="nav-number">1.4.3.2.</span> <span class="nav-text">4.3.2 this指针概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-3-%E7%A9%BA%E6%8C%87%E9%92%88%E8%AE%BF%E9%97%AE%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-number">1.4.3.3.</span> <span class="nav-text">4.3.3 空指针访问成员函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-4-const%E4%BF%AE%E9%A5%B0%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-number">1.4.3.4.</span> <span class="nav-text">4.3.4 const修饰成员函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E5%8F%8B%E5%85%83"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.4 友元</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-1-%E5%85%A8%E5%B1%80%E5%87%BD%E6%95%B0%E5%81%9A%E5%8F%8B%E5%85%83"><span class="nav-number">1.4.4.1.</span> <span class="nav-text">4.4.1 全局函数做友元</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-2-%E7%B1%BB%E5%81%9A%E5%8F%8B%E5%85%83"><span class="nav-number">1.4.4.2.</span> <span class="nav-text">4.4.2 类做友元</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-3-%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E5%81%9A%E5%8F%8B%E5%85%83"><span class="nav-number">1.4.4.3.</span> <span class="nav-text">4.4.3 成员函数做友元</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">1.4.5.</span> <span class="nav-text">4.5 运算符重载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-1-%E5%8A%A0%E5%8F%B7%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">1.4.5.1.</span> <span class="nav-text">4.5.1 加号运算符重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-2-%E5%B7%A6%E7%A7%BB%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">1.4.5.2.</span> <span class="nav-text">4.5.2 左移运算符重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-3-%E9%80%92%E5%A2%9E%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">1.4.5.3.</span> <span class="nav-text">4.5.3 递增运算符重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-4-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">1.4.5.4.</span> <span class="nav-text">4.5.4 赋值运算符重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-5-%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">1.4.5.5.</span> <span class="nav-text">4.5.5 关系运算符重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-6-%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">1.4.5.6.</span> <span class="nav-text">4.5.6 函数调用运算符重载</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-%E7%BB%A7%E6%89%BF"><span class="nav-number">1.4.6.</span> <span class="nav-text">4.6  继承</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-1-%E7%BB%A7%E6%89%BF%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-number">1.4.6.1.</span> <span class="nav-text">4.6.1 继承的基本语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-2-%E7%BB%A7%E6%89%BF%E6%96%B9%E5%BC%8F"><span class="nav-number">1.4.6.2.</span> <span class="nav-text">4.6.2 继承方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-3-%E7%BB%A7%E6%89%BF%E4%B8%AD%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.4.6.3.</span> <span class="nav-text">4.6.3 继承中的对象模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-4-%E7%BB%A7%E6%89%BF%E4%B8%AD%E6%9E%84%E9%80%A0%E5%92%8C%E6%9E%90%E6%9E%84%E9%A1%BA%E5%BA%8F"><span class="nav-number">1.4.6.4.</span> <span class="nav-text">4.6.4 继承中构造和析构顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-5-%E7%BB%A7%E6%89%BF%E5%90%8C%E5%90%8D%E6%88%90%E5%91%98%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-number">1.4.6.5.</span> <span class="nav-text">4.6.5 继承同名成员处理方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-6-%E7%BB%A7%E6%89%BF%E5%90%8C%E5%90%8D%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-number">1.4.6.6.</span> <span class="nav-text">4.6.6 继承同名静态成员处理方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-7-%E5%A4%9A%E7%BB%A7%E6%89%BF%E8%AF%AD%E6%B3%95"><span class="nav-number">1.4.6.7.</span> <span class="nav-text">4.6.7 多继承语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-8-%E8%8F%B1%E5%BD%A2%E7%BB%A7%E6%89%BF"><span class="nav-number">1.4.6.8.</span> <span class="nav-text">4.6.8 菱形继承</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-%E5%A4%9A%E6%80%81"><span class="nav-number">1.4.7.</span> <span class="nav-text">4.7  多态</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-1-%E5%A4%9A%E6%80%81%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.4.7.1.</span> <span class="nav-text">4.7.1 多态的基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-2-%E5%A4%9A%E6%80%81%E6%A1%88%E4%BE%8B%E4%B8%80-%E8%AE%A1%E7%AE%97%E5%99%A8%E7%B1%BB"><span class="nav-number">1.4.7.2.</span> <span class="nav-text">4.7.2 多态案例一-计算器类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-3-%E7%BA%AF%E8%99%9A%E5%87%BD%E6%95%B0%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="nav-number">1.4.7.3.</span> <span class="nav-text">4.7.3 纯虚函数和抽象类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-4-%E5%A4%9A%E6%80%81%E6%A1%88%E4%BE%8B%E4%BA%8C-%E5%88%B6%E4%BD%9C%E9%A5%AE%E5%93%81"><span class="nav-number">1.4.7.4.</span> <span class="nav-text">4.7.4 多态案例二-制作饮品</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-5-%E8%99%9A%E6%9E%90%E6%9E%84%E5%92%8C%E7%BA%AF%E8%99%9A%E6%9E%90%E6%9E%84"><span class="nav-number">1.4.7.5.</span> <span class="nav-text">4.7.5 虚析构和纯虚析构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-7-6-%E5%A4%9A%E6%80%81%E6%A1%88%E4%BE%8B%E4%B8%89-%E7%94%B5%E8%84%91%E7%BB%84%E8%A3%85"><span class="nav-number">1.4.7.6.</span> <span class="nav-text">4.7.6 多态案例三-电脑组装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-number">1.5.</span> <span class="nav-text">5 文件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6"><span class="nav-number">1.5.1.</span> <span class="nav-text">5.1文本文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1%E5%86%99%E6%96%87%E4%BB%B6"><span class="nav-number">1.5.1.1.</span> <span class="nav-text">5.1.1写文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2%E8%AF%BB%E6%96%87%E4%BB%B6"><span class="nav-number">1.5.1.2.</span> <span class="nav-text">5.1.2读文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6"><span class="nav-number">1.5.2.</span> <span class="nav-text">5.2 二进制文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-%E5%86%99%E6%96%87%E4%BB%B6"><span class="nav-number">1.5.2.1.</span> <span class="nav-text">5.2.1 写文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-2-%E8%AF%BB%E6%96%87%E4%BB%B6"><span class="nav-number">1.5.2.2.</span> <span class="nav-text">5.2.2 读文件</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
