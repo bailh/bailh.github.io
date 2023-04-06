@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lisihan.com.cn/2023/02/28/pointers%20on%20c/</loc>
+    <lastmod>2023-04-06</lastmod>
+  </url>
+  <url>
     <loc>https://lisihan.com.cn/2023/01/29/test/</loc>
+    <lastmod>2023-04-06</lastmod>
+  </url>
+  <url>
+    <loc>https://lisihan.com.cn/2023/03/01/cmd/</loc>
     <lastmod>2023-04-06</lastmod>
   </url>
   <url>
@@ -34,14 +42,6 @@
   </url>
   <url>
     <loc>https://lisihan.com.cn/2023/02/25/math%20faction/</loc>
-    <lastmod>2023-04-06</lastmod>
-  </url>
-  <url>
-    <loc>https://lisihan.com.cn/2023/02/28/pointers%20on%20c/</loc>
-    <lastmod>2023-04-06</lastmod>
-  </url>
-  <url>
-    <loc>https://lisihan.com.cn/2023/03/01/cmd/</loc>
     <lastmod>2023-04-06</lastmod>
   </url>
 </urlset> 
