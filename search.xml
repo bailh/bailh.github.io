@@ -1419,6 +1419,9 @@
 <li>文件输入流对象 可以通过read函数，以二进制方式读数据</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>C++学习</category>
+      </categories>
       <tags>
         <tag>C++</tag>
       </tags>
