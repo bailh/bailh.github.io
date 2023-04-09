@@ -1440,6 +1440,9 @@
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> 结构名</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">​     <span class="function"><span class="type">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">( <span class="type">const</span> T &amp; a1,<span class="type">const</span> T &amp; a2)</span> <span class="type">const</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//若a1在a2前面，则返回true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//eles返回false</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
       <tags>
         <tag>STL</tag>
       </tags>
@@ -1799,6 +1802,9 @@
 <p>　　REM 文本内容 在批处理文件中添加注解</p>
 <p>　　netsh 查看或更改本地网络配置情况</p>
 ]]></content>
+      <categories>
+        <category>CMD</category>
+      </categories>
       <tags>
         <tag>快捷键</tag>
       </tags>
@@ -1840,6 +1846,9 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <categories>
+        <category>HELLO WORLD</category>
+      </categories>
       <tags>
         <tag>Hello World</tag>
       </tags>
