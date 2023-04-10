@@ -23,20 +23,20 @@
     var CONFIG = {"hostname":"lisihan.com.cn","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="C语言为什么要return 0">
+  <meta name="description" content="python 中的 [:-1] 和 [::-1] [-1:-2:-1]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="return 0">
-<meta property="og:url" content="https://lisihan.com.cn/2023/03/05/3return%200/index.html">
+<meta property="og:title" content="12python数组操作中的两个vs3个冒号">
+<meta property="og:url" content="https://lisihan.com.cn/2023/04/10/12python%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="北辰星">
-<meta property="og:description" content="C语言为什么要return 0">
+<meta property="og:description" content="python 中的 [:-1] 和 [::-1] [-1:-2:-1]">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-05T13:13:31.152Z">
-<meta property="article:modified_time" content="2023-04-09T07:45:39.866Z">
+<meta property="article:published_time" content="2023-04-10T08:51:49.098Z">
+<meta property="article:modified_time" content="2023-04-10T14:46:11.698Z">
 <meta property="article:author" content="疯子">
-<meta property="article:tag" content="C">
+<meta property="article:tag" content="python语法">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://lisihan.com.cn/2023/03/05/3return%200/">
+<link rel="canonical" href="https://lisihan.com.cn/2023/04/10/12python%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/">
 
 
 <script id="page-configurations">
@@ -62,7 +62,7 @@
   padding: 1px 4px;
 }
 </style>
-  <title>return 0 | 北辰星</title>
+  <title>12python数组操作中的两个vs3个冒号 | 北辰星</title>
   
 
 
@@ -213,7 +213,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lisihan.com.cn/2023/03/05/3return%200/">
+    <link itemprop="mainEntityOfPage" href="https://lisihan.com.cn/2023/04/10/12python%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -226,7 +226,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          return 0<a href="https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name_posts/3return%200.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil-alt"></i></a>
+          12python数组操作中的两个vs3个冒号<a href="https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name_posts/12python%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil-alt"></i></a>
         </h1>
 
         <div class="post-meta">
@@ -235,16 +235,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-03-05 21:13:31" itemprop="dateCreated datePublished" datetime="2023-03-05T21:13:31+08:00">2023-03-05</time>
+              <time title="创建时间：2023-04-10 16:51:49 / 修改时间：22:46:11" itemprop="dateCreated datePublished" datetime="2023-04-10T16:51:49+08:00">2023-04-10</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-04-09 15:45:39" itemprop="dateModified" datetime="2023-04-09T15:45:39+08:00">2023-04-09</time>
-              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -262,8 +256,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2023/03/05/3return%200/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2023/03/05/3return%200/" itemprop="commentCount"></span>
+    <a title="valine" href="/2023/04/10/12python%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2023/04/10/12python%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -273,16 +267,16 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>291</span>
+              <span>3.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>3 分钟</span>
             </span>
-            <div class="post-description">C语言为什么要return 0</div>
+            <div class="post-description">python 中的 [:-1] 和 [::-1] [-1:-2:-1]</div>
 
         </div>
       </header>
@@ -293,10 +287,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>C语言为什么要return 0(个人看法)</p>
-<span id="more"></span>
+        <h2 id="python版本3-7"><a href="#python版本3-7" class="headerlink" title="python版本3.7"></a>python版本3.7</h2><h3 id="首先先了解下python3-7中的下标"><a href="#首先先了解下python3-7中的下标" class="headerlink" title="首先先了解下python3.7中的下标"></a>首先先了解下python3.7中的下标</h3><p>python下标有两套，一套是正的，一套是负的</p>
+<h4 id="引入负坐标的意义"><a href="#引入负坐标的意义" class="headerlink" title="引入负坐标的意义"></a>引入负坐标的意义</h4><p>方便将数组中的数据从右往左访问</p>
+<p>a&#x3D;’python’中的python 的下标描述如下</p>
+<p>组      p   y    t    h    o    n<br>正下标  0    1    2    3    4    5<br>负下标 -6   -5    -4   -3   -2   -1</p>
+<p>对应位置的正下标减去负下标等于len(a) ：正下标-负下标&#x3D;len(a)<br>使用正下标时，下标i取值范围为0 &lt;&#x3D; i &lt; len(a)     超出范围为越界，i大于len(a)表示越（数轴）右界<br>使用负下标时，下标i取值范围为-len(a)-1 &lt; i &lt;&#x3D;-1  超出范围为越界，i小于len(a)表示越（数轴）左界</p>
+<p>数组操作中一般通过 “:” 和数字或变量的组合来灵活使用里面的元素<br><strong>第一个“:” 表示循环，第二个“:” 表示设定后面数字为步长</strong>    比如i:j:k，表示从i到j步长为k，逐个顺次获取。i到j满足<strong>左闭右开</strong>原则 。<br>没有冒号表示正常的数组<strong>单个元素</strong>访问；没有第二个冒号就表示<strong>默认的步长为1</strong>，从i到j左开右闭步长为1逐个访问。</p>
+<h5 id="1、k缺省（忽略未写出的默认值）为1；"><a href="#1、k缺省（忽略未写出的默认值）为1；" class="headerlink" title="1、k缺省（忽略未写出的默认值）为1；"></a>1、k缺省（忽略未写出的默认值）为1；</h5><p>当k&gt;0时，i缺省为0，j缺省为len(a) ; 当k&lt;0时，i缺省为-1，j缺省为-len(a)-1。</p>
+<h5 id="2、当k-gt-0时，可以将i，j全转换成正下标去理解。"><a href="#2、当k-gt-0时，可以将i，j全转换成正下标去理解。" class="headerlink" title="2、当k&gt;0时，可以将i，j全转换成正下标去理解。"></a>2、当k&gt;0时，可以将i，j全转换成正下标去理解。</h5><p>当i或j为正且越正数下标右界时，越界的数全部取正下标右界len(a)。<br>当i或j为负且越负数下标的左界时，越界的数全部取左界前的有效值-len(a)，然后再转换成正下标，转换规则为：正下标&#x3D;len(a)+负下标。   </p>
+<h5 id="3、当k-lt-0时，可以将i，j全部转换成负下标去理解。"><a href="#3、当k-lt-0时，可以将i，j全部转换成负下标去理解。" class="headerlink" title="3、当k&lt;0时，可以将i，j全部转换成负下标去理解。"></a>3、当k&lt;0时，可以将i，j全部转换成负下标去理解。</h5><p>当i或j为负且越负数下标左界时，越界的数全部取负下标左界-len(a)-1。<br>当i或j为正且越正数下标右界时，越界的数全部取右界前的有效值len(a)-1，然后再转换为负下标，转换规则为：负下标&#x3D;正下标-len(a)。<br>4、k不能等于0。</p>
+<h6 id="对于循环操作中下标的操作应该先处理越界，然后再根据的正负转换成对应的正负坐标。"><a href="#对于循环操作中下标的操作应该先处理越界，然后再根据的正负转换成对应的正负坐标。" class="headerlink" title="对于循环操作中下标的操作应该先处理越界，然后再根据的正负转换成对应的正负坐标。"></a>对于循环操作中下标的操作应该先处理越界，然后再根据的正负转换成对应的正负坐标。</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="string">&#x27;python&#x27;</span>   <span class="comment">#len(a)=6</span></span><br><span class="line">i=<span class="number">1</span></span><br><span class="line">j=<span class="number">4</span></span><br><span class="line">k=<span class="number">1</span></span><br><span class="line">b=a[i:j:k]  <span class="comment">#结果为yth  。意思为从下标i个开始到下标j-1结束，步长为k，(k为整数且不能等于0,缺省为1)，第一个冒号满足左闭右开原则 。</span></span><br><span class="line">b=a[i]      <span class="comment">#结果为y ,无冒号，表示普通的数组单个元素访问，根据下标获取值。</span></span><br><span class="line">b=a[-<span class="number">1</span>]     <span class="comment">#结果为n。</span></span><br><span class="line">b=a[-<span class="number">6</span>]     <span class="comment">#结果为p。</span></span><br><span class="line">b=a[i:j]    <span class="comment">#结果为yth，从i到j，步长为缺省（默认）1 </span></span><br><span class="line">b=a[<span class="number">0</span>:<span class="number">6</span>:<span class="number">1</span>]  <span class="comment">#结果为python,第一个冒号满足左闭右开原则，等价于a[::]</span></span><br><span class="line">b=a[<span class="number">0</span>:<span class="number">6</span>:<span class="number">2</span>]  <span class="comment">#结果为pto，步长为2，等价于a[::2]</span></span><br><span class="line">b=a[<span class="number">1</span>:<span class="number">6</span>:<span class="number">3</span>]  <span class="comment">#结果为yo，步长为3，等价于a[::3]</span></span><br><span class="line">b=a[<span class="number">0</span>:<span class="number">3</span>:<span class="number">1</span>]  <span class="comment">#结果为pyt,第一个冒号满足左闭右开原则,下标为3的值是取不到的</span></span><br><span class="line">b=a[<span class="number">0</span>:<span class="number">5</span>:<span class="number">1</span>]  <span class="comment">#结果为pytho,第一个冒号满足左闭右开原则</span></span><br><span class="line">b=a[<span class="number">0</span>:<span class="number">7</span>:<span class="number">1</span>]  <span class="comment">#结果为python，等价于a[0:6:1]，当第一个冒号右边的值大于len(a)时，</span></span><br><span class="line">b=a[<span class="number">0</span>:<span class="number">100</span>:<span class="number">1</span>]<span class="comment">#结果为python，此处正下标越界，等价于a[0:6:1]，注意第一个冒号右边的100已经超越了正下标的右限。</span></span><br><span class="line">b=a[<span class="number">6</span>:<span class="number">100</span>:<span class="number">1</span>]<span class="comment">#结果为空，等价于a[6:6:1]，注意第一个冒号左右边都已经超越了正下标的右限</span></span><br><span class="line">b=a[<span class="number">7</span>:<span class="number">100</span>:<span class="number">1</span>]<span class="comment">#结果为空，等价于a[6:6:1]，注意第一个冒号左右边都已经超越了正下标的右限</span></span><br><span class="line">b=a[-<span class="number">6</span>:<span class="number">6</span>:<span class="number">1</span>] <span class="comment">#结果为python，等价于a[0:6:1]</span></span><br><span class="line">b=a[-<span class="number">7</span>:<span class="number">6</span>:<span class="number">1</span>] <span class="comment">#结果为python，左闭右开，此处负下标越界，等价于a[-6:6:1]=a[0:6:1]</span></span><br><span class="line">b=a[-<span class="number">100</span>:<span class="number">6</span>:<span class="number">1</span>]<span class="comment">#结果为python，注意-100已经超过了负下标的左限，等价于a[-6:6:1]=a[0:6:1]</span></span><br><span class="line">b=a[-<span class="number">100</span>:<span class="number">100</span>:<span class="number">1</span>]<span class="comment">#结果为python，注意-100已经超过了负下标的左限,等价于a[-6:6:1]=a[0:6:1]</span></span><br><span class="line">b=a[-<span class="number">6</span>:-<span class="number">1</span>:<span class="number">1</span>]<span class="comment">#结果为pytho，等价于a[0:5:1]，注意，-6转换成正坐标为0，-1转换为正坐标为5.</span></span><br><span class="line">b=a[-<span class="number">100</span>:-<span class="number">1</span>:<span class="number">1</span>]<span class="comment">#结果为pytho，注意-100已经超过了负下标的左限,等价于a[-6:-1:1]=a[0:5:1]</span></span><br><span class="line">b=a[<span class="number">0</span>:-<span class="number">1</span>:<span class="number">1</span>]<span class="comment">#结果为pytho,等价于a[0:5:1]</span></span><br><span class="line">b=a[<span class="number">0</span>:-<span class="number">100</span>:<span class="number">1</span>]<span class="comment">#结果为空，注意-100已经超过了负下标的左限,等价于a[0:-6:1]=a[0:0:1]</span></span><br><span class="line">b=a[<span class="number">0</span>:-<span class="number">6</span>:<span class="number">1</span>] <span class="comment">#结果为空，等价于a[0:0:1]</span></span><br><span class="line">b=a[<span class="number">0</span>:-<span class="number">7</span>:<span class="number">1</span>] <span class="comment">#结果为空，等价于a[0:0:1]</span></span><br><span class="line">b=a[:j] <span class="comment">#结果为pyth。k缺省（默认）为1，k大于0时，i缺省（默认）为0，j缺省（默认）为len(a)</span></span><br><span class="line">b=a[i:] <span class="comment">#结果为ython，表示从下标i开始到最后一个（下标为len(a)-1）</span></span><br><span class="line">b=a[:]  <span class="comment">#结果为python，等价于a[0:6:1],表示从下标0开始到最后一个结束,步长为1。</span></span><br><span class="line">b=a[::] <span class="comment">#结果为python。等价于a[0:6:1]。a[i:j:k]中，k缺省为1，当k大于0时，i缺省为0，j缺省为len(a)。</span></span><br><span class="line">b=a[::<span class="number">10</span>] <span class="comment">#结果为p。等价于a[0:6:10]。a[i:j:k]中，当k大于0时，i缺省为0，j缺省为len(a)</span></span><br><span class="line"> </span><br><span class="line">k为负，表示从右往左顺次获取数组中的值，转换成负下标后，-<span class="built_in">len</span>(a)-<span class="number">1</span>&lt;=j&lt;i&lt;=-<span class="number">1</span>才能获取到值。</span><br><span class="line">b=a[i:j:-<span class="number">1</span>]  <span class="comment">#结果为空，等价于a[1:4:-1]=a[-5:-2:-1]</span></span><br><span class="line">b=a[-<span class="number">1</span>:-<span class="number">7</span>:-<span class="number">1</span>]<span class="comment">#结果为nohtyp，第一个冒号满足左闭右开原则。</span></span><br><span class="line">b=a[-<span class="number">1</span>:-<span class="number">100</span>:-<span class="number">1</span>]<span class="comment">#结果为nohtyp，负下标越界，等价于a[-1:-7:-1]</span></span><br><span class="line">b=a[<span class="number">4</span>:<span class="number">0</span>:-<span class="number">1</span>] <span class="comment">#结果为ohty，k为负数，将i，l转换成负下标理解，等价于a[-2:-6:-1]，注意4转换成负下标为-2，0转换成负下标为-6</span></span><br><span class="line">b=a[<span class="number">4</span>:-<span class="number">1</span>:-<span class="number">1</span>]<span class="comment">#结果为空，可以理解为a[-2:-1:-1]</span></span><br><span class="line">b=a[<span class="number">4</span>:-<span class="number">100</span>:-<span class="number">1</span>]<span class="comment">#结果为ohtyp，k为负，将i转成负下标理解，同时j越界，等价于a[-2:-100:-1]=a[-2:-7:-1]</span></span><br><span class="line">b=a[-<span class="number">1</span>:<span class="number">0</span>:-<span class="number">1</span>]<span class="comment">#结果为nohty，可以理解为a[-1:-6:-1]</span></span><br><span class="line">b=a[<span class="number">0</span>:-<span class="number">1</span>:-<span class="number">1</span>]<span class="comment">#结果为空，可以理解为a[-6:-1:-1]</span></span><br><span class="line">b=a[<span class="number">0</span>:-<span class="number">2</span>:-<span class="number">1</span>]<span class="comment">#结果为空 ，可以理解为a[-6:-2:-1]</span></span><br><span class="line">b=a[-<span class="number">2</span>:<span class="number">0</span>:-<span class="number">1</span>]<span class="comment">#结果为ohty，可以理解为a[-2:-6:-1]</span></span><br><span class="line">b=a[-<span class="number">1</span>:<span class="number">6</span>:-<span class="number">1</span>]<span class="comment">#结果为空，可以理解为a[-1:5:-1]=a[-1:-1:-1]</span></span><br><span class="line">b=a[-<span class="number">1</span>:<span class="number">100</span>:-<span class="number">1</span>]<span class="comment">#结果为空，可以理解为a[-1:5:-1]=a[-1:-1:-1]</span></span><br><span class="line">b=a[<span class="number">6</span>:<span class="number">100</span>:-<span class="number">1</span>]<span class="comment">#结果为空，可以理解为a[5:5:-1]=a[-1:-1:-1]</span></span><br><span class="line">b=a[<span class="number">4</span>:<span class="number">100</span>:-<span class="number">1</span>]<span class="comment">#结果为空，可以理解为a[4:5:-1]=a[-1:-1:-1]</span></span><br><span class="line">b=a[<span class="number">100</span>:<span class="number">100</span>:-<span class="number">1</span>]<span class="comment">#结果为空，可以理解为a[5:5:-1]=a[-1:-1:-1]</span></span><br><span class="line">b=a[<span class="number">100</span>:<span class="number">4</span>:-<span class="number">1</span>]<span class="comment">#结果为n,可以理解为a[5:4:-1]=a[-1:-2:-1]</span></span><br><span class="line">b=a[<span class="number">100</span>:-<span class="number">100</span>:-<span class="number">1</span>]<span class="comment">#结果为nohtyp，可以理解为a[5:-7:-1]=a[-1:-7:-1]</span></span><br><span class="line">b=a[<span class="number">100</span>:<span class="number">0</span>:-<span class="number">1</span>]<span class="comment">#结果为nohty，可以理解为a[5:0:-1]=a[-1:-6:-1]</span></span><br><span class="line">b=a[-<span class="number">100</span>:<span class="number">100</span>:-<span class="number">1</span>]<span class="comment">#结果为空，可以理解为a[-7:6:-1]=a[-7:-1:-1]</span></span><br><span class="line">b=a[:-<span class="number">1</span>]  <span class="comment">#结果为pytho ，等价于a[0:5：1]</span></span><br><span class="line">b=a[::-<span class="number">1</span>] <span class="comment">#结果为nohtyp，等价于a[-1:-len(a)-1:-1] = a[-1:-7:-1]</span></span><br></pre></td></tr></table></figure>
 
-<p>c语言中的return 0有什么用?<br>用return这种形式就能定义返回值, return 0可以 终止 main() 函数，并返回值 0。<br>return 0 代表程序正常退出，return 1代表程序异常退出！<br>使用return 语句可以返回一个变量内的值或一个指针，也可用return0，表示返回为空。<br>return 代表调到函数外，<br><strong>return 0代表函数正常终止</strong><br><strong>return 1代表函数非正常终止</strong><br>而我觉得还有一个作用就是return之后你至少知道代码成功运行到最后一行，中间没有异常中止，并且return 关键字的还有一个作用是返回程序流程的控制权！其副作用是返回一个值。</p>
+
 
     </div>
 
@@ -340,7 +342,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://lisihan.com.cn/2023/03/05/3return%200/" title="return 0">https://lisihan.com.cn/2023/03/05/3return 0/</a>
+    <a href="https://lisihan.com.cn/2023/04/10/12python%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/" title="12python数组操作中的两个vs3个冒号">https://lisihan.com.cn/2023/04/10/12python数组操作/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -380,7 +382,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/C/" rel="tag"># C</a>
+              <a href="/tags/python%E8%AF%AD%E6%B3%95/" rel="tag"># python语法</a>
           </div>
 
         
@@ -389,13 +391,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/03/03/2liu/" rel="prev" title="liu">
-      <i class="fa fa-chevron-left"></i> liu
+    <a href="/2023/04/10/13%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="prev" title="数据结构">
+      <i class="fa fa-chevron-left"></i> 数据结构
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2023/03/15/6STL/" rel="next" title="c++的STL">
-      c++的STL <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -455,6 +454,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#python%E7%89%88%E6%9C%AC3-7"><span class="nav-number">1.</span> <span class="nav-text">python版本3.7</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E5%85%88%E4%BA%86%E8%A7%A3%E4%B8%8Bpython3-7%E4%B8%AD%E7%9A%84%E4%B8%8B%E6%A0%87"><span class="nav-number">1.1.</span> <span class="nav-text">首先先了解下python3.7中的下标</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E5%85%A5%E8%B4%9F%E5%9D%90%E6%A0%87%E7%9A%84%E6%84%8F%E4%B9%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">引入负坐标的意义</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1%E3%80%81k%E7%BC%BA%E7%9C%81%EF%BC%88%E5%BF%BD%E7%95%A5%E6%9C%AA%E5%86%99%E5%87%BA%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC%EF%BC%89%E4%B8%BA1%EF%BC%9B"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">1、k缺省（忽略未写出的默认值）为1；</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2%E3%80%81%E5%BD%93k-gt-0%E6%97%B6%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%B0%86i%EF%BC%8Cj%E5%85%A8%E8%BD%AC%E6%8D%A2%E6%88%90%E6%AD%A3%E4%B8%8B%E6%A0%87%E5%8E%BB%E7%90%86%E8%A7%A3%E3%80%82"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">2、当k&gt;0时，可以将i，j全转换成正下标去理解。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3%E3%80%81%E5%BD%93k-lt-0%E6%97%B6%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%B0%86i%EF%BC%8Cj%E5%85%A8%E9%83%A8%E8%BD%AC%E6%8D%A2%E6%88%90%E8%B4%9F%E4%B8%8B%E6%A0%87%E5%8E%BB%E7%90%86%E8%A7%A3%E3%80%82"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">3、当k&lt;0时，可以将i，j全部转换成负下标去理解。</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E5%BE%AA%E7%8E%AF%E6%93%8D%E4%BD%9C%E4%B8%AD%E4%B8%8B%E6%A0%87%E7%9A%84%E6%93%8D%E4%BD%9C%E5%BA%94%E8%AF%A5%E5%85%88%E5%A4%84%E7%90%86%E8%B6%8A%E7%95%8C%EF%BC%8C%E7%84%B6%E5%90%8E%E5%86%8D%E6%A0%B9%E6%8D%AE%E7%9A%84%E6%AD%A3%E8%B4%9F%E8%BD%AC%E6%8D%A2%E6%88%90%E5%AF%B9%E5%BA%94%E7%9A%84%E6%AD%A3%E8%B4%9F%E5%9D%90%E6%A0%87%E3%80%82"><span class="nav-number">1.1.1.3.1.</span> <span class="nav-text">对于循环操作中下标的操作应该先处理越界，然后再根据的正负转换成对应的正负坐标。</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
