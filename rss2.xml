@@ -9,8 +9,30 @@
     <atom:link href="https://lisihan.com.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>认真做好每一件事</description>
-    <pubDate>Sun, 09 Apr 2023 07:44:57 GMT</pubDate>
+    <pubDate>Mon, 10 Apr 2023 08:41:19 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title></title>
+      <link>https://lisihan.com.cn/2023/04/10/13%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <guid>https://lisihan.com.cn/2023/04/10/13%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <pubDate>Mon, 10 Apr 2023 08:31:28 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h1 id=&quot;数据结构&quot;&gt;&lt;a href=&quot;#数据结构&quot; class=&quot;headerlink&quot; title=&quot;数据结构&quot;&gt;&lt;/a&gt;数据结构&lt;/h1&gt;&lt;h2 id=&quot;第一章-概论&quot;&gt;&lt;a href=&quot;#第一章-概论&quot; class=&quot;headerlink&quot; title=&quot;第一章 概</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="第一章-概论"><a href="#第一章-概论" class="headerlink" title="第一章 概论"></a>第一章 概论</h2><p>实现PrintN函数的两种方法——引出空间复杂度和时间复杂度的概念</p><p>正常</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">PrintN</span><span class="params">(<span class="type">int</span> N)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= N; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, i);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>递归</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">PrintN</span><span class="params">(<span class="type">int</span> N)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(N &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        PrintN(N - <span class="number">1</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, N);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>运行测试程序</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">PrintN</span><span class="params">(<span class="type">int</span> N)</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> N;</span><br><span class="line"></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;N);</span><br><span class="line">printN(N);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>发现N足够大时，递归不可行</p>]]></content:encoded>
+      
+      
+      
+      
+      <comments>https://lisihan.com.cn/2023/04/10/13%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Jupyter Notebook 的快捷键</title>
@@ -18,17 +40,17 @@
       <guid>https://lisihan.com.cn/2023/04/09/7Jupyter%20book%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
       <pubDate>Sun, 09 Apr 2023 07:32:11 GMT</pubDate>
       
-      <description>什么是“流”，“流”的基本概念</description>
+      <description>Jupyter Notebook 的常用快捷键</description>
       
       
       
       <content:encoded><![CDATA[<h2 id="Jupyter-Notebook-的快捷键"><a href="#Jupyter-Notebook-的快捷键" class="headerlink" title="Jupyter Notebook 的快捷键"></a>Jupyter Notebook 的快捷键</h2><h4 id="有两种键盘输入模式"><a href="#有两种键盘输入模式" class="headerlink" title="有两种键盘输入模式"></a>有两种键盘输入模式</h4><h3 id="编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。"><a href="#编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。" class="headerlink" title="编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。"></a>编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。</h3><h3 id="命令模式-按键-Esc-开启"><a href="#命令模式-按键-Esc-开启" class="headerlink" title="命令模式 (按键 Esc 开启)"></a>命令模式 (按键 Esc 开启)</h3><p>Enter : 转入编辑模式<br>Shift-Enter : 运行本单元，选中下个单元<br>Ctrl-Enter : 运行本单元<br>Alt-Enter : 运行本单元，在其下插入新单元<br>Y : 单元转入代码状态<br>M :单元转入markdown状态<br>R : 单元转入raw状态<br>1 : 设定 1 级标题<br>2 : 设定 2 级标题<br>3 : 设定 3 级标题<br>4 : 设定 4 级标题<br>5 : 设定 5 级标题<br>6 : 设定 6 级标题<br>Up : 选中上方单元<br>K : 选中上方单元<br>Down : 选中下方单元<br>J : 选中下方单元<br>Shift-K : 扩大选中上方单元<br>Shift-J : 扩大选中下方单元<br>A : 在上方插入新单元<br>B : 在下方插入新单元<br>X : 剪切选中的单元<br>C : 复制选中的单元<br>Shift-V : 粘贴到上方单元<br>V : 粘贴到下方单元<br>Z : 恢复删除的最后一个单元<br>D,D : 删除选中的单元<br>Shift-M : 合并选中的单元<br>Ctrl-S : 文件存盘<br>S : 文件存盘<br>L : 转换行号<br>O : 转换输出<br>Shift-O : 转换输出滚动<br>Esc : 关闭页面<br>Q : 关闭页面<br>H : 显示快捷键帮助<br>I,I : 中断Notebook内核<br>0,0 : 重启Notebook内核<br>Shift : 忽略<br>Shift-Space : 向上滚动<br>Space : 向下滚动</p><h3 id="编辑模式-Enter-键启动"><a href="#编辑模式-Enter-键启动" class="headerlink" title="编辑模式 ( Enter 键启动)"></a>编辑模式 ( Enter 键启动)</h3><p>Tab : 代码补全或缩进<br>Shift-Tab : 提示<br>Ctrl-] : 缩进<br>Ctrl-[ : 解除缩进<br>Ctrl-A : 全选<br>Ctrl-Z : 复原<br>Ctrl-Shift-Z : 再做<br>Ctrl-Y : 再做<br>Ctrl-Home : 跳到单元开头<br>Ctrl-Up : 跳到单元开头<br>Ctrl-End : 跳到单元末尾<br>Ctrl-Down : 跳到单元末尾<br>Ctrl-Left : 跳到左边一个字首<br>Ctrl-Right : 跳到右边一个字首<br>Ctrl-Backspace : 删除前面一个字<br>Ctrl-Delete : 删除后面一个字<br>Esc : 进入命令模式<br>Ctrl-M : 进入命令模式<br>Shift-Enter : 运行本单元，选中下一单元<br>Ctrl-Enter : 运行本单元<br>Alt-Enter : 运行本单元，在下面插入一单元<br>Ctrl-Shift– : 分割单元<br>Ctrl-Shift-Subtract : 分割单元<br>Ctrl-S : 文件存盘<br>Shift : 忽略<br>Up : 光标上移或转入上一单元<br>Down :光标下移或转入下一单元</p>]]></content:encoded>
       
       
-      <category domain="https://lisihan.com.cn/categories/C%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">C文件操作</category>
+      <category domain="https://lisihan.com.cn/categories/python/">python</category>
       
       
-      <category domain="https://lisihan.com.cn/tags/IO/">IO</category>
+      <category domain="https://lisihan.com.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</category>
       
       
       <comments>https://lisihan.com.cn/2023/04/09/7Jupyter%20book%E5%BF%AB%E6%8D%B7%E9%94%AE/#disqus_thread</comments>
@@ -116,6 +138,8 @@
       
       <content:encoded><![CDATA[<h1 id="主要介绍："><a href="#主要介绍：" class="headerlink" title="主要介绍："></a>主要介绍：</h1><p>  什么是“流”，“流”的基本概念，“流”对于内存和外部设备着<span id="more"></span>什么样的作用，C语言默认打开的三个“流”：stdin、stdout、stderr👀。</p><!-- more --><p>通过《C语言》文件这一章的学习，我们学会了如何向文件进行读写操作，也就是如何让数据从内存中保存到硬盘上，或是如何从硬盘上读取数据放到内存中。硬盘其实是一个外部设备，那有人就要问了：我们能否对其他<strong>外部</strong>设进行读写操作呢？例如：屏幕、键盘、鼠标、U盘、光盘、网络…… ，答案当然是肯定的。</p><h2 id="但值得注意"><a href="#但值得注意" class="headerlink" title="但值得注意"></a>但值得注意</h2><p> 的是，<em>每一种外部设备的读写方式是有所差异的</em>，就比如：写硬盘和写屏幕，读键盘和读网络。那大家想一下，如果一个程序员写代码的时候，必须要把每种外部设备的读和写的方式都理解透彻，是不是太麻烦了！</p><p>  所以，为了能够<em>让程序员更加方便的对外部设备进行读写操作</em>，我们会在外部设备前抽象出来一层东西，称为：“流”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由C语言底层的封装来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个中转站，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  所以，为了能够让程序员更加方便的对外部设备进行读写操作，我们会<em>在外部设备前抽象出来一层东西</em>，称为：“<strong>流</strong>”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由<strong>C语言底层的封装</strong>来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个<strong>中转站</strong>，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  “流”是一个比较抽象的概念，数据就像水管里的水流，可以从内存中流向外部设备，也可以从外部设备流向内存，但只能<strong>单方向</strong>的流。由此可见“流”是有明确的方向性的，所以可以将“流”分为两种：以内存为第一人称，<strong>数据从内存向外流的称为输出流，数据由外向内存流的称为输入流</strong>。</p><p>  还值得补充的一点是，不知道大家有没有发现，我们在对一个文件操作前必须先打开它，获得与之关联的文件指针，这个指针就可以称为“文件流”，因为这个指针指向了数据的目的地 &#x2F; 源头。但我们在对屏幕写出数据时或从键盘上读入数据时，并没有对这些外部设备进行打开操作获得所对应的“流”啊，而且在scanf和printf操作的时候也没有要求你给出数据的流向，最后却还能实现，这是为什么呢？<br>因为任意一个C程序只要运行起来，就会默认打开3个“流”：</p><blockquote><p>stdin —— 标准输入流（键盘）</br><br>stdout —— 标准输出流（屏幕）</br><br>stderr —— 标准错误流（屏幕）</br></p></blockquote><p>  所以printf()会默认将数据发送到stdout这个“流”上，scanf()会默从stdin这个“流”上读取数据，不需要我们手动打开和关闭“流”。但对于文件来说，我们就必须先打开这个文件从而获得这个“流”，然后才能从这个“流”里面读取数据或向这个“流”里面写数据，最后还得关闭“流”。<br>  那有同学就要问了：能不能用格式化输出函数fprintf()来向屏幕上输出一段内容？答案当然是可以的.</p>]]></content:encoded>
       
+      
+      <category domain="https://lisihan.com.cn/categories/C%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">C文件操作</category>
       
       
       <category domain="https://lisihan.com.cn/tags/IO/">IO</category>
@@ -212,23 +236,6 @@
       
       
       <comments>https://lisihan.com.cn/2023/02/25/8math%20faction/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>https://lisihan.com.cn/2023/01/29/test/</link>
-      <guid>https://lisihan.com.cn/2023/01/29/test/</guid>
-      <pubDate>Sun, 29 Jan 2023 04:12:53 GMT</pubDate>
-      
-      
-      
-      
-      
-      <category domain="https://lisihan.com.cn/tags/test/">test</category>
-      
-      
-      <comments>https://lisihan.com.cn/2023/01/29/test/#disqus_thread</comments>
       
     </item>
     

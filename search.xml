@@ -1464,10 +1464,10 @@
 <h3 id="编辑模式-Enter-键启动"><a href="#编辑模式-Enter-键启动" class="headerlink" title="编辑模式 ( Enter 键启动)"></a>编辑模式 ( Enter 键启动)</h3><p>Tab : 代码补全或缩进<br>Shift-Tab : 提示<br>Ctrl-] : 缩进<br>Ctrl-[ : 解除缩进<br>Ctrl-A : 全选<br>Ctrl-Z : 复原<br>Ctrl-Shift-Z : 再做<br>Ctrl-Y : 再做<br>Ctrl-Home : 跳到单元开头<br>Ctrl-Up : 跳到单元开头<br>Ctrl-End : 跳到单元末尾<br>Ctrl-Down : 跳到单元末尾<br>Ctrl-Left : 跳到左边一个字首<br>Ctrl-Right : 跳到右边一个字首<br>Ctrl-Backspace : 删除前面一个字<br>Ctrl-Delete : 删除后面一个字<br>Esc : 进入命令模式<br>Ctrl-M : 进入命令模式<br>Shift-Enter : 运行本单元，选中下一单元<br>Ctrl-Enter : 运行本单元<br>Alt-Enter : 运行本单元，在下面插入一单元<br>Ctrl-Shift– : 分割单元<br>Ctrl-Shift-Subtract : 分割单元<br>Ctrl-S : 文件存盘<br>Shift : 忽略<br>Up : 光标上移或转入上一单元<br>Down :光标下移或转入下一单元</p>
 ]]></content>
       <categories>
-        <category>C文件操作</category>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>IO</tag>
+        <tag>快捷键</tag>
       </tags>
   </entry>
   <entry>
@@ -1887,6 +1887,9 @@
 </blockquote>
 <p>  所以printf()会默认将数据发送到stdout这个“流”上，scanf()会默从stdin这个“流”上读取数据，不需要我们手动打开和关闭“流”。但对于文件来说，我们就必须先打开这个文件从而获得这个“流”，然后才能从这个“流”里面读取数据或向这个“流”里面写数据，最后还得关闭“流”。<br>  那有同学就要问了：能不能用格式化输出函数fprintf()来向屏幕上输出一段内容？答案当然是可以的.</p>
 ]]></content>
+      <categories>
+        <category>C文件操作</category>
+      </categories>
       <tags>
         <tag>IO</tag>
       </tags>
@@ -1915,6 +1918,22 @@
       <tags>
         <tag>Hello World</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/10/13%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="第一章-概论"><a href="#第一章-概论" class="headerlink" title="第一章 概论"></a>第一章 概论</h2><p>实现PrintN函数的两种方法——引出空间复杂度和时间复杂度的概念</p>
+<p>正常</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">PrintN</span><span class="params">(<span class="type">int</span> N)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>; i &lt;= N; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, i);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;	</span><br></pre></td></tr></table></figure>
+
+<p>递归</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">PrintN</span><span class="params">(<span class="type">int</span> N)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(N &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        PrintN(N - <span class="number">1</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, N);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行测试程序</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">PrintN</span><span class="params">(<span class="type">int</span> N)</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> N;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;N);</span><br><span class="line">	printN(N);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>发现N足够大时，递归不可行</p>
+]]></content>
   </entry>
   <entry>
     <title>test</title>
