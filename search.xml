@@ -1,6 +1,729 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Python编程基础</title>
+    <url>/2023/04/11/14Python%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h2 id="Page1：函数输入与输出"><a href="#Page1：函数输入与输出" class="headerlink" title="Page1：函数输入与输出"></a>Page1：函数输入与输出</h2><h3 id="输出函数"><a href="#输出函数" class="headerlink" title="输出函数"></a>输出函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;输出单个字符串&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>输出单个字符串
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;输出&#x27;</span>,<span class="string">&#x27;多个信息&#x27;</span>,<span class="string">&#x27;用，隔开&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>输出 多个信息 用，隔开
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;设置&#x27;</span>,<span class="string">&#x27;多个信息&#x27;</span>,<span class="string">&#x27;的连接符&#x27;</span>,sep=<span class="string">&#x27;o&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>设置o多个信息o的连接符
+</code></pre>
+<h3 id="输入函数"><a href="#输入函数" class="headerlink" title="输入函数"></a>输入函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">input</span>() <span class="comment">#直接调用函数就可以输入</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>a
+
+
+
+
+
+&#39;a&#39;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">input</span>(<span class="string">&#x27;也可以输入提示信息，提示信息不被录入&#x27;</span>) </span><br></pre></td></tr></table></figure>
+
+<pre><code>也可以输入提示信息，提示信息不被录入你好
+
+
+
+
+
+&#39;你好&#39;
+</code></pre>
+<h3 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%f&#x27;</span> % <span class="number">1.11163</span>)  <span class="comment"># 默认保留6位小数</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>1.111630
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%.1f&#x27;</span> % <span class="number">1.8</span>)  <span class="comment"># 取1位小数</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>1.8
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%.3e&#x27;</span> % <span class="number">1.1167</span>)  <span class="comment"># 取3位小数，用科学计数法</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>1.117e+00
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%.7g&#x27;</span> % <span class="number">9999.5465</span>)  <span class="comment"># 取7位有效数字 可以看到按照四舍五入来的</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>9999.547
+</code></pre>
+<h3 id="和-format的格式控制"><a href="#和-format的格式控制" class="headerlink" title="{} 和 format的格式控制"></a>{} 和 format的格式控制</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;我叫&#123;&#125;，今年&#123;&#125;岁。&#x27;</span>.<span class="built_in">format</span>(<span class="string">&#x27;陈昱杰&#x27;</span>, <span class="number">19</span>))</span><br><span class="line"><span class="comment"># 省略字段名传递位置参数</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>我叫陈昱杰，今年19岁。
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;身高&#123;0&#125;，家住&#123;1&#125;。&#x27;</span>.<span class="built_in">format</span>(<span class="number">180</span>, <span class="string">&#x27;十堰&#x27;</span>))</span><br><span class="line"><span class="comment"># 通过数字形式的简单字段名传递位置参数</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>身高180，家住十堰。
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;我姐姐已经&#123;work&#125;，今年&#123;age&#125;岁。&#x27;</span>.<span class="built_in">format</span>(work = <span class="string">&quot;毕业了&quot;</span>, age = <span class="string">&#x27;22&#x27;</span>))</span><br><span class="line"><span class="comment"># 使用变量名形式的简单字段名传递关键字参数</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>我姐姐已经毕业了，今年22岁。
+</code></pre>
+<h2 id="Page12：字符串"><a href="#Page12：字符串" class="headerlink" title="Page12：字符串"></a>Page12：字符串</h2><h3 id="字符串的基本操作"><a href="#字符串的基本操作" class="headerlink" title="字符串的基本操作"></a>字符串的基本操作</h3><h4 id="‘-‘-或者-“”"><a href="#‘-‘-或者-“”" class="headerlink" title="‘ ‘ 或者 “”"></a>‘ ‘ 或者 “”</h4><h4 id="如果是多行的就用’’’’’’"><a href="#如果是多行的就用’’’’’’" class="headerlink" title="如果是多行的就用’’’’’’"></a>如果是多行的就用’’’’’’</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">str1=<span class="string">&#x27;字符串的创建&#x27;</span></span><br><span class="line">str2=<span class="string">&quot;另一种方法&quot;</span></span><br><span class="line">str3=<span class="string">&#x27;&#x27;&#x27;换行字符串</span></span><br><span class="line"><span class="string">的创建&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(str1,str2,str3,sep=<span class="string">&#x27;\n************\n&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>字符串的创建
+************
+另一种创建方法
+************
+换行字符串
+的创建
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(str1+str2)</span><br><span class="line"><span class="comment"># 合并字符串 +</span></span><br><span class="line"><span class="built_in">print</span>(str1 * <span class="number">2</span> )</span><br><span class="line"><span class="comment"># 复制字符串 * </span></span><br><span class="line"><span class="built_in">print</span>(str1.replace(<span class="string">&#x27;创建&#x27;</span>,<span class="string">&#x27;构建&#x27;</span>))</span><br><span class="line"><span class="comment"># 修改字符串 replace(&#x27;a&#x27;, &#x27;b&#x27;) 用 a 来replace b</span></span><br><span class="line"><span class="built_in">print</span>(str1.find(<span class="string">&#x27;创建&#x27;</span>))</span><br><span class="line"><span class="comment"># 查找特定字符 可以看到以第一个位置为准</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>字符串的创建另一种方法
+字符串的创建字符串的创建
+字符串的构建
+4
+</code></pre>
+<h3 id="字符串切片"><a href="#字符串切片" class="headerlink" title="字符串切片"></a>字符串切片</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">str1[<span class="number">2</span>]</span><br><span class="line"><span class="comment"># 切取单个元素 注意从0开始的</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#39;串&#39;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#切取完整对象 实际是利用缺省来切取的</span></span><br><span class="line"><span class="built_in">print</span>(str1[:]) <span class="comment">#从左往右</span></span><br><span class="line"><span class="built_in">print</span>(str1[::])   <span class="comment">#从左往右</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="k-gt-0"><a href="#k-gt-0" class="headerlink" title="k &gt; 0"></a>k &gt; 0</h4><h4 id="k-lt-0"><a href="#k-lt-0" class="headerlink" title="k &lt; 0"></a>k &lt; 0</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(str1[::-<span class="number">1</span>])<span class="comment">#从右往左</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>字符串的创建
+字符串的创建
+建创的串符字
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">## start_index和end_index全为正（+）索引的情况 </span></span><br><span class="line"><span class="comment">#str1=&#x27;字符串的创建&#x27;</span></span><br><span class="line"><span class="comment">#str2=&quot;另一种方法&quot;</span></span><br><span class="line"><span class="comment">#str3=&#x27;&#x27;&#x27;换行字符串</span></span><br><span class="line"><span class="comment">#的创建&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="左闭右开"><a href="#左闭右开" class="headerlink" title="左闭右开"></a>左闭右开</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(str1[<span class="number">2</span>:<span class="number">4</span>]) <span class="comment">#step=1，从左往右取值，start_index=2到end_index=4同样表示从左往右取值。</span></span><br><span class="line"><span class="built_in">print</span>(str1[:<span class="number">4</span>])  <span class="comment">#step=1，表示从左往右取值，而start_index省略时，表示从端点开始</span></span><br><span class="line">       <span class="comment">#因此这里的端点是“起点”，即从“起点”值0开始一直取到end_index=4（该点不包括）。</span></span><br><span class="line"><span class="built_in">print</span>(str1[:<span class="number">4</span>:-<span class="number">1</span>])<span class="comment">#step=-1，从右往左取值，而start_index省略时，表示从端点开始</span></span><br><span class="line">        <span class="comment">#因此这里的端点是“终点”，即从“终点”值9开始一直取到end_index=4（该点不包括）。</span></span><br><span class="line"><span class="built_in">print</span>(str1[<span class="number">4</span>:])   <span class="comment">#step=1，从左往右取值，从start_index=4开始，一直取到“终点”值4。</span></span><br><span class="line"><span class="built_in">print</span>(str1[<span class="number">6</span>::-<span class="number">1</span>]) <span class="comment">#step=-1，从右往左取值，从start_index=4开始，一直取到“起点”0。</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>串的
+字符串的
+建
+创建
+建创的串符字
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">## start_index和end_index全为负（-）索引的情况 </span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#str1 = &quot;  字  符  串    的  创  建&quot;</span></span><br><span class="line"><span class="comment">#          0   1  2     3   4   5</span></span><br><span class="line"><span class="comment">#         -6  -5  -4   -3  -2  -1</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(str1[-<span class="number">1</span>:-<span class="number">6</span>:-<span class="number">1</span>])  <span class="comment">#step=-1，从右往左取值，start_index=-1到end_index=-6同样是从右往左取值。</span></span><br><span class="line"><span class="built_in">print</span>(str1[-<span class="number">6</span>:-<span class="number">1</span>])  <span class="comment">#step=1，从左往右取值，而start_index=-6到end_index=-1同样是从左往右取值。</span></span><br><span class="line"><span class="built_in">print</span>(str1[:-<span class="number">4</span>]) <span class="comment">#step=1，从左往右取值，从“起点”开始一直取到end_index=-4（该点不包括）。</span></span><br><span class="line"><span class="built_in">print</span>(str1[:-<span class="number">6</span>:-<span class="number">1</span>]) <span class="comment">#step=-1，从右往左取值，从“终点”开始一直取到end_index=-6（该点不包括）。</span></span><br><span class="line"><span class="built_in">print</span>(str1[-<span class="number">4</span>:]) <span class="comment"># step=1，从左往右取值，从start_index=-4开始，一直取到“终点”。</span></span><br><span class="line"><span class="built_in">print</span>(str1[-<span class="number">4</span>::-<span class="number">1</span>]) <span class="comment">#step=-1，从右往左取值，从start_index=-4开始，一直取到“起点”。 </span></span><br><span class="line"><span class="built_in">print</span>(str1[-<span class="number">4</span>:-<span class="number">2</span>:-<span class="number">1</span>]) <span class="comment">#这样就会为空 不输出</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>建创的串符
+字符串的创
+字符
+建创的串符
+串的创建
+串符字
+</code></pre>
+<h2 id="Page13：字符串的相关函数使用"><a href="#Page13：字符串的相关函数使用" class="headerlink" title="Page13：字符串的相关函数使用"></a>Page13：字符串的相关函数使用</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S=<span class="string">&#x27;  aa!bb!cc!dd!EE  &#x27;</span></span><br><span class="line"><span class="comment">#创建一个字符串</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S.split(<span class="string">&#x27;!&#x27;</span>)</span><br><span class="line"><span class="comment">#使用!分割字符串 split</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[&#39;  aa&#39;, &#39;bb&#39;, &#39;cc&#39;, &#39;dd&#39;, &#39;EE  &#39;]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S.strip()</span><br><span class="line"><span class="comment">#删除字符串的空格 strip()</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#39;aa!bb!cc!dd!EE&#39;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(S.isalnum())</span><br><span class="line"><span class="comment">#字符串含有**数字和字母**以外的字符,判断为False isalnum</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;aabbccddEE&#x27;</span>.isalnum())</span><br><span class="line"><span class="comment">#字符串只有数字和字母,判断为True isalnum</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>False
+True
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S.count(<span class="string">&#x27;!&#x27;</span>)</span><br><span class="line"><span class="comment">#统计字符串中!字符的个数</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>4
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S.count(<span class="string">&#x27;!&#x27;</span>,<span class="number">2</span>,<span class="number">6</span>)</span><br><span class="line"><span class="comment">#统计索引在2:6的字符串中!出现的次数 即限定区间左闭右开</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>1
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S.lstrip()</span><br><span class="line"><span class="comment">#去掉字符串的左边空格 left</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#39;aa!bb!cc!dd!EE  &#39;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S.rstrip()</span><br><span class="line"><span class="comment">#去掉字符串的右边空格 right</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#39;  aa!bb!cc!dd!EE&#39;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S.upper()</span><br><span class="line"><span class="comment">#将小写字母完全变成大写字母</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#39;  AA!BB!CC!DD!EE  &#39;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S.lower()</span><br><span class="line"><span class="comment">#将大写字母完全变成小写字母</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#39;  aa!bb!cc!dd!ee  &#39;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S.capitalize()</span><br><span class="line"><span class="comment">#开始是空格的话,此函数不起作用 </span></span><br><span class="line"><span class="comment">#此函数的作用是将字符串的第一个字母变成大写,其他字母变小写</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S.lstrip().capitalize()</span><br><span class="line"><span class="comment">#把字符串的第左边一个字母变成大写 </span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#39;Aa!bb!cc!dd!ee  &#39;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">S.title()</span><br><span class="line"><span class="comment">#把所有单词的第一个字母变成大写 注意是单词 再次用！分割的</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#39;  Aa!Bb!Cc!Dd!Ee  &#39;
+</code></pre>
+<h2 id="Page14：转义字符的使用"><a href="#Page14：转义字符的使用" class="headerlink" title="Page14：转义字符的使用"></a>Page14：转义字符的使用</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;转义字符示例：\n换行&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;转义字符示例：\r回车&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;转义字符示例：\r&#x27;</span>,<span class="string">&#x27;水平制表&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;转义字符示例：\v垂直制表&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;转义字符示例：\0空字符&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>转义字符示例：
+换行
+回车
+ 水平制表
+转义字符示例：垂直制表
+转义字符示例： 空字符
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># \n 换行 \r 回车 </span></span><br><span class="line"><span class="comment"># 水平制表 就相当于空8格 用来制表对其 下面是一个实例</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\t姓\v名\t班\v级\t\t学\v校&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\t陈昱杰\t统计2班\t\t武汉科技大学&quot;</span>) </span><br></pre></td></tr></table></figure>
+
+<pre><code>    姓名	班级		学校
+    陈昱杰	统计2班		武汉科技大学
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 垂直制表 感觉很不常用</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;416 \v asfa&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>416  asfa
+</code></pre>
+<h2 id="Page15：列表"><a href="#Page15：列表" class="headerlink" title="Page15：列表"></a>Page15：列表</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">List</span> = <span class="built_in">list</span>(<span class="string">&#x27;这里是一个列表123&#x27;</span>) <span class="comment"># , 用来分隔</span></span><br><span class="line"><span class="type">List</span></span><br><span class="line"><span class="comment">#创建一个列表</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[&#39;这&#39;, &#39;里&#39;, &#39;是&#39;, &#39;一&#39;, &#39;个&#39;, &#39;列&#39;, &#39;表&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">List</span>.insert(<span class="number">3</span>,<span class="string">&#x27;%&#x27;</span>)</span><br><span class="line"><span class="type">List</span></span><br><span class="line"><span class="comment">#对列表添加元素</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[&#39;这&#39;, &#39;里&#39;, &#39;是&#39;, &#39;%&#39;, &#39;一&#39;, &#39;个&#39;, &#39;列&#39;, &#39;表&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="type">List</span>.pop())   <span class="comment">#移除列表中的一个元素（默认最后一个元素），并且返回该元素的值 pop()</span></span><br><span class="line"><span class="type">List</span>.pop(<span class="number">3</span>)    <span class="comment">#输入索引移除索引位置上的值即%</span></span><br><span class="line"><span class="type">List</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>3
+
+
+
+
+
+[&#39;这&#39;, &#39;里&#39;, &#39;是&#39;, &#39;一&#39;, &#39;个&#39;, &#39;列&#39;, &#39;表&#39;, &#39;1&#39;, &#39;2&#39;]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">List</span>[<span class="number">4</span>]=<span class="string">&#x27;new&#x27;</span> <span class="comment">#有点像数组</span></span><br><span class="line"><span class="type">List</span></span><br><span class="line"><span class="comment">#将列表索引为4的元素修改成&#x27;New&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[&#39;这&#39;, &#39;里&#39;, &#39;是&#39;, &#39;一&#39;, &#39;new&#39;, &#39;列&#39;, &#39;表&#39;, &#39;1&#39;, &#39;2&#39;]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">List</span>.index(<span class="string">&#x27;表&#x27;</span>)</span><br><span class="line"><span class="comment">#查找元素&#x27;表&#x27;的位置并返回索引 index</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>6
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;这&#x27;</span> <span class="keyword">in</span> <span class="type">List</span></span><br><span class="line"><span class="comment">#判断元素是否存在与列表</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>True
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;我是陈昱杰&#x27;</span> <span class="keyword">in</span> <span class="type">List</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>False
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">List</span>+<span class="built_in">list</span>(<span class="string">&#x27;新列表&#x27;</span>)</span><br><span class="line"><span class="comment">#合并列表 + </span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[&#39;这&#39;, &#39;里&#39;, &#39;是&#39;, &#39;一&#39;, &#39;new&#39;, &#39;列&#39;, &#39;表&#39;, &#39;1&#39;, &#39;2&#39;, &#39;新&#39;, &#39;列&#39;, &#39;表&#39;]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">List</span>*<span class="number">3</span></span><br><span class="line"><span class="comment">#重复列表 竖着来</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[&#39;这&#39;,
+ &#39;里&#39;,
+ &#39;是&#39;,
+ &#39;一&#39;,
+ &#39;new&#39;,
+ &#39;列&#39;,
+ &#39;表&#39;,
+ &#39;1&#39;,
+ &#39;2&#39;,
+ &#39;这&#39;,
+ &#39;里&#39;,
+ &#39;是&#39;,
+ &#39;一&#39;,
+ &#39;new&#39;,
+ &#39;列&#39;,
+ &#39;表&#39;,
+ &#39;1&#39;,
+ &#39;2&#39;,
+ &#39;这&#39;,
+ &#39;里&#39;,
+ &#39;是&#39;,
+ &#39;一&#39;,
+ &#39;new&#39;,
+ &#39;列&#39;,
+ &#39;表&#39;,
+ &#39;1&#39;,
+ &#39;2&#39;]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#切片操作省略</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Page16：列表的其他用法"><a href="#Page16：列表的其他用法" class="headerlink" title="Page16：列表的其他用法"></a>Page16：列表的其他用法</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">List</span>.append(<span class="string">&#x27;obj&#x27;</span>)</span><br><span class="line"><span class="type">List</span></span><br><span class="line"><span class="comment">#在列表末尾添加新的对象 app end</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[&#39;这&#39;, &#39;里&#39;, &#39;是&#39;, &#39;一&#39;, &#39;new&#39;, &#39;列&#39;, &#39;表&#39;, &#39;1&#39;, &#39;2&#39;, &#39;obj&#39;]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">List</span>.count(<span class="string">&#x27;fbj&#x27;</span>)</span><br><span class="line"><span class="comment">#统计某个元素在列表中出现的次数</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>0
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">List</span>.extend(<span class="built_in">list</span>(<span class="string">&#x27;新列表&#x27;</span>))</span><br><span class="line"><span class="type">List</span></span><br><span class="line"><span class="comment">#在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表） ext end</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[&#39;这&#39;, &#39;里&#39;, &#39;是&#39;, &#39;一&#39;, &#39;new&#39;, &#39;列&#39;, &#39;表&#39;, &#39;1&#39;, &#39;2&#39;, &#39;obj&#39;, &#39;新&#39;, &#39;列&#39;, &#39;表&#39;]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">List</span>.remove(<span class="string">&#x27;是&#x27;</span>)</span><br><span class="line"><span class="type">List</span></span><br><span class="line"><span class="comment">#移除列表中某个值的第一个匹配项 注意是第一个</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[&#39;这&#39;, &#39;里&#39;, &#39;一&#39;, &#39;new&#39;, &#39;列&#39;, &#39;表&#39;, &#39;1&#39;, &#39;2&#39;]
+</code></pre>
+<h2 id="Page17：元组基本操作"><a href="#Page17：元组基本操作" class="headerlink" title="Page17：元组基本操作"></a>Page17：元组基本操作</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Tuple</span> = <span class="built_in">tuple</span>(<span class="built_in">list</span>(<span class="string">&#x27;元组&#x27;</span>))</span><br><span class="line"><span class="type">Tuple</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>(&#39;元&#39;, &#39;组&#39;)
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Tuple</span> = <span class="built_in">tuple</span></span><br><span class="line"><span class="type">Tuple</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>tuple
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Tuple0=(<span class="number">1</span>,) <span class="comment">#创建一个元素的元组时,为了避免歧义,需要在元素后面加个, 【】 （）</span></span><br><span class="line">Tuple1=(<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>)</span><br><span class="line"><span class="type">Tuple</span>=<span class="built_in">tuple</span>(<span class="built_in">list</span>(<span class="string">&#x27;这里是一个元组&#x27;</span>)) <span class="comment">#元组tuple()</span></span><br><span class="line"><span class="type">Tuple</span></span><br><span class="line"><span class="comment">#创建元组</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>(&#39;这&#39;, &#39;里&#39;, &#39;是&#39;, &#39;一&#39;, &#39;个&#39;, &#39;元&#39;, &#39;组&#39;)
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">len</span>(<span class="type">Tuple</span>) </span><br><span class="line"><span class="comment">#求元组长度</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>7
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Tuple</span>+Tuple1</span><br><span class="line"><span class="comment">#合并两个元组</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>(&#39;这&#39;, &#39;里&#39;, &#39;是&#39;, &#39;一&#39;, &#39;个&#39;, &#39;元&#39;, &#39;组&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;)
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Tuple</span>*<span class="number">2</span></span><br><span class="line"><span class="comment">#重复元组</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>(&#39;这&#39;, &#39;里&#39;, &#39;是&#39;, &#39;一&#39;, &#39;个&#39;, &#39;元&#39;, &#39;组&#39;, &#39;这&#39;, &#39;里&#39;, &#39;是&#39;, &#39;一&#39;, &#39;个&#39;, &#39;元&#39;, &#39;组&#39;)
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;这&#x27;</span> <span class="keyword">in</span> <span class="type">Tuple</span></span><br><span class="line"><span class="comment">#判断元素是否存在于元组</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>True
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sorted</span>((<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>))</span><br><span class="line"><span class="comment">#对元组中的元素进行排序 sort是从小到大</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>[2, 3, 5, 6, 8]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#切片操作省略</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Page18：集合"><a href="#Page18：集合" class="headerlink" title="Page18：集合"></a>Page18：集合</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Set</span>=<span class="built_in">set</span>(<span class="built_in">list</span>(<span class="string">&#x27;这里是一个集合一&#x27;</span>))</span><br><span class="line"><span class="type">Set</span></span><br><span class="line"><span class="comment">#创建集合,集合元素不重复,所以&#x27;一&#x27;只有一个认第一个的位置</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#123;&#39;一&#39;, &#39;个&#39;, &#39;合&#39;, &#39;是&#39;, &#39;这&#39;, &#39;里&#39;, &#39;集&#39;&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Set</span>.add(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line"><span class="type">Set</span></span><br><span class="line"><span class="comment">#向集合添加元素 直接加到第一个</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#123;&#39;x&#39;, &#39;一&#39;, &#39;个&#39;, &#39;合&#39;, &#39;是&#39;, &#39;这&#39;, &#39;里&#39;, &#39;集&#39;&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Set2=<span class="built_in">set</span>(<span class="built_in">list</span>(<span class="string">&#x27;新元素&#x27;</span>))</span><br><span class="line"><span class="type">Set</span>.update(Set2)</span><br><span class="line"><span class="type">Set</span></span><br><span class="line"><span class="comment">#把集合Set2的元素添加到Set</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#123;&#39;x&#39;, &#39;一&#39;, &#39;个&#39;, &#39;元&#39;, &#39;合&#39;, &#39;新&#39;, &#39;是&#39;, &#39;素&#39;, &#39;这&#39;, &#39;里&#39;, &#39;集&#39;&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Set</span>.remove(<span class="string">&#x27;新&#x27;</span>)</span><br><span class="line"><span class="type">Set</span></span><br><span class="line"><span class="comment">#删除集合中的元素&#x27;新&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#123;&#39;x&#39;, &#39;一&#39;, &#39;个&#39;, &#39;元&#39;, &#39;合&#39;, &#39;是&#39;, &#39;素&#39;, &#39;这&#39;, &#39;里&#39;, &#39;集&#39;&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Set</span>.discard(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line"><span class="type">Set</span></span><br><span class="line"><span class="comment">#删除指定元素，但是如果集合中没有的话就什么也不做 discard</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#123;&#39;一&#39;, &#39;个&#39;, &#39;元&#39;, &#39;合&#39;, &#39;是&#39;, &#39;素&#39;, &#39;这&#39;, &#39;里&#39;, &#39;集&#39;&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="type">Set</span>.pop()) </span><br><span class="line"><span class="built_in">print</span>(<span class="type">Set</span>)</span><br><span class="line"><span class="comment">#随机删除一个，并返回该值 pop还记得在列表中是最后一个 这里随机的是’这‘</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>里
+&#123;&#39;一&#39;, &#39;集&#39;, &#39;是&#39;, &#39;个&#39;, &#39;元&#39;, &#39;素&#39;, &#39;合&#39;, &#39;这&#39;&#125;
+</code></pre>
+<h2 id="Page19：集合运算操作简便写法"><a href="#Page19：集合运算操作简便写法" class="headerlink" title="Page19：集合运算操作简便写法"></a>Page19：集合运算操作简便写法</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在对集合做运算时，不会影响原来的集合，而是返回一个运算结果</span></span><br><span class="line"><span class="comment"># 创建两个集合</span></span><br><span class="line">A = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;</span><br><span class="line">B = &#123;<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>&#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 并集</span></span><br><span class="line"><span class="built_in">print</span>(A | B) </span><br><span class="line"><span class="built_in">print</span>(A.union(B) )          <span class="comment">#联合</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>&#123;1, 2, 3, 4, 5, 6, 7&#125;
+&#123;1, 2, 3, 4, 5, 6, 7&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 交集</span></span><br><span class="line"><span class="built_in">print</span>(A &amp; B)                                      </span><br><span class="line"><span class="built_in">print</span>(A.intersection(B))      <span class="comment">#交集的结果           </span></span><br></pre></td></tr></table></figure>
+
+<pre><code>&#123;3, 4, 5&#125;
+&#123;3, 4, 5&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 差集</span></span><br><span class="line"><span class="built_in">print</span>(A - B)</span><br><span class="line"><span class="built_in">print</span>(A.difference(B))                 <span class="comment">#-等同于difference</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>&#123;1, 2&#125;
+&#123;1, 2&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 异或集合</span></span><br><span class="line"><span class="built_in">print</span>(A ^ B)        </span><br><span class="line"><span class="built_in">print</span>(A.symmetric_difference(B))    <span class="comment">#C语言^二进制取异或</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>&#123;1, 2, 6, 7&#125;
+&#123;1, 2, 6, 7&#125;
+</code></pre>
+<h2 id="Page20：字典"><a href="#Page20：字典" class="headerlink" title="Page20：字典"></a>Page20：字典</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用大括号来创建字典&#123; &#125; </span></span><br><span class="line"><span class="comment">#字典是可以重复的</span></span><br><span class="line"><span class="type">Dict</span>  = &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;陈昱杰&quot;</span>,<span class="string">&quot;age&quot;</span>:<span class="number">19</span>,<span class="string">&quot;pay&quot;</span>:<span class="number">40000</span>,<span class="string">&quot;job&quot;</span>:<span class="string">&quot;学不会计算机&quot;</span>&#125;</span><br><span class="line"><span class="comment">#使用关键字参数和类型构造函数来创建字典</span></span><br><span class="line"><span class="type">Dict</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#123;&#39;name&#39;: &#39;陈昱杰&#39;, &#39;age&#39;: 19, &#39;pay&#39;: 40000, &#39;job&#39;: &#39;学不会计算机&#39;&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Dict</span> = <span class="built_in">dict</span>(name=<span class="string">&quot;陈昱杰&quot;</span>,age=<span class="number">19</span>,pay=<span class="number">40000</span>,job=<span class="string">&quot;学不会计算机&quot;</span>)</span><br><span class="line"><span class="type">Dict</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#123;&#39;name&#39;: &#39;陈昱杰&#39;, &#39;age&#39;: 19, &#39;pay&#39;: 40000, &#39;job&#39;: &#39;学不会计算机&#39;&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Dict</span>.update(&#123;<span class="string">&#x27;AddKey&#x27;</span>:<span class="string">&#x27;AddValue&#x27;</span>&#125;)</span><br><span class="line"><span class="type">Dict</span></span><br><span class="line"><span class="comment">#向字典中添加键值对   &#x27;AddKey&#x27;:&#x27;AddValue&#x27; updata合并 也在里面</span></span><br><span class="line"><span class="comment">#                   Add      Key      Value  小驼峰</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#123;&#39;name&#39;: &#39;陈昱杰&#39;, &#39;age&#39;: 19, &#39;pay&#39;: 40000, &#39;job&#39;: &#39;学不会计算机&#39;, &#39;AddKey&#39;: &#39;AddValue&#39;&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Dict</span>.pop(<span class="string">&#x27;name&#x27;</span>)</span><br><span class="line"><span class="type">Dict</span></span><br><span class="line"><span class="comment">#删除&#x27;name&#x27;对应的键值对</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#123;&#39;age&#39;: 19, &#39;pay&#39;: 40000, &#39;job&#39;: &#39;学不会计算机&#39;, &#39;AddKey&#39;: &#39;AddValue&#39;&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Dict</span>[<span class="string">&#x27;pay&#x27;</span>]=<span class="number">10000</span></span><br><span class="line"><span class="type">Dict</span></span><br><span class="line"><span class="comment">#修改键&#x27;pay&#x27;的值为10000</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#123;&#39;age&#39;: 19, &#39;pay&#39;: 10000, &#39;job&#39;: &#39;学不会计算机&#39;, &#39;AddKey&#39;: &#39;AddValue&#39;&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">DictMerged = <span class="type">Dict</span>.copy() <span class="comment">#复制字典,避免合并结果影响原始字典 拷贝引用</span></span><br><span class="line">Dict2=&#123;<span class="string">&#x27;AddKey1&#x27;</span>:<span class="string">&#x27;AddValue1&#x27;</span>,<span class="string">&#x27;AddKey2&#x27;</span>:<span class="string">&#x27;AddValue2&#x27;</span>,<span class="string">&#x27;AddKey3&#x27;</span>:<span class="string">&#x27;AddValue3&#x27;</span>&#125;<span class="comment"># 新字典</span></span><br><span class="line">DictMerged.update(Dict2)<span class="comment">#通过updata合并两个字典</span></span><br><span class="line">DictMerged</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>&#123;&#39;age&#39;: 19,
+ &#39;pay&#39;: 10000,
+ &#39;job&#39;: &#39;学不会计算机&#39;,
+ &#39;AddKey&#39;: &#39;AddValue&#39;,
+ &#39;AddKey1&#39;: &#39;AddValue1&#39;,
+ &#39;AddKey2&#39;: &#39;AddValue2&#39;,
+ &#39;AddKey3&#39;: &#39;AddValue3&#39;&#125;
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;age&#x27;</span> <span class="keyword">in</span> <span class="type">Dict</span></span><br><span class="line"><span class="comment">#判断键在不在字典中</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>True
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Dict</span>.keys()<span class="comment">#查看所有键 s</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>dict_keys([&#39;age&#39;, &#39;pay&#39;, &#39;job&#39;, &#39;AddKey&#39;])
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Dict</span>.values()<span class="comment">#查看所有值 对 s</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>dict_values([18, 10000, &#39;Python工程师&#39;, &#39;AddValue&#39;])
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="type">Dict</span>.items()<span class="comment">#查看键值对 item 项 s </span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>dict_items([(&#39;age&#39;, 19), (&#39;pay&#39;, 10000), (&#39;job&#39;, &#39;学不会计算机&#39;), (&#39;AddKey&#39;, &#39;AddValue&#39;)])
+</code></pre>
+<h2 id="Page23：循环"><a href="#Page23：循环" class="headerlink" title="Page23：循环"></a>Page23：循环</h2><h3 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)<span class="comment">#注意空格 range 从0到5 换行输出</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>0
+1
+2
+3
+4
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,<span class="number">6</span>):<span class="comment">#依旧是左闭右开</span></span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+<pre><code>2
+3
+4
+5
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,<span class="number">6</span>,<span class="number">2</span>):<span class="comment">#步长</span></span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+<pre><code>2
+4
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Object=<span class="built_in">list</span>(<span class="string">&#x27;列表内容&#x27;</span>)<span class="comment">#var</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> Object:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;循环结束&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>列
+表
+内
+容
+循环结束
+</code></pre>
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="number">2</span></span><br><span class="line"><span class="keyword">while</span> a&lt;<span class="number">5</span>:  <span class="comment">#python就是简便 连()都不用 while 跟 else 都可以</span></span><br><span class="line">    <span class="built_in">print</span>(a)</span><br><span class="line">    a += <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;循环结束&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>2
+3
+4
+循环结束
+</code></pre>
+<h2 id="Page24：分支结构"><a href="#Page24：分支结构" class="headerlink" title="Page24：分支结构"></a>Page24：分支结构</h2><h3 id="单分支"><a href="#单分支" class="headerlink" title="单分支"></a>单分支</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = <span class="number">3</span></span><br><span class="line"><span class="keyword">if</span> a &lt; <span class="number">2</span>:</span><br><span class="line">    <span class="built_in">print</span>(a)    </span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> a &gt; <span class="number">2</span>:</span><br><span class="line">    <span class="built_in">print</span>(a)</span><br></pre></td></tr></table></figure>
+
+<pre><code>3
+</code></pre>
+<h3 id="双分支"><a href="#双分支" class="headerlink" title="双分支"></a>双分支</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = <span class="number">3</span></span><br><span class="line"><span class="keyword">if</span> a &lt; <span class="number">2</span>:</span><br><span class="line">    <span class="built_in">print</span>(a)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;a不小于2&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<pre><code>a不小于2
+</code></pre>
+<h3 id="多分支"><a href="#多分支" class="headerlink" title="多分支"></a>多分支</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = <span class="number">2</span></span><br><span class="line"><span class="keyword">if</span> a &lt; <span class="number">2</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;a小于2&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> a &gt; <span class="number">2</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;a大于2&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;a等于2&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>a等于2
+</code></pre>
+<h2 id="Page26：列表推导式"><a href="#Page26：列表推导式" class="headerlink" title="Page26：列表推导式"></a>Page26：列表推导式</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>): <span class="comment">#0 1 2 3 4 </span></span><br><span class="line">    data.append(i**<span class="number">2</span>-i*<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(data)</span><br><span class="line"></span><br><span class="line">data1=[i**<span class="number">2</span>-i*<span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>)]</span><br><span class="line"><span class="built_in">print</span>(data1)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[0, -1, 0, 3, 8]
+[0, -1, 0, 3, 8]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#既然到这里不妨比较一下 2**3**4 (2**3)**4 上下 左右 这种式子要从右到左</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">2</span>**<span class="number">3</span>**<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>2417851639229258349412352
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>((<span class="number">2</span>**<span class="number">3</span>)**<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>4096
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">if</span> i%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">        data.append(i**<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(data)</span><br><span class="line"></span><br><span class="line">data1=[i ** <span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>) <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>] <span class="comment">#偶数 连：都没有</span></span><br><span class="line"><span class="built_in">print</span>(data1)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[0, 4, 16, 36, 64]
+[0, 4, 16, 36, 64]
+</code></pre>
+<h2 id="Page26：pass、break和continue"><a href="#Page26：pass、break和continue" class="headerlink" title="Page26：pass、break和continue"></a>Page26：pass、break和continue</h2><h3 id="pass"><a href="#pass" class="headerlink" title="pass"></a>pass</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">    <span class="comment">#没有内容,会报错</span></span><br></pre></td></tr></table></figure>
+
+
+<pre><code>  File &quot;C:\Users\探索者\AppData\Local\Temp\ipykernel_11816\1463202553.py&quot;, line 2
+    #没有内容,会报错
+             ^
+IndentationError: expected an indented block
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">    <span class="comment">#pass占位 不报错 占位符号</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="break"><a href="#break" class="headerlink" title="break"></a>break</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;break前&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">    <span class="keyword">break</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;break后&#x27;</span>)</span><br><span class="line"><span class="comment">#break停止整个循环</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>break前
+0
+</code></pre>
+<h3 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">6</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;continue前&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">    <span class="keyword">continue</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;continue后&#x27;</span>)</span><br><span class="line"><span class="comment">#continue停止一次循环的后半段 进入下一次循环</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>continue前
+0
+continue前
+1
+continue前
+2
+continue前
+3
+continue前
+4
+continue前
+5
+</code></pre>
+<h2 id="Page28-函数使用"><a href="#Page28-函数使用" class="headerlink" title="Page28:函数使用"></a>Page28:函数使用</h2><h3 id="def函数"><a href="#def函数" class="headerlink" title="def函数"></a>def函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fun1</span>(<span class="params">x,y</span>): <span class="comment">#定义def</span></span><br><span class="line">    <span class="keyword">return</span> x ** y</span><br><span class="line">fun1(<span class="number">2</span>,<span class="number">3</span>)<span class="comment">#按照顺序传入参数 funl</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>8
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fun1</span>(<span class="params">x,y</span>):</span><br><span class="line">    <span class="keyword">return</span> x ** y</span><br><span class="line">fun1(y = <span class="number">2</span>, x = <span class="number">3</span>)<span class="comment">#通过名称传入参数,可以忽略位置顺序</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>9
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fun1</span>(<span class="params">x , y = <span class="number">3</span></span>):</span><br><span class="line">    <span class="keyword">return</span> x**y</span><br><span class="line">fun1(x = <span class="number">3</span>) <span class="comment">#设置默认值,没有传入相应参数时会首先应用默认参数</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>27
+</code></pre>
+<h3 id="lambda函数"><a href="#lambda函数" class="headerlink" title="lambda函数"></a>lambda函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">f = <span class="keyword">lambda</span> x , y: x ** y <span class="comment">#return 匿名函数 可以不用函数名称</span></span><br><span class="line">f(<span class="number">2</span> , <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>8
+</code></pre>
+<h2 id="Page29-类"><a href="#Page29-类" class="headerlink" title="Page29:类"></a>Page29:类</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">test</span>: <span class="comment">#self是类的名称 s1   s2  是成员变量</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,s1,s2</span>):</span><br><span class="line">        self.s1 = s1</span><br><span class="line">        self.s2 = s2</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">f1</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self.s1 + self.s2</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">f2</span>(<span class="params">self, x</span>): <span class="comment">#注意，号</span></span><br><span class="line">        <span class="keyword">return</span> (x**self.s2, x**self.s2)</span><br><span class="line">aa=test(s1=<span class="number">2</span>,s2=<span class="number">3</span>) <span class="comment">#定义aa</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;查看属性值&#x27;</span>, aa.s1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;输出f1: &quot;</span>, aa.f1())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;输出f2: &quot;</span>, aa.f2(<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>查看属性值 2
+输出f1:  5
+输出f2:  (27, 27)
+</code></pre>
+<h2 id="Page32-读写文件"><a href="#Page32-读写文件" class="headerlink" title="Page32:读写文件"></a>Page32:读写文件</h2><h3 id="写文件"><a href="#写文件" class="headerlink" title="写文件"></a>写文件</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;test.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">&#x27;Hello, world!\n&#x27;</span>)</span><br><span class="line">    f.write(<span class="string">&#x27;Goodbye, world!&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">f=<span class="built_in">open</span>(<span class="string">&#x27;test1.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">f.write(<span class="string">&#x27;Hello, text!\n&#x27;</span>)</span><br><span class="line">f.write(<span class="string">&#x27;Goodbye, text!&#x27;</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<h3 id="读文件"><a href="#读文件" class="headerlink" title="读文件"></a>读文件</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;test1.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    context=f.readlines()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> context:</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br><span class="line">        </span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;test1.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    context=f.read() <span class="comment">#一行一行的读</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> context:</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Hello, text!
+
+Goodbye, text!
+H
+e
+l
+l
+o
+,
+ 
+t
+e
+x
+t
+!
+
+
+G
+o
+o
+d
+b
+y
+e
+,
+ 
+t
+e
+x
+t
+!
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;test1.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>) <span class="comment">#路径</span></span><br><span class="line">context = file.readlines()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> context:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>语法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构</title>
     <url>/2023/04/10/13%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[<h2 id="第一章-概论"><a href="#第一章-概论" class="headerlink" title="第一章 概论"></a>第一章 概论</h2><p>实现PrintN函数的两种方法——引出空间复杂度和时间复杂度的概念</p>
@@ -23,32 +746,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/01/27/1hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you <span id="more"></span>can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<!-- more -->
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
- <!-- more -->
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>HELLO WORLD</category>
-      </categories>
-      <tags>
-        <tag>Hello World</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>12python数组操作中的两个vs3个冒号</title>
+    <title>python数组操作中的两个vs3个冒号</title>
     <url>/2023/04/10/12python%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h2 id="python版本3-7"><a href="#python版本3-7" class="headerlink" title="python版本3.7"></a>python版本3.7</h2><h3 id="首先先了解下python3-7中的下标"><a href="#首先先了解下python3-7中的下标" class="headerlink" title="首先先了解下python3.7中的下标"></a>首先先了解下python3.7中的下标</h3><p>python下标有两套，一套是正的，一套是负的</p>
 <h4 id="引入负坐标的意义"><a href="#引入负坐标的意义" class="headerlink" title="引入负坐标的意义"></a>引入负坐标的意义</h4><p>方便将数组中的数据从右往左访问</p>
@@ -413,30 +1111,11 @@
 <h3 id="9-7-错误信息"><a href="#9-7-错误信息" class="headerlink" title="9.7 错误信息"></a>9.7 错误信息</h3><h3 id="9-8-字符操作"><a href="#9-8-字符操作" class="headerlink" title="9.8 字符操作"></a>9.8 字符操作</h3><h3 id="9-9-内存操作"><a href="#9-9-内存操作" class="headerlink" title="9.9 内存操作"></a>9.9 内存操作</h3><h3 id="9-10-总结"><a href="#9-10-总结" class="headerlink" title="9.10 总结"></a>9.10 总结</h3><h3 id="9-11-警告的总结"><a href="#9-11-警告的总结" class="headerlink" title="9.11 警告的总结"></a>9.11 警告的总结</h3><h3 id="9-12-编程提示的总结"><a href="#9-12-编程提示的总结" class="headerlink" title="9.12 编程提示的总结"></a>9.12 编程提示的总结</h3><h3 id="9-13-问题"><a href="#9-13-问题" class="headerlink" title="9.13 问题"></a>9.13 问题</h3><h3 id="9-14-编程练习"><a href="#9-14-编程练习" class="headerlink" title="9.14 编程练习"></a>9.14 编程练习</h3><h2 id="第十章-结构和联合"><a href="#第十章-结构和联合" class="headerlink" title="第十章 结构和联合"></a>第十章 结构和联合</h2><h3 id="10-1-结构基础知识"><a href="#10-1-结构基础知识" class="headerlink" title="10.1 结构基础知识"></a>10.1 结构基础知识</h3><h4 id="10-1-1-结构声明"><a href="#10-1-1-结构声明" class="headerlink" title="10.1.1 结构声明"></a>10.1.1 结构声明</h4><h4 id="10-1-2-结构成员"><a href="#10-1-2-结构成员" class="headerlink" title="10.1.2 结构成员"></a>10.1.2 结构成员</h4><h4 id="10-1-3-结构成员的直接访问"><a href="#10-1-3-结构成员的直接访问" class="headerlink" title="10.1.3 结构成员的直接访问"></a>10.1.3 结构成员的直接访问</h4><h4 id="10-1-4-结构成员的间接访问"><a href="#10-1-4-结构成员的间接访问" class="headerlink" title="10.1.4 结构成员的间接访问"></a>10.1.4 结构成员的间接访问</h4><h4 id="10-1-5-结构的自引用"><a href="#10-1-5-结构的自引用" class="headerlink" title="10.1.5 结构的自引用"></a>10.1.5 结构的自引用</h4><h4 id="10-1-6-不完整的声明"><a href="#10-1-6-不完整的声明" class="headerlink" title="10.1.6 不完整的声明"></a>10.1.6 不完整的声明</h4><h4 id="10-1-7-结构的初始化"><a href="#10-1-7-结构的初始化" class="headerlink" title="10.1.7 结构的初始化"></a>10.1.7 结构的初始化</h4><h3 id="10-2-结构、指针和成员"><a href="#10-2-结构、指针和成员" class="headerlink" title="10.2 结构、指针和成员"></a>10.2 结构、指针和成员</h3><h4 id="10-2-1-访问指针"><a href="#10-2-1-访问指针" class="headerlink" title="10.2.1 访问指针"></a>10.2.1 访问指针</h4><h4 id="10-2-1-访问结构"><a href="#10-2-1-访问结构" class="headerlink" title="10.2.1 访问结构"></a>10.2.1 访问结构</h4><h4 id="10-2-1-访问结构成员"><a href="#10-2-1-访问结构成员" class="headerlink" title="10.2.1 访问结构成员"></a>10.2.1 访问结构成员</h4><h4 id="10-2-1-访问嵌套的结构"><a href="#10-2-1-访问嵌套的结构" class="headerlink" title="10.2.1 访问嵌套的结构"></a>10.2.1 访问嵌套的结构</h4><h4 id="10-2-1-访问指针成员"><a href="#10-2-1-访问指针成员" class="headerlink" title="10.2.1 访问指针成员"></a>10.2.1 访问指针成员</h4><h3 id="10-3-结构的存储分配"><a href="#10-3-结构的存储分配" class="headerlink" title="10.3 结构的存储分配"></a>10.3 结构的存储分配</h3><h3 id="10-4-作为函数参数的结构"><a href="#10-4-作为函数参数的结构" class="headerlink" title="10.4 作为函数参数的结构"></a>10.4 作为函数参数的结构</h3><h3 id="10-5-位段"><a href="#10-5-位段" class="headerlink" title="10.5 位段"></a>10.5 位段</h3><h3 id="10-6-联合"><a href="#10-6-联合" class="headerlink" title="10.6 联合"></a>10.6 联合</h3><h4 id="10-6-1-变体记录"><a href="#10-6-1-变体记录" class="headerlink" title="10.6.1 变体记录"></a>10.6.1 变体记录</h4><h4 id="10-6-2-联合初始化"><a href="#10-6-2-联合初始化" class="headerlink" title="10.6.2 联合初始化"></a>10.6.2 联合初始化</h4><h3 id="10-7-总结"><a href="#10-7-总结" class="headerlink" title="10.7 总结"></a>10.7 总结</h3><h3 id="10-8-警告的总结"><a href="#10-8-警告的总结" class="headerlink" title="10.8 警告的总结"></a>10.8 警告的总结</h3><h3 id="10-9-编程提示的总结"><a href="#10-9-编程提示的总结" class="headerlink" title="10.9 编程提示的总结"></a>10.9 编程提示的总结</h3><h3 id="10-10-问题"><a href="#10-10-问题" class="headerlink" title="10.10 问题"></a>10.10 问题</h3><h3 id="10-11-编程练习"><a href="#10-11-编程练习" class="headerlink" title="10.11 编程练习"></a>10.11 编程练习</h3><h2 id="第十一章-动态内存分配"><a href="#第十一章-动态内存分配" class="headerlink" title="第十一章 动态内存分配"></a>第十一章 动态内存分配</h2><h3 id="11-1-为什么使用动态内存配"><a href="#11-1-为什么使用动态内存配" class="headerlink" title="11.1 为什么使用动态内存配"></a>11.1 为什么使用动态内存配</h3><h3 id="11-2-malloc和free"><a href="#11-2-malloc和free" class="headerlink" title="11.2 malloc和free"></a>11.2 malloc和free</h3><h3 id="11-3-calloc和realloc"><a href="#11-3-calloc和realloc" class="headerlink" title="11.3 calloc和realloc"></a>11.3 calloc和realloc</h3><h3 id="11-4-使用动态分配的内存"><a href="#11-4-使用动态分配的内存" class="headerlink" title="11.4 使用动态分配的内存"></a>11.4 使用动态分配的内存</h3><h3 id="11-5-常见的动态内存错误"><a href="#11-5-常见的动态内存错误" class="headerlink" title="11.5 常见的动态内存错误"></a>11.5 常见的动态内存错误</h3><h3 id="11-6-内存分配实例"><a href="#11-6-内存分配实例" class="headerlink" title="11.6 内存分配实例"></a>11.6 内存分配实例</h3><h3 id="11-7-总结"><a href="#11-7-总结" class="headerlink" title="11.7 总结"></a>11.7 总结</h3><h3 id="11-8-警告的总结"><a href="#11-8-警告的总结" class="headerlink" title="11.8 警告的总结"></a>11.8 警告的总结</h3><h3 id="11-9-编程提示的总结"><a href="#11-9-编程提示的总结" class="headerlink" title="11.9 编程提示的总结"></a>11.9 编程提示的总结</h3><h3 id="11-10-问题"><a href="#11-10-问题" class="headerlink" title="11.10 问题"></a>11.10 问题</h3><h3 id="11-11-编程练习"><a href="#11-11-编程练习" class="headerlink" title="11.11 编程练习"></a>11.11 编程练习</h3><h2 id="第十二章-使用结构和指针"><a href="#第十二章-使用结构和指针" class="headerlink" title="第十二章 使用结构和指针"></a>第十二章 使用结构和指针</h2><h3 id="12-1-链表"><a href="#12-1-链表" class="headerlink" title="12.1 链表"></a>12.1 链表</h3><h3 id="12-2-单链表"><a href="#12-2-单链表" class="headerlink" title="12.2 单链表"></a>12.2 单链表</h3><h4 id="12-2-1-在单链表中插入"><a href="#12-2-1-在单链表中插入" class="headerlink" title="12.2.1 在单链表中插入"></a>12.2.1 在单链表中插入</h4><h4 id="12-2-2-其他链表操作"><a href="#12-2-2-其他链表操作" class="headerlink" title="12.2.2 其他链表操作"></a>12.2.2 其他链表操作</h4><h3 id="12-3-双链表"><a href="#12-3-双链表" class="headerlink" title="12.3 双链表"></a>12.3 双链表</h3><h4 id="12-3-1-在双链表中插入"><a href="#12-3-1-在双链表中插入" class="headerlink" title="12.3.1 在双链表中插入"></a>12.3.1 在双链表中插入</h4><h4 id="12-3-2-其他链表操作"><a href="#12-3-2-其他链表操作" class="headerlink" title="12.3.2 其他链表操作"></a>12.3.2 其他链表操作</h4><h3 id="12-4-总结"><a href="#12-4-总结" class="headerlink" title="12.4 总结"></a>12.4 总结</h3><h3 id="12-5-警告的总结"><a href="#12-5-警告的总结" class="headerlink" title="12.5 警告的总结"></a>12.5 警告的总结</h3><h3 id="12-6-编程提示的总结"><a href="#12-6-编程提示的总结" class="headerlink" title="12.6 编程提示的总结"></a>12.6 编程提示的总结</h3><h3 id="12-7-问题"><a href="#12-7-问题" class="headerlink" title="12.7 问题"></a>12.7 问题</h3><h3 id="12-8-编程练习"><a href="#12-8-编程练习" class="headerlink" title="12.8 编程练习"></a>12.8 编程练习</h3><h2 id="第十八章-高级指针话题"><a href="#第十八章-高级指针话题" class="headerlink" title="第十八章 高级指针话题"></a>第十八章 高级指针话题</h2><h3 id="13-1-进一步探讨指向指针的指针"><a href="#13-1-进一步探讨指向指针的指针" class="headerlink" title="13.1 进一步探讨指向指针的指针"></a>13.1 进一步探讨指向指针的指针</h3><h3 id="13-2-高级声明"><a href="#13-2-高级声明" class="headerlink" title="13.2 高级声明"></a>13.2 高级声明</h3><h3 id="13-3-函数指针"><a href="#13-3-函数指针" class="headerlink" title="13.3 函数指针"></a>13.3 函数指针</h3><h4 id="13-3-1-回调函数"><a href="#13-3-1-回调函数" class="headerlink" title="13.3.1 回调函数"></a>13.3.1 回调函数</h4><h4 id="13-3-2-转移表"><a href="#13-3-2-转移表" class="headerlink" title="13.3.2 转移表"></a>13.3.2 转移表</h4><h3 id="13-4-命令行参数"><a href="#13-4-命令行参数" class="headerlink" title="13.4 命令行参数"></a>13.4 命令行参数</h3><h4 id="13-4-1-传递命令行参数"><a href="#13-4-1-传递命令行参数" class="headerlink" title="13.4.1 传递命令行参数"></a>13.4.1 传递命令行参数</h4><h4 id="13-4-2-处理命令行参数"><a href="#13-4-2-处理命令行参数" class="headerlink" title="13.4.2 处理命令行参数"></a>13.4.2 处理命令行参数</h4><h3 id="13-5-字符串常量"><a href="#13-5-字符串常量" class="headerlink" title="13.5 字符串常量"></a>13.5 字符串常量</h3><h3 id="13-6-总结"><a href="#13-6-总结" class="headerlink" title="13.6 总结"></a>13.6 总结</h3><h3 id="13-7-警告的总结"><a href="#13-7-警告的总结" class="headerlink" title="13.7 警告的总结"></a>13.7 警告的总结</h3><h3 id="13-8-编程提示的总结"><a href="#13-8-编程提示的总结" class="headerlink" title="13.8 编程提示的总结"></a>13.8 编程提示的总结</h3><h3 id="13-9-问题"><a href="#13-9-问题" class="headerlink" title="13.9 问题"></a>13.9 问题</h3><h3 id="13-10-编程练习"><a href="#13-10-编程练习" class="headerlink" title="13.10 编程练习"></a>13.10 编程练习</h3><h2 id="第十四章-预处理器"><a href="#第十四章-预处理器" class="headerlink" title="第十四章 预处理器"></a>第十四章 预处理器</h2><h3 id="14-1-预定义符号"><a href="#14-1-预定义符号" class="headerlink" title="14.1 预定义符号"></a>14.1 预定义符号</h3><h3 id="14-2-define"><a href="#14-2-define" class="headerlink" title="14.2 #define"></a>14.2 #define</h3><h4 id="14-2-1-宏"><a href="#14-2-1-宏" class="headerlink" title="14.2.1 宏"></a>14.2.1 宏</h4><h4 id="14-2-2-define函数"><a href="#14-2-2-define函数" class="headerlink" title="14.2.2 #define函数"></a>14.2.2 #define函数</h4><h4 id="14-2-3-宏与函数"><a href="#14-2-3-宏与函数" class="headerlink" title="14.2.3 宏与函数"></a>14.2.3 宏与函数</h4><h4 id="14-2-4-带副作用的宏参数"><a href="#14-2-4-带副作用的宏参数" class="headerlink" title="14.2.4 带副作用的宏参数"></a>14.2.4 带副作用的宏参数</h4><h4 id="14-2-5-命名约定"><a href="#14-2-5-命名约定" class="headerlink" title="14.2.5 命名约定"></a>14.2.5 命名约定</h4><h4 id="14-2-6-undef"><a href="#14-2-6-undef" class="headerlink" title="14.2.6 #undef"></a>14.2.6 #undef</h4><h4 id="14-2-7-命令行定义"><a href="#14-2-7-命令行定义" class="headerlink" title="14.2.7 命令行定义"></a>14.2.7 命令行定义</h4><h4 id="14-3-条件包含"><a href="#14-3-条件包含" class="headerlink" title="14.3 条件包含"></a>14.3 条件包含</h4><h4 id="14-3-1-是否被定义"><a href="#14-3-1-是否被定义" class="headerlink" title="14.3.1 是否被定义"></a>14.3.1 是否被定义</h4><h4 id="14-3-2-嵌套指令"><a href="#14-3-2-嵌套指令" class="headerlink" title="14.3.2 嵌套指令"></a>14.3.2 嵌套指令</h4><h3 id="14-4-文件包含"><a href="#14-4-文件包含" class="headerlink" title="14.4 文件包含"></a>14.4 文件包含</h3><h4 id="14-4-1-函数库文件包含"><a href="#14-4-1-函数库文件包含" class="headerlink" title="14.4.1 函数库文件包含"></a>14.4.1 函数库文件包含</h4><h4 id="14-4-2-本地文件包含"><a href="#14-4-2-本地文件包含" class="headerlink" title="14.4.2 本地文件包含"></a>14.4.2 本地文件包含</h4><h4 id="14-4-3-嵌套文件包含"><a href="#14-4-3-嵌套文件包含" class="headerlink" title="14.4.3 嵌套文件包含"></a>14.4.3 嵌套文件包含</h4><h3 id="14-5-其他指令"><a href="#14-5-其他指令" class="headerlink" title="14.5 其他指令"></a>14.5 其他指令</h3><h3 id="14-6-总结"><a href="#14-6-总结" class="headerlink" title="14.6 总结"></a>14.6 总结</h3><h3 id="14-7-警告的总结"><a href="#14-7-警告的总结" class="headerlink" title="14.7 警告的总结"></a>14.7 警告的总结</h3><h3 id="14-8-编程提示的总结"><a href="#14-8-编程提示的总结" class="headerlink" title="14.8 编程提示的总结"></a>14.8 编程提示的总结</h3><h3 id="14-9-问题"><a href="#14-9-问题" class="headerlink" title="14.9 问题"></a>14.9 问题</h3><h3 id="14-10-编程练习"><a href="#14-10-编程练习" class="headerlink" title="14.10 编程练习"></a>14.10 编程练习</h3><h2 id="第十五章-输入-x2F-输出函数"><a href="#第十五章-输入-x2F-输出函数" class="headerlink" title="第十五章 输入&#x2F;输出函数"></a>第十五章 输入&#x2F;输出函数</h2><h3 id="15-1-错误报告"><a href="#15-1-错误报告" class="headerlink" title="15.1 错误报告"></a>15.1 错误报告</h3><h3 id="15-2-终止执行"><a href="#15-2-终止执行" class="headerlink" title="15.2 终止执行"></a>15.2 终止执行</h3><h3 id="15-3-标准I-x2F-O函数库"><a href="#15-3-标准I-x2F-O函数库" class="headerlink" title="15.3 标准I&#x2F;O函数库"></a>15.3 标准I&#x2F;O函数库</h3><h3 id="15-4-ANSI-I-x2F-O概念"><a href="#15-4-ANSI-I-x2F-O概念" class="headerlink" title="15.4 ANSI I&#x2F;O概念"></a>15.4 ANSI I&#x2F;O概念</h3><h4 id="15-4-1-流"><a href="#15-4-1-流" class="headerlink" title="15.4.1 流"></a>15.4.1 流</h4><h4 id="15-4-2-文件"><a href="#15-4-2-文件" class="headerlink" title="15.4.2 文件"></a>15.4.2 文件</h4><h4 id="15-4-3-标准I-x2F-O常量"><a href="#15-4-3-标准I-x2F-O常量" class="headerlink" title="15.4.3 标准I&#x2F;O常量"></a>15.4.3 标准I&#x2F;O常量</h4><h3 id="15-5-流I-x2F-O总览"><a href="#15-5-流I-x2F-O总览" class="headerlink" title="15.5 流I&#x2F;O总览"></a>15.5 流I&#x2F;O总览</h3><h3 id="15-6-打开流"><a href="#15-6-打开流" class="headerlink" title="15.6 打开流"></a>15.6 打开流</h3><h3 id="15-7-关闭流"><a href="#15-7-关闭流" class="headerlink" title="15.7 关闭流"></a>15.7 关闭流</h3><h3 id="15-8-字符I-x2F-O"><a href="#15-8-字符I-x2F-O" class="headerlink" title="15.8 字符I&#x2F;O"></a>15.8 字符I&#x2F;O</h3><h4 id="15-8-1-字符I-x2F-O宏"><a href="#15-8-1-字符I-x2F-O宏" class="headerlink" title="15.8.1 字符I&#x2F;O宏"></a>15.8.1 字符I&#x2F;O宏</h4><h4 id="15-8-2-撤销字符I-x2F-O"><a href="#15-8-2-撤销字符I-x2F-O" class="headerlink" title="15.8.2 撤销字符I&#x2F;O"></a>15.8.2 撤销字符I&#x2F;O</h4><h3 id="15-9-未格式化的行I-x2F-O"><a href="#15-9-未格式化的行I-x2F-O" class="headerlink" title="15.9 未格式化的行I&#x2F;O"></a>15.9 未格式化的行I&#x2F;O</h3><h3 id="15-10-格式化的行I-x2F-O"><a href="#15-10-格式化的行I-x2F-O" class="headerlink" title="15.10 格式化的行I&#x2F;O"></a>15.10 格式化的行I&#x2F;O</h3><h4 id="15-10-1-scanf家族"><a href="#15-10-1-scanf家族" class="headerlink" title="15.10.1 scanf家族"></a>15.10.1 scanf家族</h4><h4 id="15-10-2-scanf格式代码"><a href="#15-10-2-scanf格式代码" class="headerlink" title="15.10.2 scanf格式代码"></a>15.10.2 scanf格式代码</h4><h4 id="15-10-3-printf家族"><a href="#15-10-3-printf家族" class="headerlink" title="15.10.3 printf家族"></a>15.10.3 printf家族</h4><h4 id="15-10-4-printf格式代码"><a href="#15-10-4-printf格式代码" class="headerlink" title="15.10.4 printf格式代码"></a>15.10.4 printf格式代码</h4><h3 id="15-11-二进制I-x2F-O"><a href="#15-11-二进制I-x2F-O" class="headerlink" title="15.11 二进制I&#x2F;O"></a>15.11 二进制I&#x2F;O</h3><h3 id="15-12-刷新和定位函数"><a href="#15-12-刷新和定位函数" class="headerlink" title="15.12 刷新和定位函数"></a>15.12 刷新和定位函数</h3><h3 id="15-13-改变缓冲方式"><a href="#15-13-改变缓冲方式" class="headerlink" title="15.13 改变缓冲方式"></a>15.13 改变缓冲方式</h3><h3 id="15-14-流错误函数"><a href="#15-14-流错误函数" class="headerlink" title="15.14 流错误函数"></a>15.14 流错误函数</h3><h3 id="15-15-临时文件"><a href="#15-15-临时文件" class="headerlink" title="15.15 临时文件"></a>15.15 临时文件</h3><h3 id="15-16-文件操纵函数"><a href="#15-16-文件操纵函数" class="headerlink" title="15.16 文件操纵函数"></a>15.16 文件操纵函数</h3><h3 id="15-17-总结"><a href="#15-17-总结" class="headerlink" title="15.17 总结"></a>15.17 总结</h3><h3 id="15-18-警告的总结"><a href="#15-18-警告的总结" class="headerlink" title="15.18 警告的总结"></a>15.18 警告的总结</h3><h3 id="15-19-编程提示的总结"><a href="#15-19-编程提示的总结" class="headerlink" title="15.19 编程提示的总结"></a>15.19 编程提示的总结</h3><h3 id="15-20-问题"><a href="#15-20-问题" class="headerlink" title="15.20 问题"></a>15.20 问题</h3><h3 id="15-21-编程练习"><a href="#15-21-编程练习" class="headerlink" title="15.21 编程练习"></a>15.21 编程练习</h3><h2 id="第十六章-标准函数库"><a href="#第十六章-标准函数库" class="headerlink" title="第十六章 标准函数库"></a>第十六章 标准函数库</h2><h3 id="16-1-整型函数"><a href="#16-1-整型函数" class="headerlink" title="16.1 整型函数"></a>16.1 整型函数</h3><h4 id="16-1-1-算术-lt-stdilb-h-gt"><a href="#16-1-1-算术-lt-stdilb-h-gt" class="headerlink" title="16.1.1 算术 &lt;stdilb.h&gt;"></a>16.1.1 算术 &lt;stdilb.h&gt;</h4><h4 id="16-1-2-随机数-lt-stdlib-h-gt"><a href="#16-1-2-随机数-lt-stdlib-h-gt" class="headerlink" title="16.1.2 随机数 &lt;stdlib.h&gt;"></a>16.1.2 随机数 &lt;stdlib.h&gt;</h4><h4 id="16-1-3-字符串转换-lt-stdilb-h-gt"><a href="#16-1-3-字符串转换-lt-stdilb-h-gt" class="headerlink" title="16.1.3 字符串转换 &lt;stdilb.h&gt;"></a>16.1.3 字符串转换 &lt;stdilb.h&gt;</h4><h3 id="16-2-浮点型函数"><a href="#16-2-浮点型函数" class="headerlink" title="16.2 浮点型函数"></a>16.2 浮点型函数</h3><h4 id="16-2-1-三角函数-lt-math-h-gt"><a href="#16-2-1-三角函数-lt-math-h-gt" class="headerlink" title="16.2.1 三角函数 &lt;math.h&gt;"></a>16.2.1 三角函数 &lt;math.h&gt;</h4><h4 id="16-2-2-双曲函数-lt-math-h-gt"><a href="#16-2-2-双曲函数-lt-math-h-gt" class="headerlink" title="16.2.2 双曲函数 &lt;math.h&gt;"></a>16.2.2 双曲函数 &lt;math.h&gt;</h4><h4 id="16-2-3-对数和指数函数-lt-math-h-gt"><a href="#16-2-3-对数和指数函数-lt-math-h-gt" class="headerlink" title="16.2.3 对数和指数函数 &lt;math.h&gt;"></a>16.2.3 对数和指数函数 &lt;math.h&gt;</h4><h4 id="16-2-4-浮点表示形式-lt-math-h-gt"><a href="#16-2-4-浮点表示形式-lt-math-h-gt" class="headerlink" title="16.2.4 浮点表示形式 &lt;math.h&gt;"></a>16.2.4 浮点表示形式 &lt;math.h&gt;</h4><h4 id="16-2-5-幂-lt-math-h-gt"><a href="#16-2-5-幂-lt-math-h-gt" class="headerlink" title="16.2.5 幂 &lt;math.h&gt;"></a>16.2.5 幂 &lt;math.h&gt;</h4><h4 id="16-2-6-底数、顶数、绝对数、和余数-lt-math-h-gt"><a href="#16-2-6-底数、顶数、绝对数、和余数-lt-math-h-gt" class="headerlink" title="16.2.6 底数、顶数、绝对数、和余数 &lt;math.h&gt;"></a>16.2.6 底数、顶数、绝对数、和余数 &lt;math.h&gt;</h4><h3 id="16-3-日期和时间函数"><a href="#16-3-日期和时间函数" class="headerlink" title="16.3 日期和时间函数"></a>16.3 日期和时间函数</h3><h4 id="16-3-1-处理器时间-lt-time-h-gt"><a href="#16-3-1-处理器时间-lt-time-h-gt" class="headerlink" title="16.3.1 处理器时间 &lt;time.h&gt;"></a>16.3.1 处理器时间 &lt;time.h&gt;</h4><h4 id="16-3-2-当天时间"><a href="#16-3-2-当天时间" class="headerlink" title="16.3.2 当天时间"></a>16.3.2 当天时间</h4><h4 id="16-3-3-日期和时间转换"><a href="#16-3-3-日期和时间转换" class="headerlink" title="16.3.3 日期和时间转换"></a>16.3.3 日期和时间转换</h4><h3 id="16-4-非本地跳转-lt-setjmp-h-gt"><a href="#16-4-非本地跳转-lt-setjmp-h-gt" class="headerlink" title="16.4 非本地跳转 &lt;setjmp.h&gt;"></a>16.4 非本地跳转 &lt;setjmp.h&gt;</h3><h4 id="16-4-1-实例"><a href="#16-4-1-实例" class="headerlink" title="16.4.1 实例"></a>16.4.1 实例</h4><h4 id="16-4-2-何时使用非本地跳转"><a href="#16-4-2-何时使用非本地跳转" class="headerlink" title="16.4.2 何时使用非本地跳转"></a>16.4.2 何时使用非本地跳转</h4><h3 id="16-5-信号"><a href="#16-5-信号" class="headerlink" title="16.5 信号"></a>16.5 信号</h3><h4 id="16-5-1-信号名-lt-signal-h-gt"><a href="#16-5-1-信号名-lt-signal-h-gt" class="headerlink" title="16.5.1 信号名 &lt;signal.h&gt;"></a>16.5.1 信号名 &lt;signal.h&gt;</h4><h4 id="16-5-2-处理信号-lt-signal-h-gt"><a href="#16-5-2-处理信号-lt-signal-h-gt" class="headerlink" title="16.5.2 处理信号 &lt;signal.h&gt;"></a>16.5.2 处理信号 &lt;signal.h&gt;</h4><h4 id="16-5-3-信号处理函数"><a href="#16-5-3-信号处理函数" class="headerlink" title="16.5.3 信号处理函数"></a>16.5.3 信号处理函数</h4><h3 id="16-6-打印可变参数列表"><a href="#16-6-打印可变参数列表" class="headerlink" title="16.6 打印可变参数列表"></a>16.6 打印可变参数列表</h3><h3 id="16-7-执行环境"><a href="#16-7-执行环境" class="headerlink" title="16.7 执行环境"></a>16.7 执行环境</h3><h4 id="16-7-1-终止执行-lt-stdlib-h-gt"><a href="#16-7-1-终止执行-lt-stdlib-h-gt" class="headerlink" title="16.7.1 终止执行 &lt;stdlib.h&gt;"></a>16.7.1 终止执行 &lt;stdlib.h&gt;</h4><h4 id="16-7-2-断言-lt-assert-h-gt"><a href="#16-7-2-断言-lt-assert-h-gt" class="headerlink" title="16.7.2 断言 &lt;assert.h&gt;"></a>16.7.2 断言 &lt;assert.h&gt;</h4><h4 id="16-7-3-环境-lt-stdlib-h-gt"><a href="#16-7-3-环境-lt-stdlib-h-gt" class="headerlink" title="16.7.3 环境 &lt;stdlib.h&gt;"></a>16.7.3 环境 &lt;stdlib.h&gt;</h4><h4 id="16-7-4-执行系统命令-lt-stdlib-h-gt"><a href="#16-7-4-执行系统命令-lt-stdlib-h-gt" class="headerlink" title="16.7.4 执行系统命令 &lt;stdlib.h&gt;"></a>16.7.4 执行系统命令 &lt;stdlib.h&gt;</h4><h4 id="16-7-5-排序和查找-lt-stdlib-h-gt"><a href="#16-7-5-排序和查找-lt-stdlib-h-gt" class="headerlink" title="16.7.5 排序和查找 &lt;stdlib.h&gt;"></a>16.7.5 排序和查找 &lt;stdlib.h&gt;</h4><h3 id="16-8-locale"><a href="#16-8-locale" class="headerlink" title="16.8 locale"></a>16.8 locale</h3><h4 id="16-8-1-数值和货币形式-lt-local-h-gt"><a href="#16-8-1-数值和货币形式-lt-local-h-gt" class="headerlink" title="16.8.1 数值和货币形式 &lt;local.h&gt;"></a>16.8.1 数值和货币形式 &lt;local.h&gt;</h4><h4 id="16-8-2-字符串和locale-lt-string-h-gt"><a href="#16-8-2-字符串和locale-lt-string-h-gt" class="headerlink" title="16.8.2 字符串和locale &lt;string.h&gt;"></a>16.8.2 字符串和locale &lt;string.h&gt;</h4><h4 id="16-8-3-改变locale的效果"><a href="#16-8-3-改变locale的效果" class="headerlink" title="16.8.3 改变locale的效果"></a>16.8.3 改变locale的效果</h4><h3 id="16-9-总结"><a href="#16-9-总结" class="headerlink" title="16.9 总结"></a>16.9 总结</h3><h3 id="16-10-警告的总结"><a href="#16-10-警告的总结" class="headerlink" title="16.10 警告的总结"></a>16.10 警告的总结</h3><h3 id="16-11-编程提示的总结"><a href="#16-11-编程提示的总结" class="headerlink" title="16.11 编程提示的总结"></a>16.11 编程提示的总结</h3><h3 id="16-12-问题"><a href="#16-12-问题" class="headerlink" title="16.12 问题"></a>16.12 问题</h3><h3 id="16-13-编程练习"><a href="#16-13-编程练习" class="headerlink" title="16.13 编程练习"></a>16.13 编程练习</h3><h2 id="第十七章-经典抽象数据类型"><a href="#第十七章-经典抽象数据类型" class="headerlink" title="第十七章 经典抽象数据类型"></a>第十七章 经典抽象数据类型</h2><h3 id="17-1-内存分配"><a href="#17-1-内存分配" class="headerlink" title="17.1 内存分配"></a>17.1 内存分配</h3><h3 id="17-2-堆栈"><a href="#17-2-堆栈" class="headerlink" title="17.2 堆栈"></a>17.2 堆栈</h3><h4 id="17-2-1-堆栈接口"><a href="#17-2-1-堆栈接口" class="headerlink" title="17.2.1 堆栈接口"></a>17.2.1 堆栈接口</h4><h4 id="17-2-2-实现堆栈"><a href="#17-2-2-实现堆栈" class="headerlink" title="17.2.2 实现堆栈"></a>17.2.2 实现堆栈</h4><h3 id="17-3-队列"><a href="#17-3-队列" class="headerlink" title="17.3 队列"></a>17.3 队列</h3><h4 id="17-3-1-队列接口"><a href="#17-3-1-队列接口" class="headerlink" title="17.3.1 队列接口"></a>17.3.1 队列接口</h4><h4 id="17-3-2-实现队列"><a href="#17-3-2-实现队列" class="headerlink" title="17.3.2 实现队列"></a>17.3.2 实现队列</h4><h3 id="17-4-树"><a href="#17-4-树" class="headerlink" title="17.4 树"></a>17.4 树</h3><h4 id="17-4-1-在二叉搜查树中插入"><a href="#17-4-1-在二叉搜查树中插入" class="headerlink" title="17.4.1 在二叉搜查树中插入"></a>17.4.1 在二叉搜查树中插入</h4><h4 id="17-4-2-从二叉搜查树删除节点"><a href="#17-4-2-从二叉搜查树删除节点" class="headerlink" title="17.4.2 从二叉搜查树删除节点"></a>17.4.2 从二叉搜查树删除节点</h4><h4 id="17-4-3-在二叉搜查树中查找"><a href="#17-4-3-在二叉搜查树中查找" class="headerlink" title="17.4.3 在二叉搜查树中查找"></a>17.4.3 在二叉搜查树中查找</h4><h4 id="17-4-4-树的遍历"><a href="#17-4-4-树的遍历" class="headerlink" title="17.4.4 树的遍历"></a>17.4.4 树的遍历</h4><h4 id="17-4-5-二叉搜索树接口"><a href="#17-4-5-二叉搜索树接口" class="headerlink" title="17.4.5 二叉搜索树接口"></a>17.4.5 二叉搜索树接口</h4><h4 id="17-4-6-实现二叉搜索树"><a href="#17-4-6-实现二叉搜索树" class="headerlink" title="17.4.6 实现二叉搜索树"></a>17.4.6 实现二叉搜索树</h4><h3 id="17-5-实现的改进"><a href="#17-5-实现的改进" class="headerlink" title="17.5 实现的改进"></a>17.5 实现的改进</h3><h4 id="17-5-1-拥有超过一个的堆栈"><a href="#17-5-1-拥有超过一个的堆栈" class="headerlink" title="17.5.1 拥有超过一个的堆栈"></a>17.5.1 拥有超过一个的堆栈</h4><h4 id="17-5-2-拥有超过一个的类型"><a href="#17-5-2-拥有超过一个的类型" class="headerlink" title="17.5.2 拥有超过一个的类型"></a>17.5.2 拥有超过一个的类型</h4><h4 id="17-5-3-名字冲突"><a href="#17-5-3-名字冲突" class="headerlink" title="17.5.3 名字冲突"></a>17.5.3 名字冲突</h4><h4 id="17-5-4-标准函数库的ADT"><a href="#17-5-4-标准函数库的ADT" class="headerlink" title="17.5.4 标准函数库的ADT"></a>17.5.4 标准函数库的ADT</h4><h3 id="17-6-总结"><a href="#17-6-总结" class="headerlink" title="17.6 总结"></a>17.6 总结</h3><h3 id="17-7-警告的总结"><a href="#17-7-警告的总结" class="headerlink" title="17.7 警告的总结"></a>17.7 警告的总结</h3><h3 id="17-8-编程提示的总结"><a href="#17-8-编程提示的总结" class="headerlink" title="17.8 编程提示的总结"></a>17.8 编程提示的总结</h3><h3 id="17-9-问题"><a href="#17-9-问题" class="headerlink" title="17.9 问题"></a>17.9 问题</h3><h3 id="17-10-编程练习"><a href="#17-10-编程练习" class="headerlink" title="17.10 编程练习"></a>17.10 编程练习</h3><h2 id="第十八章-运行时环境"><a href="#第十八章-运行时环境" class="headerlink" title="第十八章 运行时环境"></a>第十八章 运行时环境</h2><h3 id="18-1-判断运行时环境"><a href="#18-1-判断运行时环境" class="headerlink" title="18.1 判断运行时环境"></a>18.1 判断运行时环境</h3><h4 id="18-1-1-测试程序"><a href="#18-1-1-测试程序" class="headerlink" title="18.1.1 测试程序"></a>18.1.1 测试程序</h4><h4 id="18-1-2-静态变量和初始化"><a href="#18-1-2-静态变量和初始化" class="headerlink" title="18.1.2 静态变量和初始化"></a>18.1.2 静态变量和初始化</h4><h4 id="18-1-3-堆栈帧"><a href="#18-1-3-堆栈帧" class="headerlink" title="18.1.3 堆栈帧"></a>18.1.3 堆栈帧</h4><h4 id="18-1-4-寄存器变量"><a href="#18-1-4-寄存器变量" class="headerlink" title="18.1.4 寄存器变量"></a>18.1.4 寄存器变量</h4><h4 id="18-1-5-外部标识符的长度"><a href="#18-1-5-外部标识符的长度" class="headerlink" title="18.1.5 外部标识符的长度"></a>18.1.5 外部标识符的长度</h4><h4 id="18-1-6-判断堆栈帧布局"><a href="#18-1-6-判断堆栈帧布局" class="headerlink" title="18.1.6 判断堆栈帧布局"></a>18.1.6 判断堆栈帧布局</h4><h4 id="18-1-7-表达式的副作用"><a href="#18-1-7-表达式的副作用" class="headerlink" title="18.1.7 表达式的副作用"></a>18.1.7 表达式的副作用</h4><h3 id="18-2-C和汇编语言的接口"><a href="#18-2-C和汇编语言的接口" class="headerlink" title="18.2 C和汇编语言的接口"></a>18.2 C和汇编语言的接口</h3><h3 id="18-3-运行时效率"><a href="#18-3-运行时效率" class="headerlink" title="18.3 运行时效率"></a>18.3 运行时效率</h3><h3 id="18-4-总结"><a href="#18-4-总结" class="headerlink" title="18.4 总结"></a>18.4 总结</h3><h3 id="18-5-警告的总结"><a href="#18-5-警告的总结" class="headerlink" title="18.5 警告的总结"></a>18.5 警告的总结</h3><h3 id="18-6-编程提示的总结"><a href="#18-6-编程提示的总结" class="headerlink" title="18.6 编程提示的总结"></a>18.6 编程提示的总结</h3><h3 id="18-7-问题"><a href="#18-7-问题" class="headerlink" title="18.7 问题"></a>18.7 问题</h3><h3 id="18-8-编程练习"><a href="#18-8-编程练习" class="headerlink" title="18.8 编程练习"></a>18.8 编程练习</h3><p>[^NUL]:字符串终止符（不是字符串的一部分）<br /><br>       ·是ASCII字符集中‘\0’字符的名字，字节模式为全0.<br /><br>       ·NULL在头文件stdio.h中定义，不存在预定义的符号NUL,若要使用他而不是字符常量‘\0’,就必须自行定义<br /></p>
 <p>[^在其他语言中，这种叫做过程]</p>
 ]]></content>
-      <tags>
-        <tag>C与指针</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>liu</title>
-    <url>/2023/03/03/2liu/</url>
-    <content><![CDATA[<h1 id="主要介绍："><a href="#主要介绍：" class="headerlink" title="主要介绍："></a>主要介绍：</h1><p>  什么是“流”，“流”的基本概念，“流”对于内存和外部设备着<span id="more"></span>什么样的作用，C语言默认打开的三个“流”：stdin、stdout、stderr👀。</p>
-<!-- more -->
-
-<p>通过《C语言》文件这一章的学习，我们学会了如何向文件进行读写操作，也就是如何让数据从内存中保存到硬盘上，或是如何从硬盘上读取数据放到内存中。硬盘其实是一个外部设备，那有人就要问了：我们能否对其他<strong>外部</strong>设进行读写操作呢？例如：屏幕、键盘、鼠标、U盘、光盘、网络…… ，答案当然是肯定的。</p>
-<h2 id="但值得注意"><a href="#但值得注意" class="headerlink" title="但值得注意"></a>但值得注意</h2><p> 的是，<em>每一种外部设备的读写方式是有所差异的</em>，就比如：写硬盘和写屏幕，读键盘和读网络。那大家想一下，如果一个程序员写代码的时候，必须要把每种外部设备的读和写的方式都理解透彻，是不是太麻烦了！</p>
-<p>  所以，为了能够<em>让程序员更加方便的对外部设备进行读写操作</em>，我们会在外部设备前抽象出来一层东西，称为：“流”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由C语言底层的封装来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个中转站，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  所以，为了能够让程序员更加方便的对外部设备进行读写操作，我们会<em>在外部设备前抽象出来一层东西</em>，称为：“<strong>流</strong>”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由<strong>C语言底层的封装</strong>来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个<strong>中转站</strong>，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  “流”是一个比较抽象的概念，数据就像水管里的水流，可以从内存中流向外部设备，也可以从外部设备流向内存，但只能<strong>单方向</strong>的流。由此可见“流”是有明确的方向性的，所以可以将“流”分为两种：以内存为第一人称，<strong>数据从内存向外流的称为输出流，数据由外向内存流的称为输入流</strong>。</p>
-<p>  还值得补充的一点是，不知道大家有没有发现，我们在对一个文件操作前必须先打开它，获得与之关联的文件指针，这个指针就可以称为“文件流”，因为这个指针指向了数据的目的地 &#x2F; 源头。但我们在对屏幕写出数据时或从键盘上读入数据时，并没有对这些外部设备进行打开操作获得所对应的“流”啊，而且在scanf和printf操作的时候也没有要求你给出数据的流向，最后却还能实现，这是为什么呢？<br>因为任意一个C程序只要运行起来，就会默认打开3个“流”：</p>
-<blockquote>
-<p>stdin —— 标准输入流（键盘）</br><br>stdout —— 标准输出流（屏幕）</br><br>stderr —— 标准错误流（屏幕）</br></p>
-</blockquote>
-<p>  所以printf()会默认将数据发送到stdout这个“流”上，scanf()会默从stdin这个“流”上读取数据，不需要我们手动打开和关闭“流”。但对于文件来说，我们就必须先打开这个文件从而获得这个“流”，然后才能从这个“流”里面读取数据或向这个“流”里面写数据，最后还得关闭“流”。<br>  那有同学就要问了：能不能用格式化输出函数fprintf()来向屏幕上输出一段内容？答案当然是可以的.</p>
-]]></content>
       <categories>
-        <category>C文件操作</category>
+        <category>C语言经典书籍</category>
       </categories>
       <tags>
-        <tag>IO</tag>
+        <tag>C与指针</tag>
       </tags>
   </entry>
   <entry>
@@ -1519,18 +2198,111 @@
       </tags>
   </entry>
   <entry>
-    <title>return 0</title>
-    <url>/2023/03/05/3return%200/</url>
-    <content><![CDATA[<p>C语言为什么要return 0(个人看法)</p>
+    <title>clock</title>
+    <url>/2023/03/01/9clock/</url>
+    <content><![CDATA[<h1 id="clock"><a href="#clock" class="headerlink" title="clock"></a>clock</h1><p>C语言中的函数clock（ ），它可以捕捉从程序开始运行到clock(<code>&lt;!-- more --&gt;</code> )被调用时所耗费的时间。它计时所用的单位是clock tick，翻译成中文就是“时钟打点”。</p>
 <span id="more"></span>
 
-<p>c语言中的return 0有什么用?<br>用return这种形式就能定义返回值, return 0可以 终止 main() 函数，并返回值 0。<br>return 0 代表程序正常退出，return 1代表程序异常退出！<br>使用return 语句可以返回一个变量内的值或一个指针，也可用return0，表示返回为空。<br>return 代表调到函数外，<br><strong>return 0代表函数正常终止</strong><br><strong>return 1代表函数非正常终止</strong><br>而我觉得还有一个作用就是return之后你至少知道代码成功运行到最后一行，中间没有异常中止，并且return 关键字的还有一个作用是返回程序流程的控制权！其副作用是返回一个值。</p>
+<p>与之配套的还有一个常数CLK_TCK，实际上就是“clock tick”的缩写。它给出的是机器时钟每秒所走的时钟打点数。这个数在不同机器中可能不一样，可以通过写程序得到一台机器的CLK_TCK。</p>
+<p>代码如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">( )</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, CLK_TCK);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>将clock( )函数和常数CLK_TCK两个配合在一起，就可以计算出来一个函数到底跑了多少秒钟。</p>
+<p>以下是一个常用的模板：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;studio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="comment">/*要用clock( )函数必须要包含time.h*/</span></span><br><span class="line"><span class="type">clock_t</span> start,stop;<span class="comment">/*clock_t是clock( )函数返回的变量类型*/</span></span><br><span class="line"><span class="type">double</span> duration;<span class="comment">/*记录被测函数运行时间，以秒为单位*/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">( )</span></span><br><span class="line">&#123;   <span class="comment">/*不在测试范围内的准备工作写在clock( )调用之前*/</span></span><br><span class="line">    start=clock();<span class="comment">/*开始计时*/</span></span><br><span class="line">    MyFunction();<span class="comment">/*把被测函数加在这里*/</span></span><br><span class="line">    stop=clock();<span class="comment">/*停止计时*/</span></span><br><span class="line">    duration=((<span class="type">double</span>)(stop-start))/CLK_TCK;<span class="comment">/*计算运行时间*/</span></span><br><span class="line">    <span class="comment">/*其他不在测试范围的处理写在后面，例如输出duration的值*/</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>下面是一个具体的例子</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="type">clock_t</span> start, stop;</span><br><span class="line"><span class="type">double</span> duration;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXN 10</span></span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> a[MAXN];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; MAXN; i++)  a[i] = (<span class="type">double</span>)i;</span><br><span class="line"></span><br><span class="line">    start = clock();</span><br><span class="line">    f(MAXN - <span class="number">1</span>, a, <span class="number">1.1</span>);</span><br><span class="line">    stop = clock();</span><br><span class="line">    duration = ((<span class="type">double</span>)(stop - start)) / CLK_TCK;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ticks=%f\n&quot;</span>, (<span class="type">double</span>)(stop - start));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;duration=%6.2e\n&quot;</span>, duration);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> p = a[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        p += (a[i] * <span class="built_in">pow</span>(x,i));</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>计算结果都是0，是因为这个函数跑的实在是太快了，它的运行时间不到一个tick，所以clock函数铺捉不到它。解决方法就是让被测函数<strong>重复运行</strong>充分多次，使得测出的总的时钟打点间隔充分长，最后计算被测函数<strong>平均每次</strong>运行的时间即可。</p>
+<p>调整后的代码如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="type">clock_t</span> start, stop;</span><br><span class="line"><span class="type">double</span> duration;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXN 10</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXK 1e7<span class="comment">/*被测函数最大重复调用次数*/</span></span></span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> a[MAXN];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; MAXN; i++)  a[i] = (<span class="type">double</span>)i;</span><br><span class="line"></span><br><span class="line">    start = clock();</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=MAXK;i++)<span class="comment">/*重复调用函数已获得充分多的时钟打点数*/</span></span><br><span class="line">        f(MAXN - <span class="number">1</span>, a, <span class="number">1.1</span>);</span><br><span class="line">    stop = clock();</span><br><span class="line">    duration = ((<span class="type">double</span>)(stop - start)) / CLK_TCK/MAXK;<span class="comment">/*计算函数单次运行的时间*/</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ticks=%f\n&quot;</span>, (<span class="type">double</span>)(stop - start));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;duration=%6.2e\n&quot;</span>, duration);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> p = a[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        p += (a[i] * <span class="built_in">pow</span>(x,i));</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这个数据在不同的电脑上运行出来的结果不同，因为不同机器的CLK_TCK不一定相同</p>
+<p><img src="/image/clock/1677666755946.png" alt="1677666755946"></p>
 ]]></content>
       <categories>
-        <category>C语言</category>
+        <category>C语言函数</category>
       </categories>
       <tags>
-        <tag>C</tag>
+        <tag>时针函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>math faction</title>
+    <url>/2023/02/25/8math%20faction/</url>
+    <content><![CDATA[<p>头文件math.h</p>
+<p>实数绝对值函数</p>
+<h2 id="➢指数函数"><a href="#➢指数函数" class="headerlink" title="➢指数函数"></a>➢指数函数</h2><p>double fabs(double <code>&lt;!-- more --&gt;</code> x);</p>
+<p>double exp(double x);</p>
+<p>求实数x的绝对值|x|</p>
+<p>求e的实数x次幂ex</p>
+<p>例: fabs(3.5)的值为3.5</p>
+<p>例: exp(1.0)的值约为2.71828</p>
+<p>fabs(-3.5)的值为3.5</p>
+<p>exp(2. 5)的值约为12.1825</p>
+<h2 id="平方根函数"><a href="#平方根函数" class="headerlink" title="平方根函数"></a>平方根函数</h2><p>double sqrt(double x);</p>
+<h2 id="➢对数函数"><a href="#➢对数函数" class="headerlink" title="➢对数函数"></a>➢对数函数</h2><p>double log(double x);</p>
+<p>求实数x的平方根vx</p>
+<p>求以e为底正实数x的对数Inx</p>
+<p>例: sqrt(100.0)的值约为10.0</p>
+<p>double log10(doublex);</p>
+<p>sqrt(12.96)的值约为3.6</p>
+<p>求以10为底正实数x的对数lgx</p>
+<h2 id="➢幂函数"><a href="#➢幂函数" class="headerlink" title="➢幂函数"></a>➢幂函数</h2><p>例: log(2.718283)的值约为1.0</p>
+<p>double pow(double x, doubley); .</p>
+<p>log(45.7)的值约为3.822098</p>
+<p>求实数x的实数y次幂x</p>
+<p>log10(1000.0)的值约为3.0</p>
+<p>例: pow(2.0, 10.0)的值约为1024.0</p>
+<p>log10(6.022e23)的值约为23.7797</p>
+<p>pow(4.3, 2.9)的值约为68.7161</p>
+<p>注: C只提供以e和10为底数的对数函数。当计算</p>
+<p>以其它实数为底数的对数时，可利用换底公式。</p>
+<h2 id="➢双曲函数"><a href="#➢双曲函数" class="headerlink" title="➢双曲函数"></a>➢双曲函数</h2><p>ex-e-x<br>shx或sinhx<br>double sinh(double x);<br>sinh x&#x3D;<br>2<br>chx或cosh xdouble cosh(double x);<br>thx或tanhx<br>double tanh(double x);<br>e*+ e-x<br>例: sinh(1.0)的值约为1.175201<br>coshx&#x3D; -<br>2<br>cosh(1.0)的值约为1.543081<br>tanh(1.0)的值约为0.7615942<br>ex- e-x</p>
+<h2 id="➢取整函数"><a href="#➢取整函数" class="headerlink" title="➢取整函数"></a>➢取整函数</h2><p>tanh x &#x3D;ex+ e-x<br>[x1 double ceil(double x);<br>. lx」<br>double floor(double x);<br>例: ceil(1.1)的值约为2.0, ceil(-1.1)的值约为-1.0<br>floor(1.1)的值约为1.0, floor(-1.1)的值约为-2.0<br>ceil(1.0)和floor(1.0)的值都约为1.0, ceil(-1.0)和floor(-1.0)的值都约为-1.0</p>
+<h2 id="➢取模函数"><a href="#➢取模函数" class="headerlink" title="➢取模函数"></a>➢取模函数</h2><p>xmody<br>double fmod(double x, double y);<br>例: fmod(14.0, 3.0)的值约为2.0, fmod(-14.0, -3.0)的值约为-2.0<br>fmod(-6.5, -3.2)的值约为-0.1, fmod(6.5, -3.2)的值约为0.1</p>
+]]></content>
+      <categories>
+        <category>常用数学函数</category>
+      </categories>
+      <tags>
+        <tag>math faction</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Jupyter Notebook 的快捷键</title>
+    <url>/2023/04/09/7Jupyter%20book%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h2 id="Jupyter-Notebook-的快捷键"><a href="#Jupyter-Notebook-的快捷键" class="headerlink" title="Jupyter Notebook 的快捷键"></a>Jupyter Notebook 的快捷键</h2><h4 id="有两种键盘输入模式"><a href="#有两种键盘输入模式" class="headerlink" title="有两种键盘输入模式"></a>有两种键盘输入模式</h4><h3 id="编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。"><a href="#编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。" class="headerlink" title="编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。"></a>编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。</h3><h3 id="命令模式-按键-Esc-开启"><a href="#命令模式-按键-Esc-开启" class="headerlink" title="命令模式 (按键 Esc 开启)"></a>命令模式 (按键 Esc 开启)</h3><p>Enter : 转入编辑模式<br>Shift-Enter : 运行本单元，选中下个单元<br>Ctrl-Enter : 运行本单元<br>Alt-Enter : 运行本单元，在其下插入新单元<br>Y : 单元转入代码状态<br>M :单元转入markdown状态<br>R : 单元转入raw状态<br>1 : 设定 1 级标题<br>2 : 设定 2 级标题<br>3 : 设定 3 级标题<br>4 : 设定 4 级标题<br>5 : 设定 5 级标题<br>6 : 设定 6 级标题<br>Up : 选中上方单元<br>K : 选中上方单元<br>Down : 选中下方单元<br>J : 选中下方单元<br>Shift-K : 扩大选中上方单元<br>Shift-J : 扩大选中下方单元<br>A : 在上方插入新单元<br>B : 在下方插入新单元<br>X : 剪切选中的单元<br>C : 复制选中的单元<br>Shift-V : 粘贴到上方单元<br>V : 粘贴到下方单元<br>Z : 恢复删除的最后一个单元<br>D,D : 删除选中的单元<br>Shift-M : 合并选中的单元<br>Ctrl-S : 文件存盘<br>S : 文件存盘<br>L : 转换行号<br>O : 转换输出<br>Shift-O : 转换输出滚动<br>Esc : 关闭页面<br>Q : 关闭页面<br>H : 显示快捷键帮助<br>I,I : 中断Notebook内核<br>0,0 : 重启Notebook内核<br>Shift : 忽略<br>Shift-Space : 向上滚动<br>Space : 向下滚动</p>
+<h3 id="编辑模式-Enter-键启动"><a href="#编辑模式-Enter-键启动" class="headerlink" title="编辑模式 ( Enter 键启动)"></a>编辑模式 ( Enter 键启动)</h3><p>Tab : 代码补全或缩进<br>Shift-Tab : 提示<br>Ctrl-] : 缩进<br>Ctrl-[ : 解除缩进<br>Ctrl-A : 全选<br>Ctrl-Z : 复原<br>Ctrl-Shift-Z : 再做<br>Ctrl-Y : 再做<br>Ctrl-Home : 跳到单元开头<br>Ctrl-Up : 跳到单元开头<br>Ctrl-End : 跳到单元末尾<br>Ctrl-Down : 跳到单元末尾<br>Ctrl-Left : 跳到左边一个字首<br>Ctrl-Right : 跳到右边一个字首<br>Ctrl-Backspace : 删除前面一个字<br>Ctrl-Delete : 删除后面一个字<br>Esc : 进入命令模式<br>Ctrl-M : 进入命令模式<br>Shift-Enter : 运行本单元，选中下一单元<br>Ctrl-Enter : 运行本单元<br>Alt-Enter : 运行本单元，在下面插入一单元<br>Ctrl-Shift– : 分割单元<br>Ctrl-Shift-Subtract : 分割单元<br>Ctrl-S : 文件存盘<br>Shift : 忽略<br>Up : 光标上移或转入上一单元<br>Down :光标下移或转入下一单元</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>快捷键</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c++的STL</title>
+    <url>/2023/03/15/6STL/</url>
+    <content><![CDATA[<h1 id="c-的STL"><a href="#c-的STL" class="headerlink" title="c++的STL"></a>c++的STL</h1><h2 id="sort排序"><a href="#sort排序" class="headerlink" title="sort排序"></a>sort排序</h2><h3 id="用法一"><a href="#用法一" class="headerlink" title="用法一"></a>用法一</h3><span id="more"></span>
+
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[] = &#123;<span class="number">15</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">6</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">sort</span>(a,a+<span class="number">7</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="用法二-从大到小"><a href="#用法二-从大到小" class="headerlink" title="用法二 -从大到小"></a>用法二 -从大到小</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[] = &#123;<span class="number">15</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">2</span> ,<span class="number">6</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">sort</span>(a+<span class="number">1</span>,a+<span class="number">4</span>,<span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;());</span><br></pre></td></tr></table></figure>
+
+<!-- more -->
+
+<h3 id="用法三-结构体"><a href="#用法三-结构体" class="headerlink" title="用法三-结构体"></a>用法三-结构体</h3><p>sort(数组名+n1，数组名+n2,排序规则结构名());</p>
+<p>排序规则结构的定义方式</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> 结构名</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="type">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">( <span class="type">const</span> T &amp; a1,<span class="type">const</span> T &amp; a2)</span> <span class="type">const</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//若a1在a2前面，则返回true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//eles返回false</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>STL</tag>
       </tags>
   </entry>
   <entry>
@@ -1857,25 +2629,73 @@
       </tags>
   </entry>
   <entry>
-    <title>c++的STL</title>
-    <url>/2023/03/15/6STL/</url>
-    <content><![CDATA[<h1 id="c-的STL"><a href="#c-的STL" class="headerlink" title="c++的STL"></a>c++的STL</h1><h2 id="sort排序"><a href="#sort排序" class="headerlink" title="sort排序"></a>sort排序</h2><h3 id="用法一"><a href="#用法一" class="headerlink" title="用法一"></a>用法一</h3><span id="more"></span>
+    <title>return 0</title>
+    <url>/2023/03/05/3return%200/</url>
+    <content><![CDATA[<p>C语言为什么要return 0(个人看法)</p>
+<span id="more"></span>
 
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[] = &#123;<span class="number">15</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">6</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">sort</span>(a,a+<span class="number">7</span>);</span><br></pre></td></tr></table></figure>
-
-<h3 id="用法二-从大到小"><a href="#用法二-从大到小" class="headerlink" title="用法二 -从大到小"></a>用法二 -从大到小</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[] = &#123;<span class="number">15</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">2</span> ,<span class="number">6</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">sort</span>(a+<span class="number">1</span>,a+<span class="number">4</span>,<span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;());</span><br></pre></td></tr></table></figure>
-
-<!-- more -->
-
-<h3 id="用法三-结构体"><a href="#用法三-结构体" class="headerlink" title="用法三-结构体"></a>用法三-结构体</h3><p>sort(数组名+n1，数组名+n2,排序规则结构名());</p>
-<p>排序规则结构的定义方式</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> 结构名</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">     <span class="function"><span class="type">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">( <span class="type">const</span> T &amp; a1,<span class="type">const</span> T &amp; a2)</span> <span class="type">const</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//若a1在a2前面，则返回true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//eles返回false</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>c语言中的return 0有什么用?<br>用return这种形式就能定义返回值, return 0可以 终止 main() 函数，并返回值 0。<br>return 0 代表程序正常退出，return 1代表程序异常退出！<br>使用return 语句可以返回一个变量内的值或一个指针，也可用return0，表示返回为空。<br>return 代表调到函数外，<br><strong>return 0代表函数正常终止</strong><br><strong>return 1代表函数非正常终止</strong><br>而我觉得还有一个作用就是return之后你至少知道代码成功运行到最后一行，中间没有异常中止，并且return 关键字的还有一个作用是返回程序流程的控制权！其副作用是返回一个值。</p>
 ]]></content>
       <categories>
-        <category>算法</category>
+        <category>C语言</category>
       </categories>
       <tags>
-        <tag>STL</tag>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>liu</title>
+    <url>/2023/03/03/2liu/</url>
+    <content><![CDATA[<h1 id="主要介绍："><a href="#主要介绍：" class="headerlink" title="主要介绍："></a>主要介绍：</h1><p>  什么是“流”，“流”的基本概念，“流”对于内存和外部设备着<span id="more"></span>什么样的作用，C语言默认打开的三个“流”：stdin、stdout、stderr👀。</p>
+<!-- more -->
+
+<p>通过《C语言》文件这一章的学习，我们学会了如何向文件进行读写操作，也就是如何让数据从内存中保存到硬盘上，或是如何从硬盘上读取数据放到内存中。硬盘其实是一个外部设备，那有人就要问了：我们能否对其他<strong>外部</strong>设进行读写操作呢？例如：屏幕、键盘、鼠标、U盘、光盘、网络…… ，答案当然是肯定的。</p>
+<h2 id="但值得注意"><a href="#但值得注意" class="headerlink" title="但值得注意"></a>但值得注意</h2><p> 的是，<em>每一种外部设备的读写方式是有所差异的</em>，就比如：写硬盘和写屏幕，读键盘和读网络。那大家想一下，如果一个程序员写代码的时候，必须要把每种外部设备的读和写的方式都理解透彻，是不是太麻烦了！</p>
+<p>  所以，为了能够<em>让程序员更加方便的对外部设备进行读写操作</em>，我们会在外部设备前抽象出来一层东西，称为：“流”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由C语言底层的封装来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个中转站，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  所以，为了能够让程序员更加方便的对外部设备进行读写操作，我们会<em>在外部设备前抽象出来一层东西</em>，称为：“<strong>流</strong>”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由<strong>C语言底层的封装</strong>来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个<strong>中转站</strong>，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  “流”是一个比较抽象的概念，数据就像水管里的水流，可以从内存中流向外部设备，也可以从外部设备流向内存，但只能<strong>单方向</strong>的流。由此可见“流”是有明确的方向性的，所以可以将“流”分为两种：以内存为第一人称，<strong>数据从内存向外流的称为输出流，数据由外向内存流的称为输入流</strong>。</p>
+<p>  还值得补充的一点是，不知道大家有没有发现，我们在对一个文件操作前必须先打开它，获得与之关联的文件指针，这个指针就可以称为“文件流”，因为这个指针指向了数据的目的地 &#x2F; 源头。但我们在对屏幕写出数据时或从键盘上读入数据时，并没有对这些外部设备进行打开操作获得所对应的“流”啊，而且在scanf和printf操作的时候也没有要求你给出数据的流向，最后却还能实现，这是为什么呢？<br>因为任意一个C程序只要运行起来，就会默认打开3个“流”：</p>
+<blockquote>
+<p>stdin —— 标准输入流（键盘）</br><br>stdout —— 标准输出流（屏幕）</br><br>stderr —— 标准错误流（屏幕）</br></p>
+</blockquote>
+<p>  所以printf()会默认将数据发送到stdout这个“流”上，scanf()会默从stdin这个“流”上读取数据，不需要我们手动打开和关闭“流”。但对于文件来说，我们就必须先打开这个文件从而获得这个“流”，然后才能从这个“流”里面读取数据或向这个“流”里面写数据，最后还得关闭“流”。<br>  那有同学就要问了：能不能用格式化输出函数fprintf()来向屏幕上输出一段内容？答案当然是可以的.</p>
+]]></content>
+      <categories>
+        <category>C文件操作</category>
+      </categories>
+      <tags>
+        <tag>IO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/01/27/1hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you <span id="more"></span>can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<!-- more -->
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+ <!-- more -->
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>HELLO WORLD</category>
+      </categories>
+      <tags>
+        <tag>Hello World</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/2023/01/29/test/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>test</tag>
       </tags>
   </entry>
   <entry>
@@ -1903,102 +2723,11 @@
 <p>[^LaTeX]: 支持 <strong>LaTeX</strong> 编辑显示支持，例如：$\sum_{i&#x3D;1}^n a_i&#x3D;0$， 访问 <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">MathJax</a> 参考更多使用方法。</p>
 <p>[^code]: 代码高亮功能支持包括 Java, Python, JavaScript 在内的，<strong>四十一</strong>种主流编程语言。</p>
 ]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
       <tags>
         <tag>Md</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Jupyter Notebook 的快捷键</title>
-    <url>/2023/04/09/7Jupyter%20book%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-    <content><![CDATA[<h2 id="Jupyter-Notebook-的快捷键"><a href="#Jupyter-Notebook-的快捷键" class="headerlink" title="Jupyter Notebook 的快捷键"></a>Jupyter Notebook 的快捷键</h2><h4 id="有两种键盘输入模式"><a href="#有两种键盘输入模式" class="headerlink" title="有两种键盘输入模式"></a>有两种键盘输入模式</h4><h3 id="编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。"><a href="#编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。" class="headerlink" title="编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。"></a>编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。</h3><h3 id="命令模式-按键-Esc-开启"><a href="#命令模式-按键-Esc-开启" class="headerlink" title="命令模式 (按键 Esc 开启)"></a>命令模式 (按键 Esc 开启)</h3><p>Enter : 转入编辑模式<br>Shift-Enter : 运行本单元，选中下个单元<br>Ctrl-Enter : 运行本单元<br>Alt-Enter : 运行本单元，在其下插入新单元<br>Y : 单元转入代码状态<br>M :单元转入markdown状态<br>R : 单元转入raw状态<br>1 : 设定 1 级标题<br>2 : 设定 2 级标题<br>3 : 设定 3 级标题<br>4 : 设定 4 级标题<br>5 : 设定 5 级标题<br>6 : 设定 6 级标题<br>Up : 选中上方单元<br>K : 选中上方单元<br>Down : 选中下方单元<br>J : 选中下方单元<br>Shift-K : 扩大选中上方单元<br>Shift-J : 扩大选中下方单元<br>A : 在上方插入新单元<br>B : 在下方插入新单元<br>X : 剪切选中的单元<br>C : 复制选中的单元<br>Shift-V : 粘贴到上方单元<br>V : 粘贴到下方单元<br>Z : 恢复删除的最后一个单元<br>D,D : 删除选中的单元<br>Shift-M : 合并选中的单元<br>Ctrl-S : 文件存盘<br>S : 文件存盘<br>L : 转换行号<br>O : 转换输出<br>Shift-O : 转换输出滚动<br>Esc : 关闭页面<br>Q : 关闭页面<br>H : 显示快捷键帮助<br>I,I : 中断Notebook内核<br>0,0 : 重启Notebook内核<br>Shift : 忽略<br>Shift-Space : 向上滚动<br>Space : 向下滚动</p>
-<h3 id="编辑模式-Enter-键启动"><a href="#编辑模式-Enter-键启动" class="headerlink" title="编辑模式 ( Enter 键启动)"></a>编辑模式 ( Enter 键启动)</h3><p>Tab : 代码补全或缩进<br>Shift-Tab : 提示<br>Ctrl-] : 缩进<br>Ctrl-[ : 解除缩进<br>Ctrl-A : 全选<br>Ctrl-Z : 复原<br>Ctrl-Shift-Z : 再做<br>Ctrl-Y : 再做<br>Ctrl-Home : 跳到单元开头<br>Ctrl-Up : 跳到单元开头<br>Ctrl-End : 跳到单元末尾<br>Ctrl-Down : 跳到单元末尾<br>Ctrl-Left : 跳到左边一个字首<br>Ctrl-Right : 跳到右边一个字首<br>Ctrl-Backspace : 删除前面一个字<br>Ctrl-Delete : 删除后面一个字<br>Esc : 进入命令模式<br>Ctrl-M : 进入命令模式<br>Shift-Enter : 运行本单元，选中下一单元<br>Ctrl-Enter : 运行本单元<br>Alt-Enter : 运行本单元，在下面插入一单元<br>Ctrl-Shift– : 分割单元<br>Ctrl-Shift-Subtract : 分割单元<br>Ctrl-S : 文件存盘<br>Shift : 忽略<br>Up : 光标上移或转入上一单元<br>Down :光标下移或转入下一单元</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>快捷键</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>math faction</title>
-    <url>/2023/02/25/8math%20faction/</url>
-    <content><![CDATA[<p>头文件math.h</p>
-<p>实数绝对值函数</p>
-<h2 id="➢指数函数"><a href="#➢指数函数" class="headerlink" title="➢指数函数"></a>➢指数函数</h2><p>double fabs(double<code>&lt;!-- more --&gt;</code> x);</p>
-<p>double exp(double x);</p>
-<p>求实数x的绝对值|x|</p>
-<p>求e的实数x次幂ex</p>
-<p>例: fabs(3.5)的值为3.5</p>
-<p>例: exp(1.0)的值约为2.71828</p>
-<p>fabs(-3.5)的值为3.5</p>
-<p>exp(2. 5)的值约为12.1825</p>
-<h2 id="平方根函数"><a href="#平方根函数" class="headerlink" title="平方根函数"></a>平方根函数</h2><p>double sqrt(double x);</p>
-<h2 id="➢对数函数"><a href="#➢对数函数" class="headerlink" title="➢对数函数"></a>➢对数函数</h2><p>double log(double x);</p>
-<p>求实数x的平方根vx</p>
-<p>求以e为底正实数x的对数Inx</p>
-<p>例: sqrt(100.0)的值约为10.0</p>
-<p>double log10(doublex);</p>
-<p>sqrt(12.96)的值约为3.6</p>
-<p>求以10为底正实数x的对数lgx</p>
-<h2 id="➢幂函数"><a href="#➢幂函数" class="headerlink" title="➢幂函数"></a>➢幂函数</h2><p>例: log(2.718283)的值约为1.0</p>
-<p>double pow(double x, doubley); .</p>
-<p>log(45.7)的值约为3.822098</p>
-<p>求实数x的实数y次幂x</p>
-<p>log10(1000.0)的值约为3.0</p>
-<p>例: pow(2.0, 10.0)的值约为1024.0</p>
-<p>log10(6.022e23)的值约为23.7797</p>
-<p>pow(4.3, 2.9)的值约为68.7161</p>
-<p>注: C只提供以e和10为底数的对数函数。当计算</p>
-<p>以其它实数为底数的对数时，可利用换底公式。</p>
-<h2 id="➢双曲函数"><a href="#➢双曲函数" class="headerlink" title="➢双曲函数"></a>➢双曲函数</h2><p>ex-e-x<br>shx或sinhx<br>double sinh(double x);<br>sinh x&#x3D;<br>2<br>chx或cosh xdouble cosh(double x);<br>thx或tanhx<br>double tanh(double x);<br>e*+ e-x<br>例: sinh(1.0)的值约为1.175201<br>coshx&#x3D; -<br>2<br>cosh(1.0)的值约为1.543081<br>tanh(1.0)的值约为0.7615942<br>ex- e-x</p>
-<h2 id="➢取整函数"><a href="#➢取整函数" class="headerlink" title="➢取整函数"></a>➢取整函数</h2><p>tanh x &#x3D;ex+ e-x<br>[x1 double ceil(double x);<br>. lx」<br>double floor(double x);<br>例: ceil(1.1)的值约为2.0, ceil(-1.1)的值约为-1.0<br>floor(1.1)的值约为1.0, floor(-1.1)的值约为-2.0<br>ceil(1.0)和floor(1.0)的值都约为1.0, ceil(-1.0)和floor(-1.0)的值都约为-1.0</p>
-<h2 id="➢取模函数"><a href="#➢取模函数" class="headerlink" title="➢取模函数"></a>➢取模函数</h2><p>xmody<br>double fmod(double x, double y);<br>例: fmod(14.0, 3.0)的值约为2.0, fmod(-14.0, -3.0)的值约为-2.0<br>fmod(-6.5, -3.2)的值约为-0.1, fmod(6.5, -3.2)的值约为0.1</p>
-]]></content>
-      <categories>
-        <category>常用数学函数</category>
-      </categories>
-      <tags>
-        <tag>math faction</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>clock</title>
-    <url>/2023/03/01/9clock/</url>
-    <content><![CDATA[<h1 id="clock"><a href="#clock" class="headerlink" title="clock"></a>clock</h1><p>C语言中的函数clock（ ），它可以捕捉从程序开始运行到clock(<code>&lt;!-- more --&gt;</code> )被调用时所耗费的时间。它计时所用的单位是clock tick，翻译成中文就是“时钟打点”。</p>
-<span id="more"></span>
-
-<p>与之配套的还有一个常数CLK_TCK，实际上就是“clock tick”的缩写。它给出的是机器时钟每秒所走的时钟打点数。这个数在不同机器中可能不一样，可以通过写程序得到一台机器的CLK_TCK。</p>
-<p>代码如下：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">( )</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, CLK_TCK);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>将clock( )函数和常数CLK_TCK两个配合在一起，就可以计算出来一个函数到底跑了多少秒钟。</p>
-<p>以下是一个常用的模板：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;studio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="comment">/*要用clock( )函数必须要包含time.h*/</span></span><br><span class="line"><span class="type">clock_t</span> start,stop;<span class="comment">/*clock_t是clock( )函数返回的变量类型*/</span></span><br><span class="line"><span class="type">double</span> duration;<span class="comment">/*记录被测函数运行时间，以秒为单位*/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">( )</span></span><br><span class="line">&#123;   <span class="comment">/*不在测试范围内的准备工作写在clock( )调用之前*/</span></span><br><span class="line">    start=clock();<span class="comment">/*开始计时*/</span></span><br><span class="line">    MyFunction();<span class="comment">/*把被测函数加在这里*/</span></span><br><span class="line">    stop=clock();<span class="comment">/*停止计时*/</span></span><br><span class="line">    duration=((<span class="type">double</span>)(stop-start))/CLK_TCK;<span class="comment">/*计算运行时间*/</span></span><br><span class="line">    <span class="comment">/*其他不在测试范围的处理写在后面，例如输出duration的值*/</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>下面是一个具体的例子</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="type">clock_t</span> start, stop;</span><br><span class="line"><span class="type">double</span> duration;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXN 10</span></span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> a[MAXN];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; MAXN; i++)  a[i] = (<span class="type">double</span>)i;</span><br><span class="line"></span><br><span class="line">    start = clock();</span><br><span class="line">    f(MAXN - <span class="number">1</span>, a, <span class="number">1.1</span>);</span><br><span class="line">    stop = clock();</span><br><span class="line">    duration = ((<span class="type">double</span>)(stop - start)) / CLK_TCK;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ticks=%f\n&quot;</span>, (<span class="type">double</span>)(stop - start));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;duration=%6.2e\n&quot;</span>, duration);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> p = a[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        p += (a[i] * <span class="built_in">pow</span>(x,i));</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>计算结果都是0，是因为这个函数跑的实在是太快了，它的运行时间不到一个tick，所以clock函数铺捉不到它。解决方法就是让被测函数<strong>重复运行</strong>充分多次，使得测出的总的时钟打点间隔充分长，最后计算被测函数<strong>平均每次</strong>运行的时间即可。</p>
-<p>调整后的代码如下：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="type">clock_t</span> start, stop;</span><br><span class="line"><span class="type">double</span> duration;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXN 10</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXK 1e7<span class="comment">/*被测函数最大重复调用次数*/</span></span></span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> a[MAXN];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; MAXN; i++)  a[i] = (<span class="type">double</span>)i;</span><br><span class="line"></span><br><span class="line">    start = clock();</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=MAXK;i++)<span class="comment">/*重复调用函数已获得充分多的时钟打点数*/</span></span><br><span class="line">        f(MAXN - <span class="number">1</span>, a, <span class="number">1.1</span>);</span><br><span class="line">    stop = clock();</span><br><span class="line">    duration = ((<span class="type">double</span>)(stop - start)) / CLK_TCK/MAXK;<span class="comment">/*计算函数单次运行的时间*/</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ticks=%f\n&quot;</span>, (<span class="type">double</span>)(stop - start));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;duration=%6.2e\n&quot;</span>, duration);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">double</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> n, <span class="type">double</span> a[], <span class="type">double</span> x)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">double</span> p = a[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        p += (a[i] * <span class="built_in">pow</span>(x,i));</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>这个数据在不同的电脑上运行出来的结果不同，因为不同机器的CLK_TCK不一定相同</p>
-<p><img src="/image/clock/1677666755946.png" alt="1677666755946"></p>
-]]></content>
-      <categories>
-        <category>C语言函数</category>
-      </categories>
-      <tags>
-        <tag>时针函数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/2023/01/29/test/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>test</tag>
       </tags>
   </entry>
 </search>
