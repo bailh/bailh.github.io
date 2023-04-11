@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lisihan.com.cn/2023/03/15/6STL/</loc>
+    <lastmod>2023-04-11</lastmod>
+  </url>
+  <url>
     <loc>https://lisihan.com.cn/2023/04/11/14Python%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2023-04-11</lastmod>
   </url>
@@ -31,10 +35,6 @@
   <url>
     <loc>https://lisihan.com.cn/2023/04/09/7Jupyter%20book%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2023-04-10</lastmod>
-  </url>
-  <url>
-    <loc>https://lisihan.com.cn/2023/03/15/6STL/</loc>
-    <lastmod>2023-04-09</lastmod>
   </url>
   <url>
     <loc>https://lisihan.com.cn/2023/03/05/3return%200/</loc>
