@@ -9,8 +9,31 @@
     <atom:link href="https://lisihan.com.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>认真做好每一件事</description>
-    <pubDate>Thu, 20 Apr 2023 04:32:06 GMT</pubDate>
+    <pubDate>Mon, 10 Jul 2023 12:30:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>dos命令</title>
+      <link>https://lisihan.com.cn/2023/07/10/17dos%20%E5%91%BD%E4%BB%A4/</link>
+      <guid>https://lisihan.com.cn/2023/07/10/17dos%20%E5%91%BD%E4%BB%A4/</guid>
+      <pubDate>Mon, 10 Jul 2023 12:25:39 GMT</pubDate>
+      
+      <description>磁盘操作系统(dos)常用操作</description>
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="操作如下"><a href="#操作如下" class="headerlink" title="操作如下"></a>操作如下</h2><ol><li>查看当前目录是有什么内容 dir<br>dir dir d:\abc2\test200</li><li>切换到其他盘下：盘符号 cd : change directory<br>案例演示：切换到 c 盘 cd &#x2F;D c:</li><li>切换到当前盘的其他目录下 (使用相对路径和绝对路径演示), ..\表示上一级目录<br>案例演示： cd d:\abc2\test200 cd ....\abc2\test200</li><li>切换到上一级：<br>案例演示： cd .. 5) 切换到根目录：cd <br>案例演示：cd \</li><li>查看指定的目录下所有的子级目录 tree</li><li>清屏 cls [苍老师]</li><li>退出 DOS exit</li><li>说明: 因为小伙伴后面使用 DOS 非常少，所以对下面的几个指令，老韩给大家演示下, 大家了解即可 (md[创建目<br>录],rd[删除目录],copy[拷贝文件],del[删除文件],echo[输入内容到文件],type,move[剪切]) &#x3D;&gt; Linux,</li></ol>]]></content:encoded>
+      
+      
+      <category domain="https://lisihan.com.cn/categories/dos%E5%91%BD%E4%BB%A4/">dos命令</category>
+      
+      
+      <category domain="https://lisihan.com.cn/tags/dos/">dos</category>
+      
+      
+      <comments>https://lisihan.com.cn/2023/07/10/17dos%20%E5%91%BD%E4%BB%A4/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>AcWing 3431. skew数</title>
@@ -219,29 +242,6 @@
       
       
       <comments>https://lisihan.com.cn/2023/03/05/3return%200/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>liu</title>
-      <link>https://lisihan.com.cn/2023/03/03/2liu/</link>
-      <guid>https://lisihan.com.cn/2023/03/03/2liu/</guid>
-      <pubDate>Fri, 03 Mar 2023 08:56:14 GMT</pubDate>
-      
-      <description>什么是“流”，“流”的基本概念</description>
-      
-      
-      
-      <content:encoded><![CDATA[<h1 id="主要介绍："><a href="#主要介绍：" class="headerlink" title="主要介绍："></a>主要介绍：</h1><p>  什么是“流”，“流”的基本概念，“流”对于内存和外部设备着<span id="more"></span>什么样的作用，C语言默认打开的三个“流”：stdin、stdout、stderr👀。</p><!-- more --><p>通过《C语言》文件这一章的学习，我们学会了如何向文件进行读写操作，也就是如何让数据从内存中保存到硬盘上，或是如何从硬盘上读取数据放到内存中。硬盘其实是一个外部设备，那有人就要问了：我们能否对其他<strong>外部</strong>设进行读写操作呢？例如：屏幕、键盘、鼠标、U盘、光盘、网络…… ，答案当然是肯定的。</p><h2 id="但值得注意"><a href="#但值得注意" class="headerlink" title="但值得注意"></a>但值得注意</h2><p> 的是，<em>每一种外部设备的读写方式是有所差异的</em>，就比如：写硬盘和写屏幕，读键盘和读网络。那大家想一下，如果一个程序员写代码的时候，必须要把每种外部设备的读和写的方式都理解透彻，是不是太麻烦了！</p><p>  所以，为了能够<em>让程序员更加方便的对外部设备进行读写操作</em>，我们会在外部设备前抽象出来一层东西，称为：“流”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由C语言底层的封装来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个中转站，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  所以，为了能够让程序员更加方便的对外部设备进行读写操作，我们会<em>在外部设备前抽象出来一层东西</em>，称为：“<strong>流</strong>”的概念。这样程序员在写文件的时候就不需要关注外部设备了，只需要将数据写到“流”里面去，然后由<strong>C语言底层的封装</strong>来进行相应的操作，把“流”里面的数据分发到不同的外部设备当中去。反之亦是如此。 如下图所示。抽象的来说“流”就相当于一个<strong>中转站</strong>，能够将数据更具不同的外部设备读写的方式来进行相应的操作。 如此这些外部设备的细节就不需要用户来关注，用户只需要关注“流”就可以了（这里的“流”指的是向哪个外部设备进行的操作）。至于“流”是如何做到向不同外部设备读写的，这是在C语言底层就已经实现好的，不需要我们关心。<br>  “流”是一个比较抽象的概念，数据就像水管里的水流，可以从内存中流向外部设备，也可以从外部设备流向内存，但只能<strong>单方向</strong>的流。由此可见“流”是有明确的方向性的，所以可以将“流”分为两种：以内存为第一人称，<strong>数据从内存向外流的称为输出流，数据由外向内存流的称为输入流</strong>。</p><p>  还值得补充的一点是，不知道大家有没有发现，我们在对一个文件操作前必须先打开它，获得与之关联的文件指针，这个指针就可以称为“文件流”，因为这个指针指向了数据的目的地 &#x2F; 源头。但我们在对屏幕写出数据时或从键盘上读入数据时，并没有对这些外部设备进行打开操作获得所对应的“流”啊，而且在scanf和printf操作的时候也没有要求你给出数据的流向，最后却还能实现，这是为什么呢？<br>因为任意一个C程序只要运行起来，就会默认打开3个“流”：</p><blockquote><p>stdin —— 标准输入流（键盘）</br><br>stdout —— 标准输出流（屏幕）</br><br>stderr —— 标准错误流（屏幕）</br></p></blockquote><p>  所以printf()会默认将数据发送到stdout这个“流”上，scanf()会默从stdin这个“流”上读取数据，不需要我们手动打开和关闭“流”。但对于文件来说，我们就必须先打开这个文件从而获得这个“流”，然后才能从这个“流”里面读取数据或向这个“流”里面写数据，最后还得关闭“流”。<br>  那有同学就要问了：能不能用格式化输出函数fprintf()来向屏幕上输出一段内容？答案当然是可以的.</p>]]></content:encoded>
-      
-      
-      <category domain="https://lisihan.com.cn/categories/C%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">C文件操作</category>
-      
-      
-      <category domain="https://lisihan.com.cn/tags/IO/">IO</category>
-      
-      
-      <comments>https://lisihan.com.cn/2023/03/03/2liu/#disqus_thread</comments>
       
     </item>
     
